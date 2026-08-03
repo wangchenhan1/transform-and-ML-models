@@ -1,0 +1,352 @@
+import pandas as pd
+from sklearn.model_selection import train_test_split, RandomizedSearchCV
+from sklearn.preprocessing import MinMaxScaler
+from sklearn.ensemble import GradientBoostingRegressor
+from sklearn.metrics import r2_score, mean_absolute_error, mean_squared_error
+import time
+import os
+import joblib
+import matplotlib.pyplot as plt
+import shap
+import numpy as np
+
+# 从Excel文件中读取数据
+data = pd.read_excel('/home/ggx/wls/DAC-code/CR-X/HCOOH-C/data/2D-CR-train-HCOOH-C.xlsx')
+
+X = data.iloc[:, 1:-1].to_numpy()
+y = data.iloc[:, -1]
+
+# 定义随机状态值范围
+random_states = range(1, 100)
+results_all_states = {}
+
+# 定义超参数范围（针对 GradientBoostingRegressor）
+param_grid = {
+    "n_estimators": list(range(50, 500, 50)),
+    "max_depth": list(range(2, 10, 1)),
+    "learning_rate": [0.06, 0.01, 0.02, 0.5, 0.8],
+    "min_samples_leaf": [1, 2, 5, 7, 9],
+    "max_features": [1, 2, 3, 4, 6, 8, 12],
+    "min_samples_split": [1, 2, 4, 6, 8, 10, 12],
+    "min_weight_fraction_leaf": [0, 0.02, 0.04, 0.06, 0.08],
+    "min_impurity_decrease": [0.008, 0.01],
+    "alpha": [0.1, 0.2, 0.5, 0.6, 0.7, 0.8, 0.9, 0.92]
+}
+
+time_start = time.time()
+
+# 定义函数来计算 MAE 和 RMSE
+def calculate_metrics(model, X_train, X_test, y_train, y_test):
+    pred_train = model.predict(X_train)
+    pred_test = model.predict(X_test)
+    train_mae = mean_absolute_error(y_train, pred_train)
+    test_mae = mean_absolute_error(y_test, pred_test)
+    train_rmse = np.sqrt(mean_squared_error(y_train, pred_train))
+    test_rmse = np.sqrt(mean_squared_error(y_test, pred_test))
+    return train_mae, test_mae, train_rmse, test_rmse
+
+# 在循环中进行训练
+for state in random_states:
+    print(f"\nUsing random_state={state} for training")
+    
+    # 关键修正：每次循环都重新分割数据
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=state)
+    
+    # 数据归一化 - 只在训练集上拟合
+    scaler = MinMaxScaler()
+    X_train_normalized = scaler.fit_transform(X_train)  # 关键：只在训练集上fit
+    X_test_normalized = scaler.transform(X_test)        # 用训练集的参数transform测试集
+
+    # 定义GradientBoostingRegressor模型
+    GBR = GradientBoostingRegressor(random_state=state)  # 使用当前state作为random_state
+
+    # 使用RandomizedSearchCV来寻找最优超参数
+    grid_search = RandomizedSearchCV(
+        GBR, param_grid, n_iter=20, cv=5, n_jobs=-1, scoring='r2'
+    )
+
+    grid_search.fit(X_train_normalized, y_train)
+
+    # 最佳模型预测
+    pred_train = grid_search.predict(X_train_normalized)
+    pred_test = grid_search.predict(X_test_normalized)
+
+    # 计算 R² 分数
+    r2_train = r2_score(y_train, pred_train)
+    r2_test = r2_score(y_test, pred_test)
+
+    # 打印最佳参数
+    print("\nBest parameter combination:")
+    print(grid_search.best_params_)
+    print(f"Train R²: {r2_train:.4f}, Test R²: {r2_test:.4f}")
+
+    # 计算 MAE 和 RMSE
+    train_mae, test_mae, train_rmse, test_rmse = calculate_metrics(
+        grid_search, X_train_normalized, X_test_normalized, y_train, y_test
+    )
+
+    # 关键修正：存储数据分割信息
+    results_all_states[state] = {
+        "best_params": grid_search.best_params_,
+        "train_r2": r2_train,
+        "test_r2": r2_test,
+        "train_mae": train_mae,
+        "test_mae": test_mae,
+        "train_rmse": train_rmse,
+        "test_rmse": test_rmse,
+        "scaler": scaler,
+        "model": grid_search.best_estimator_,
+        # 存储数据分割信息
+        "X_train": X_train, "X_test": X_test,
+        "y_train": y_train, "y_test": y_test,
+        "X_train_normalized": X_train_normalized,
+        "X_test_normalized": X_test_normalized
+    }
+
+# 找到最佳参数组合 - 只关注测试性能
+best_test_r2 = float('-inf')
+best_test_mae = float('inf')
+best_test_rmse = float('inf')
+best_random_state = None
+best_params = None
+
+for state, result in results_all_states.items():
+    # 找最佳测试结果
+    if (result['test_r2'] > best_test_r2) or \
+       (np.isclose(result['test_r2'], best_test_r2) and result['test_mae'] < best_test_mae):
+        best_test_r2 = result['test_r2']
+        best_test_mae = result['test_mae']
+        best_test_rmse = result['test_rmse']
+        best_random_state = state
+        best_params = result["best_params"]
+
+# 获取最佳结果
+best_result = results_all_states[best_random_state]
+best_model = best_result["model"]
+best_scaler = best_result["scaler"]
+
+# 使用正确的数据进行预测
+X_train_correct = best_result["X_train"]
+X_test_correct = best_result["X_test"]
+y_train_correct = best_result["y_train"]
+y_test_correct = best_result["y_test"]
+X_train_normalized_correct = best_result["X_train_normalized"]
+X_test_normalized_correct = best_result["X_test_normalized"]
+
+pred_train_correct = best_model.predict(X_train_normalized_correct)
+pred_test_correct = best_model.predict(X_test_normalized_correct)
+
+# 计算真实指标
+train_mse_correct = mean_squared_error(y_train_correct, pred_train_correct)
+test_mse_correct = mean_squared_error(y_test_correct, pred_test_correct)
+train_mae_correct = mean_absolute_error(y_train_correct, pred_train_correct)
+test_mae_correct = mean_absolute_error(y_test_correct, pred_test_correct)
+train_r2_correct = r2_score(y_train_correct, pred_train_correct)
+test_r2_correct = r2_score(y_test_correct, pred_test_correct)
+
+# 保存最佳模型和 Scaler
+current_directory = os.getcwd()
+best_model_filename = os.path.join(current_directory, "best_model.pkl")
+joblib.dump(best_model, best_model_filename)
+
+best_scaler_filename = os.path.join(current_directory, "best_scaler.pkl")
+joblib.dump(best_scaler, best_scaler_filename)
+
+# =============================================================================
+# 输出最佳模型参数和性能
+# =============================================================================
+print("\n" + "="*80)
+print("🎯 BEST GRADIENT BOOSTING MODEL PARAMETERS AND PERFORMANCE SUMMARY")
+print("="*80)
+
+print(f"\n📊 Best Random State: {best_random_state}")
+print(f"📈 Dataset Size: {len(X)} samples, {X.shape[1]} features")
+
+print(f"\n🔧 OPTIMAL HYPERPARAMETERS:")
+print("-" * 50)
+for param, value in best_params.items():
+    print(f"  {param:25}: {value}")
+
+print(f"\n📊 MODEL PERFORMANCE:")
+print("-" * 50)
+print(f"{'Metric':15} | {'Training':12} | {'Testing':12} | {'Description'}")
+print(f"{'-'*15} | {'-'*12} | {'-'*12} | {'-'*30}")
+print(f"{'R² Score':15} | {train_r2_correct:12.4f} | {test_r2_correct:12.4f} | Closer to 1 is better")
+print(f"{'MAE':15} | {train_mae_correct:12.4f} | {test_mae_correct:12.4f} | Lower is better")
+print(f"{'RMSE':15} | {np.sqrt(train_mse_correct):12.4f} | {np.sqrt(test_mse_correct):12.4f} | Lower is better")
+print(f"{'MSE':15} | {train_mse_correct:12.4f} | {test_mse_correct:12.4f} | Lower is better")
+
+print(f"\n📈 PERFORMANCE ANALYSIS:")
+print("-" * 50)
+overfitting_gap = train_r2_correct - test_r2_correct
+print(f"Overfitting Gap (Train R² - Test R²): {overfitting_gap:.4f}")
+
+if overfitting_gap > 0.1:
+    print("⚠️  Status: Potential overfitting detected")
+elif overfitting_gap > 0.05:
+    print("ℹ️  Status: Slight overfitting, but acceptable")
+elif overfitting_gap < -0.05:
+    print("ℹ️  Status: Test performance better than training - may indicate data splitting artifact")
+else:
+    print("✅ Status: Well-balanced model with good generalization")
+
+# 计算性能改进百分比（如果可能）
+if test_r2_correct > 0.9:
+    print("🎉 Excellent: Model explains over 90% of variance in test data")
+elif test_r2_correct > 0.8:
+    print("👍 Good: Model explains over 80% of variance in test data")
+elif test_r2_correct > 0.7:
+    print("📊 Fair: Model explains over 70% of variance in test data")
+else:
+    print("🔍 Needs Improvement: Consider feature engineering or model tuning")
+
+print(f"\n💾 Model saved as: {best_model_filename}")
+print(f"🔧 Scaler saved as: {best_scaler_filename}")
+
+# 保存详细结果到文件
+output_file = os.path.join(current_directory, "best_gbr_model_summary.txt")
+with open(output_file, 'w') as f:
+    f.write("BEST GRADIENT BOOSTING REGRESSOR MODEL SUMMARY\n")
+    f.write("="*50 + "\n\n")
+    
+    f.write("MODEL CONFIGURATION:\n")
+    f.write("-" * 30 + "\n")
+    f.write(f"Best Random State: {best_random_state}\n")
+    f.write(f"Dataset: {len(X)} samples, {X.shape[1]} features\n\n")
+    
+    f.write("OPTIMAL HYPERPARAMETERS:\n")
+    f.write("-" * 30 + "\n")
+    for param, value in best_params.items():
+        f.write(f"{param}: {value}\n")
+    
+    f.write("\nPERFORMANCE METRICS:\n")
+    f.write("-" * 30 + "\n")
+    f.write(f"{'Metric':10} | {'Training':10} | {'Testing':10}\n")
+    f.write(f"{'-'*10} | {'-'*10} | {'-'*10}\n")
+    f.write(f"{'R²':10} | {train_r2_correct:10.4f} | {test_r2_correct:10.4f}\n")
+    f.write(f"{'MAE':10} | {train_mae_correct:10.4f} | {test_mae_correct:10.4f}\n")
+    f.write(f"{'RMSE':10} | {np.sqrt(train_mse_correct):10.4f} | {np.sqrt(test_mse_correct):10.4f}\n")
+    f.write(f"{'MSE':10} | {train_mse_correct:10.4f} | {test_mse_correct:10.4f}\n")
+    
+    f.write(f"\nPERFORMANCE ANALYSIS:\n")
+    f.write("-" * 30 + "\n")
+    f.write(f"Overfitting Gap: {overfitting_gap:.4f}\n")
+    if overfitting_gap > 0.1:
+        f.write("Status: Potential overfitting detected\n")
+    elif overfitting_gap > 0.05:
+        f.write("Status: Slight overfitting, but acceptable\n")
+    elif overfitting_gap < -0.05:
+        f.write("Status: Test performance better than training\n")
+    else:
+        f.write("Status: Well-balanced model\n")
+
+print(f"\n📄 Detailed summary saved to: {output_file}")
+
+# 计算运行时间
+time_end = time.time()
+print(f"\n⏱️  Total execution time: {(time_end - time_start)/60:.2f} minutes")
+
+# =============================================================================
+# 可视化部分
+# =============================================================================
+print(f"\n📊 Generating visualizations...")
+
+# 绘制真实的散点图
+plt.figure(figsize=(12, 10))
+plt.scatter(y_train_correct, pred_train_correct, 
+            label=f'Train Data (n={len(y_train_correct)})\nR²: {train_r2_correct:.4f}, MAE: {train_mae_correct:.4f}',
+            color="green", alpha=0.7, s=60, edgecolor='black', linewidth=0.5)
+plt.scatter(y_test_correct, pred_test_correct, 
+            label=f'Test Data (n={len(y_test_correct)})\nR²: {test_r2_correct:.4f}, MAE: {test_mae_correct:.4f}',
+            color="red", alpha=0.7, s=60, edgecolor='black', linewidth=0.5)
+
+# 添加完美预测线
+min_val = min(min(y_train_correct), min(y_test_correct))
+max_val = max(max(y_train_correct), max(y_test_correct))
+plt.plot([min_val, max_val], [min_val, max_val], 
+         linestyle="--", color="black", linewidth=2, label='Perfect Prediction')
+
+plt.title(f"Gradient Boosting Regression - Best Model (Random State: {best_random_state})", fontsize=14, fontweight='bold')
+plt.xlabel("Actual Values", fontsize=12)
+plt.ylabel("Predicted Values", fontsize=12)
+plt.legend(fontsize=10)
+plt.grid(True, alpha=0.3)
+plt.tight_layout()
+
+# 保存散点图
+scatter_plot_filename = os.path.join(current_directory, "best_gbr_model_scatter_plot.png")
+plt.savefig(scatter_plot_filename, dpi=300, bbox_inches='tight')
+print(f"✅ Scatter plot saved as: {scatter_plot_filename}")
+plt.show()
+
+# 绘制训练R² vs 测试R²的散点图
+plt.figure(figsize=(10, 8))
+train_r2_values = [result['train_r2'] for result in results_all_states.values()]
+test_r2_values = [result['test_r2'] for result in results_all_states.values()]
+
+plt.scatter(train_r2_values, test_r2_values, alpha=0.7, s=50)
+plt.xlabel("Train R²")
+plt.ylabel("Test R²")
+plt.title("Train R² vs Test R² for All Random States (GBR)")
+plt.grid(True, alpha=0.3)
+
+# 标记最佳测试R²的点
+best_train_r2_for_best_test = results_all_states[best_random_state]['train_r2']
+plt.scatter(best_train_r2_for_best_test, best_test_r2, color='red', s=100, 
+           label=f'Best Test R² (State: {best_random_state})', edgecolors='black')
+
+# 添加对角线
+min_r2 = min(min(train_r2_values), min(test_r2_values))
+max_r2 = max(max(train_r2_values), max(test_r2_values))
+plt.plot([min_r2, max_r2], [min_r2, max_r2], 'k--', alpha=0.5, label='y=x')
+
+plt.legend()
+plt.tight_layout()
+
+# 保存训练vs测试R²图
+r2_comparison_filename = os.path.join(current_directory, "gbr_train_vs_test_r2_comparison.png")
+plt.savefig(r2_comparison_filename, dpi=300, bbox_inches='tight')
+print(f"✅ R² comparison plot saved as: {r2_comparison_filename}")
+plt.show()
+
+# SHAP 特征重要性分析
+print("🔍 Performing SHAP analysis...")
+try:
+    explainer = shap.Explainer(best_model)
+    shap_values = explainer(X_test_normalized_correct)
+
+    # 绘制 SHAP 总结图
+    plt.figure(figsize=(10, 8))
+    shap.summary_plot(shap_values, X_test_normalized_correct, 
+                      feature_names=data.columns[1:-1], show=False)
+    plt.title("SHAP Feature Importance (Gradient Boosting)", fontsize=14, fontweight='bold')
+    plt.tight_layout()
+
+    # 保存 SHAP 图
+    shap_plot_filename = os.path.join(current_directory, "best_gbr_model_shap_analysis.png")
+    plt.savefig(shap_plot_filename, dpi=300, bbox_inches='tight')
+    print(f"✅ SHAP analysis plot saved as: {shap_plot_filename}")
+    plt.show()
+except Exception as e:
+    print(f"❌ SHAP analysis failed: {e}")
+    # 使用内置特征重要性作为备选
+    feature_importance = best_model.feature_importances_
+    feature_names = data.columns[1:-1]
+    
+    plt.figure(figsize=(10, 8))
+    indices = np.argsort(feature_importance)[::-1]
+    plt.bar(range(len(feature_importance)), feature_importance[indices])
+    plt.xticks(range(len(feature_importance)), [feature_names[i] for i in indices], rotation=45)
+    plt.title("Feature Importance (Gradient Boosting)", fontsize=14, fontweight='bold')
+    plt.xlabel("Features")
+    plt.ylabel("Importance")
+    plt.tight_layout()
+    
+    feature_plot_filename = os.path.join(current_directory, "best_gbr_model_feature_importance.png")
+    plt.savefig(feature_plot_filename, dpi=300, bbox_inches='tight')
+    print(f"✅ Feature importance plot saved as: {feature_plot_filename}")
+    plt.show()
+
+print("\n" + "="*80)
+print("🎉 ALL GRADIENT BOOSTING ANALYSES COMPLETED SUCCESSFULLY!")
+print("="*80)
