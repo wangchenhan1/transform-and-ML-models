@@ -1,0 +1,832 @@
+import numpy as np
+import pandas as pd
+from gplearn.genetic import SymbolicTransformer
+from sklearn.metrics import mean_squared_error, r2_score, mean_absolute_error
+from sklearn.model_selection import train_test_split, cross_val_score
+import matplotlib.pyplot as plt
+from scipy.stats import pearsonr
+from sklearn.ensemble import RandomForestRegressor, AdaBoostRegressor, GradientBoostingRegressor, BaggingRegressor
+from xgboost import XGBRegressor
+from lightgbm import LGBMRegressor
+from catboost import CatBoostRegressor
+import joblib
+import optuna
+from optuna.samplers import TPESampler
+import warnings
+import os
+from concurrent.futures import ProcessPoolExecutor, as_completed
+import json
+import time
+import sys
+import psutil
+import threading
+from datetime import datetime
+
+warnings.filterwarnings('ignore')
+
+# ============================
+# 1. CPU核心管理类
+# ============================
+class CPUMonitor:
+    """CPU核心监控和管理类"""
+    
+    def __init__(self):
+        self.total_cores = os.cpu_count()
+        self.used_cores = set()
+        self.lock = threading.Lock()
+        self.monitoring_interval = 2  # 监控间隔（秒）
+        self.stop_monitoring = False
+        
+    def get_idle_cores(self):
+        """获取空闲的CPU核心"""
+        idle_cores = []
+        
+        # 获取系统CPU使用率（每个核心）
+        try:
+            cpu_percent = psutil.cpu_percent(interval=0.5, percpu=True)
+        except:
+            cpu_percent = [0] * self.total_cores
+        
+        # 获取进程级别的CPU亲和性信息
+        system_processes = []
+        try:
+            for proc in psutil.process_iter(['pid', 'name', 'cpu_affinity']):
+                try:
+                    cpu_affinity = proc.info.get('cpu_affinity')
+                    if cpu_affinity:
+                        system_processes.append((proc.info['pid'], cpu_affinity))
+                except (psutil.NoSuchProcess, psutil.AccessDenied):
+                    continue
+        except:
+            pass
+        
+        # 选择空闲核心（使用率低于10%的）
+        with self.lock:
+            for i in range(self.total_cores):
+                if i not in self.used_cores:
+                    # 检查系统使用率
+                    if i < len(cpu_percent) and cpu_percent[i] < 10:
+                        idle_cores.append(i)
+            
+            # 如果没有低使用率的核心，选择使用率最低的
+            if not idle_cores:
+                for i in range(self.total_cores):
+                    if i not in self.used_cores:
+                        idle_cores.append(i)
+            
+            # 按使用率排序（升序）
+            idle_cores.sort(key=lambda x: cpu_percent[x] if x < len(cpu_percent) else 0)
+        
+        return idle_cores
+    
+    def allocate_cores(self, num_cores):
+        """分配指定数量的CPU核心"""
+        idle_cores = self.get_idle_cores()
+        
+        with self.lock:
+            # 选择前num_cores个空闲核心
+            allocated = idle_cores[:min(num_cores, len(idle_cores))]
+            self.used_cores.update(allocated)
+            
+            if len(allocated) < num_cores:
+                print(f"⚠️  警告: 请求 {num_cores} 个核心，但只能分配 {len(allocated)} 个")
+            
+            return allocated
+    
+    def release_cores(self, cores):
+        """释放CPU核心"""
+        with self.lock:
+            for core in cores:
+                if core in self.used_cores:
+                    self.used_cores.remove(core)
+    
+    def monitor_system_load(self):
+        """监控系统负载"""
+        while not self.stop_monitoring:
+            try:
+                # 获取系统负载信息
+                load_avg = psutil.getloadavg()
+                cpu_percent = psutil.cpu_percent(interval=1, percpu=True)
+                memory = psutil.virtual_memory()
+                
+                # 打印负载信息
+                print(f"📊 系统监控 - 负载: {load_avg}, 内存使用率: {memory.percent:.1f}%", end='\r')
+                
+                # 睡眠
+                time.sleep(self.monitoring_interval)
+            except:
+                pass
+    
+    def start_monitoring(self):
+        """启动监控线程"""
+        monitor_thread = threading.Thread(target=self.monitor_system_load, daemon=True)
+        monitor_thread.start()
+        return monitor_thread
+    
+    def stop(self):
+        """停止监控"""
+        self.stop_monitoring = True
+
+# 创建CPU管理器
+cpu_manager = CPUMonitor()
+
+# ============================
+# 2. 全局变量和配置
+# ============================
+# 保存原始数据，供所有进程使用
+global_X_train_full = None
+global_X_test_full = None
+global_y_train_full = None
+global_y_test_full = None
+global_X = None
+global_y = None
+global_models = None
+
+def initialize_global_data():
+    """初始化全局数据，供所有进程使用"""
+    global global_X_train_full, global_X_test_full, global_y_train_full, global_y_test_full
+    global global_X, global_y, global_models
+    
+    # 数据读取
+    data = pd.read_excel('/home/ggx/wls/DAC-code/CR-X/HCOOH-C/data/CR-train-HCOOH-C.xlsx')
+    global_X = data.iloc[:, 1:-1].values  # 74维特征
+    global_y = data.iloc[:, -1].values    # 目标变量
+    
+    # 数据分割
+    global_X_train_full, global_X_test_full, global_y_train_full, global_y_test_full = train_test_split(
+        global_X, global_y, test_size=0.2, random_state=42, shuffle=True
+    )
+    
+    # 初始化模型字典（模型将在进程内部重新创建）
+    global_models = {}
+
+# ============================
+# 3. 单个维度处理函数（支持CPU绑定）
+# ============================
+def process_single_dimension_with_cpu(args):
+    """处理单个维度的完整流程，支持CPU绑定"""
+    n_dim, allocated_cores = args
+    
+    # 设置进程CPU亲和性
+    try:
+        process = psutil.Process()
+        process.cpu_affinity(allocated_cores)
+        print(f"[进程 {os.getpid()}] 🔧 绑定到CPU核心: {allocated_cores}")
+    except Exception as e:
+        print(f"[进程 {os.getpid()}] ⚠️ CPU绑定失败: {e}")
+    
+    # 设置环境变量
+    os.environ['OMP_NUM_THREADS'] = str(len(allocated_cores))
+    os.environ['OPENBLAS_NUM_THREADS'] = str(len(allocated_cores))
+    os.environ['MKL_NUM_THREADS'] = str(len(allocated_cores))
+    
+    print(f"\n{'='*60}")
+    print(f"[进程 {os.getpid()}] 开始处理 {n_dim}D 特征")
+    print(f"{'='*60}")
+    
+    start_time = time.time()
+    
+    # 检查是否已有保存的结果
+    results_file = f'dim_{n_dim:02d}_results.pkl'
+    if os.path.exists(results_file):
+        print(f"[进程 {os.getpid()}] 📂 找到 {n_dim}D 的已保存结果，加载中...")
+        try:
+            result = joblib.load(results_file)
+            # 释放CPU核心
+            cpu_manager.release_cores(allocated_cores)
+            return result
+        except:
+            print(f"[进程 {os.getpid()}] ⚠️ 加载失败，重新处理...")
+    
+    # 在进程内部重新加载数据
+    data_path = '/home/ggx/wls/DAC-code/CR-X/HCOOH-C/data/CR-train-HCOOH-C.xlsx'
+    data = pd.read_excel(data_path)
+    X = data.iloc[:, 1:-1].values
+    y = data.iloc[:, -1].values
+    
+    # 数据分割
+    X_train_full, X_test_full, y_train_full, y_test_full = train_test_split(
+        X, y, test_size=0.2, random_state=42, shuffle=True
+    )
+    
+    # 存储结果
+    results = {
+        'n_dim': n_dim,
+        'best_params': None,
+        'best_score': None,
+        'correlations': [],
+        'model_metrics': {},
+        'processing_time': None,
+        'allocated_cores': allocated_cores
+    }
+    
+    try:
+        # 步骤1: Optuna优化
+        print(f"[进程 {os.getpid()}] 🔍 步骤1: 使用Optuna优化 {n_dim}D 符号转换器")
+        
+        def objective(trial):
+            """优化目标函数"""
+            # 概率约束逻辑
+            p_crossover = trial.suggest_float('p_crossover', 0.4, 0.7)
+            p_subtree_mutation = trial.suggest_float('p_subtree_mutation', 0.1, 0.3)
+            remaining_prob = 1.0 - p_crossover - p_subtree_mutation
+            p_hoist_mutation = trial.suggest_float('p_hoist_mutation', 0.01, min(0.1, remaining_prob * 0.5))
+            p_point_mutation = trial.suggest_float('p_point_mutation', 0.05, remaining_prob - p_hoist_mutation)
+            
+            total_prob = p_crossover + p_subtree_mutation + p_hoist_mutation + p_point_mutation
+            if total_prob > 1.0:
+                scale = 1.0 / total_prob
+                p_crossover *= scale
+                p_subtree_mutation *= scale
+                p_hoist_mutation *= scale
+                p_point_mutation *= scale
+
+            # 超参数搜索空间
+            population_size = trial.suggest_int('population_size', 5000, 30000, step=5000)
+            st_n_jobs = len(allocated_cores)  # 使用分配的核心数
+
+            params = {
+                'population_size': population_size,
+                'generations': trial.suggest_int('generations', 10, 50, step=10),
+                'function_set': trial.suggest_categorical(
+                    'function_set',
+                    [['add', 'sub', 'mul', 'div', 'abs', 'sqrt'], 
+                     ['add', 'sub', 'mul', 'div', 'abs', 'sqrt', 'log', 'inv', 'sin', 'cos']]
+                ),
+                'parsimony_coefficient': trial.suggest_float('parsimony_coefficient', 1e-4, 1e-2, log=True),
+                'p_crossover': p_crossover,
+                'p_subtree_mutation': p_subtree_mutation,
+                'p_hoist_mutation': p_hoist_mutation,
+                'p_point_mutation': p_point_mutation,
+                'tournament_size': trial.suggest_int('tournament_size', 5, 15, step=5),
+                'const_range': (-1, 1),
+                'random_state': 42,
+                'verbose': 0,
+                'n_jobs': st_n_jobs
+            }
+
+            try:
+                # 训练符号转换器
+                transformer = SymbolicTransformer(n_components=n_dim, **params)
+                X_transformed = transformer.fit_transform(X_train_full, y_train_full)
+
+                # 交叉验证
+                cv_parallel_jobs = len(allocated_cores)
+                cv_r2 = cross_val_score(
+                    AdaBoostRegressor(random_state=42),
+                    X_transformed, y_train_full,
+                    cv=5, scoring='r2',
+                    n_jobs=cv_parallel_jobs
+                ).mean()
+                
+                cv_rmse = np.sqrt(-cross_val_score(
+                    AdaBoostRegressor(random_state=42),
+                    X_transformed, y_train_full,
+                    cv=5, scoring='neg_mean_squared_error',
+                    n_jobs=cv_parallel_jobs
+                ).mean())
+                
+                # 归一化组合评分
+                norm_r2 = cv_r2
+                norm_rmse = 1 - (cv_rmse / (y.max() - y.min()))
+                return 0.6 * norm_r2 + 0.4 * norm_rmse
+            except Exception as e:
+                print(f"[进程 {os.getpid()}] ⚠️  Optuna试验失败: {str(e)[:100]}...")
+                return -np.inf
+        
+        # 创建Optuna研究
+        study = optuna.create_study(
+            direction='maximize',
+            sampler=TPESampler(seed=42),
+            study_name=f'st_{n_dim}D',
+            pruner=optuna.pruners.MedianPruner(n_warmup_steps=5)
+        )
+        
+        # 优化
+        study.optimize(
+            objective,
+            n_trials=20,
+            show_progress_bar=False,  # 多进程时不显示进度条
+            catch=(ValueError, RuntimeError, MemoryError),
+            n_jobs=1  # Optuna内部使用单进程
+        )
+
+        results['best_params'] = study.best_params
+        results['best_score'] = study.best_value
+        
+        print(f"[进程 {os.getpid()}] ✅ 优化完成 - 最佳得分: {study.best_value:.4f}")
+        
+        # 步骤2: 训练最终转换器
+        print(f"[进程 {os.getpid()}] ⚙️  步骤2: 训练最终符号转换器")
+        
+        # 使用最佳参数创建转换器
+        best_params = study.best_params.copy()
+        best_params['n_components'] = n_dim
+        best_params['random_state'] = 42
+        best_params['verbose'] = 0
+        best_params['n_jobs'] = len(allocated_cores)
+        
+        best_transformer = SymbolicTransformer(**best_params)
+        X_transformed_full = best_transformer.fit_transform(X, y)
+        
+        # 保存转换器
+        transformer_filename = f'symbolic_transformer_{n_dim}D.pkl'
+        joblib.dump(best_transformer, transformer_filename)
+        
+        # 保存参数
+        params_filename = f'symbolic_transformer_{n_dim}D_best_params.csv'
+        pd.DataFrame([best_params]).to_csv(params_filename, index=False)
+        
+        print(f"[进程 {os.getpid()}] 💾 符号转换器已保存: {transformer_filename}")
+        
+        # 步骤3: 计算特征相关性
+        print(f"[进程 {os.getpid()}] 📈 步骤3: 计算特征相关性")
+        
+        correlations = []
+        for i in range(n_dim):
+            corr, p_value = pearsonr(X_transformed_full[:, i], y)
+            correlations.append({
+                'feature': i+1,
+                'correlation': corr,
+                'p_value': p_value
+            })
+            if i < 5:  # 只打印前5个特征的相关性
+                print(f"[进程 {os.getpid()}]   特征 {i+1}: 相关性 = {corr:.4f}, p值 = {p_value:.4f}")
+        
+        results['correlations'] = correlations
+        
+        # 步骤4: 模型训练与评估
+        print(f"[进程 {os.getpid()}] 🤖 步骤4: 模型训练与评估")
+        
+        # 转换训练和测试数据
+        X_train_trans = best_transformer.transform(X_train_full)
+        X_test_trans = best_transformer.transform(X_test_full)
+        
+        # 创建模型字典（使用分配的核心数）
+        models_per_process = {
+            'RandomForestRegressor': RandomForestRegressor(
+                random_state=42,
+                n_jobs=len(allocated_cores),
+                verbose=0
+            ),
+            'AdaBoostRegressor': AdaBoostRegressor(random_state=42),
+            'GradientBoostingRegressor': GradientBoostingRegressor(
+                random_state=42,
+                verbose=0
+            ),
+            'XGBRegressor': XGBRegressor(
+                use_label_encoder=False,
+                eval_metric='rmse',
+                random_state=42,
+                n_jobs=len(allocated_cores),
+                verbosity=0
+            ),
+            'LGBMRegressor': LGBMRegressor(
+                random_state=42,
+                n_jobs=len(allocated_cores),
+                verbose=-1
+            ),
+            'CatBoostRegressor': CatBoostRegressor(
+                random_state=42,
+                verbose=0,
+                allow_writing_files=False,
+                thread_count=len(allocated_cores)
+            ),
+            'BaggingRegressor': BaggingRegressor(
+                random_state=42,
+                n_jobs=len(allocated_cores),
+                verbose=0
+            )
+        }
+        
+        model_metrics = {}
+        
+        for model_name, model in models_per_process.items():
+            print(f"[进程 {os.getpid()}]   训练模型: {model_name}")
+            
+            try:
+                # 训练模型
+                model.fit(X_train_trans, y_train_full)
+                
+                # 预测
+                y_pred_train = model.predict(X_train_trans)
+                y_pred_test = model.predict(X_test_trans)
+                
+                # 计算指标
+                train_r2 = r2_score(y_train_full, y_pred_train)
+                train_rmse = np.sqrt(mean_squared_error(y_train_full, y_pred_train))
+                train_mae = mean_absolute_error(y_train_full, y_pred_train)
+                
+                test_r2 = r2_score(y_test_full, y_pred_test)
+                test_rmse = np.sqrt(mean_squared_error(y_test_full, y_pred_test))
+                test_mae = mean_absolute_error(y_test_full, y_pred_test)
+                
+                metrics = {
+                    'train_r2': train_r2,
+                    'train_rmse': train_rmse,
+                    'train_mae': train_mae,
+                    'test_r2': test_r2,
+                    'test_rmse': test_rmse,
+                    'test_mae': test_mae
+                }
+                
+                model_metrics[model_name] = metrics
+                
+                print(f"[进程 {os.getpid()}]     ✓ 训练集 - R2: {train_r2:.4f}, RMSE: {train_rmse:.4f}, MAE: {train_mae:.4f}")
+                print(f"[进程 {os.getpid()}]     ✓ 测试集 - R2: {test_r2:.4f}, RMSE: {test_rmse:.4f}, MAE: {test_mae:.4f}")
+                
+                # 保存模型
+                model_file = f"model_{model_name}_{n_dim}D.pkl"
+                joblib.dump(model, model_file)
+                
+            except Exception as e:
+                print(f"[进程 {os.getpid()}]     ✗ 模型 {model_name} 训练失败: {str(e)[:100]}")
+                model_metrics[model_name] = {
+                    'train_r2': np.nan,
+                    'train_rmse': np.nan,
+                    'train_mae': np.nan,
+                    'test_r2': np.nan,
+                    'test_rmse': np.nan,
+                    'test_mae': np.nan,
+                    'error': str(e)
+                }
+        
+        results['model_metrics'] = model_metrics
+        
+        # 步骤5: 保存转换后的特征
+        print(f"[进程 {os.getpid()}] 💾 步骤5: 保存转换后特征")
+        
+        transformed_df = pd.DataFrame(
+            X_transformed_full,
+            columns=[f'Optimized_Feature_{i+1}' for i in range(n_dim)]
+        )
+        transformed_df['Target'] = y
+        
+        # 保存到独立Excel文件
+        excel_file = f'optimized_transformed_features_{n_dim}D.xlsx'
+        transformed_df.to_excel(excel_file, index=False)
+        
+        print(f"[进程 {os.getpid()}] ✅ 转换后特征已保存到: {excel_file}")
+        
+        # 步骤6: 保存结果
+        end_time = time.time()
+        results['processing_time'] = end_time - start_time
+        
+        # 保存结果到文件
+        joblib.dump(results, results_file)
+        
+        print(f"[进程 {os.getpid()}] ✅ {n_dim}D 处理完成!")
+        print(f"[进程 {os.getpid()}] ⏱️  耗时: {results['processing_time']:.2f} 秒")
+        
+        # 释放CPU核心
+        cpu_manager.release_cores(allocated_cores)
+        
+        return results
+        
+    except Exception as e:
+        print(f"[进程 {os.getpid()}] ❌ {n_dim}D 处理失败: {str(e)}")
+        import traceback
+        traceback.print_exc()
+        
+        # 保存部分结果
+        results['error'] = str(e)
+        end_time = time.time()
+        results['processing_time'] = end_time - start_time
+        joblib.dump(results, results_file)
+        
+        # 释放CPU核心
+        cpu_manager.release_cores(allocated_cores)
+        
+        return results
+
+# ============================
+# 4. 主程序 - 智能并行版本
+# ============================
+def main_smart_parallel():
+    """主程序 - 智能并行处理所有维度"""
+    print("\n" + "="*70)
+    print("         符号回归特征转换与模型训练系统 - 智能并行版本")
+    print("="*70)
+    
+    # 启动系统监控
+    print(f"\n📊 启动系统监控...")
+    print(f"🖥️  总CPU核心数: {cpu_manager.total_cores}")
+    monitor_thread = cpu_manager.start_monitoring()
+    
+    # 定义待优化的特征维度
+    n_components_list = list(range(1, 11))
+    print(f"\n🎯 将处理以下维度: {n_components_list}")
+    
+    # 检查已完成的维度
+    completed_dims = []
+    for n_dim in n_components_list:
+        results_file = f'dim_{n_dim:02d}_results.pkl'
+        if os.path.exists(results_file):
+            try:
+                results = joblib.load(results_file)
+                if 'model_metrics' in results:
+                    completed_dims.append(n_dim)
+                    print(f"✅ 维度 {n_dim}D 已完成")
+            except:
+                pass
+    
+    # 确定要处理的维度
+    dims_to_process = [n_dim for n_dim in n_components_list if n_dim not in completed_dims]
+    
+    if not dims_to_process:
+        print("\n✅ 所有维度均已处理完成!")
+        print("\n📊 开始汇总结果...")
+        collect_and_summarize_results(n_components_list)
+        cpu_manager.stop()
+        return
+    
+    print(f"\n🎯 将要处理的维度: {dims_to_process}")
+    
+    # 智能分配CPU核心
+    print("\n🔧 智能分配CPU核心...")
+    
+    # 根据系统负载和维度数量动态分配
+    total_dimensions = len(dims_to_process)
+    
+    # 初始分配策略：每个维度分配2个核心
+    cores_per_dimension = 2
+    if total_dimensions > cpu_manager.total_cores // 4:
+        cores_per_dimension = 1  # 如果维度太多，每个维度只分配1个核心
+    
+    print(f"📊 分配策略: 每个维度 {cores_per_dimension} 个核心")
+    
+    # 为每个维度分配CPU核心
+    dimension_allocations = []
+    for n_dim in dims_to_process:
+        allocated_cores = cpu_manager.allocate_cores(cores_per_dimension)
+        if allocated_cores:
+            dimension_allocations.append((n_dim, allocated_cores))
+            print(f"  维度 {n_dim}D 分配到核心: {allocated_cores}")
+        else:
+            print(f"⚠️  维度 {n_dim}D 无法分配核心，跳过")
+    
+    if not dimension_allocations:
+        print("❌ 无法为任何维度分配CPU核心")
+        cpu_manager.stop()
+        return
+    
+    # 确定并行进程数
+    max_workers = len(dimension_allocations)
+    print(f"\n🚀 启动 {max_workers} 个并行进程")
+    
+    start_time = time.time()
+    
+    # 使用进程池并行处理
+    with ProcessPoolExecutor(max_workers=max_workers) as executor:
+        # 提交所有任务
+        future_to_dim = {executor.submit(process_single_dimension_with_cpu, args): args[0] for args in dimension_allocations}
+        
+        # 等待所有任务完成
+        completed_count = 0
+        failed_count = 0
+        results_dict = {}
+        
+        for future in as_completed(future_to_dim):
+            n_dim = future_to_dim[future]
+            try:
+                result = future.result()
+                results_dict[n_dim] = result
+                
+                if result and 'error' not in result:
+                    completed_count += 1
+                    print(f"\n✅ 维度 {n_dim}D 处理成功 (已完成: {completed_count}/{len(dimension_allocations)})")
+                else:
+                    failed_count += 1
+                    print(f"\n❌ 维度 {n_dim}D 处理失败 (失败: {failed_count}/{len(dimension_allocations)})")
+            except Exception as e:
+                failed_count += 1
+                print(f"\n❌ 维度 {n_dim}D 处理异常: {str(e)}")
+                results_dict[n_dim] = {'error': str(e)}
+    
+    end_time = time.time()
+    total_time = end_time - start_time
+    
+    # 停止监控
+    cpu_manager.stop()
+    monitor_thread.join(timeout=2)
+    
+    print(f"\n" + "="*70)
+    print(f"           并行处理完成!")
+    print(f"           ⏱️  总耗时: {total_time:.2f} 秒")
+    print(f"           ✅ 成功: {completed_count}, ❌ 失败: {failed_count}")
+    print("="*70)
+    
+    # 收集并汇总所有结果
+    collect_and_summarize_results(n_components_list)
+
+# ============================
+# 5. 结果收集和汇总
+# ============================
+def collect_and_summarize_results(n_components_list):
+    """收集并汇总所有维度的结果"""
+    print("\n📊 收集并汇总所有维度的结果...")
+    
+    # 收集所有指标
+    all_metrics = []
+    all_results = {}
+    
+    for n_dim in n_components_list:
+        results_file = f'dim_{n_dim:02d}_results.pkl'
+        if os.path.exists(results_file):
+            try:
+                results = joblib.load(results_file)
+                all_results[n_dim] = results
+                
+                if 'model_metrics' in results:
+                    for model_name, metrics in results['model_metrics'].items():
+                        if isinstance(metrics, dict) and 'test_r2' in metrics:
+                            all_metrics.append({
+                                'Dimension': n_dim,
+                                'Model': model_name,
+                                'Train_R2': metrics.get('train_r2', np.nan),
+                                'Train_RMSE': metrics.get('train_rmse', np.nan),
+                                'Train_MAE': metrics.get('train_mae', np.nan),
+                                'Test_R2': metrics.get('test_r2', np.nan),
+                                'Test_RMSE': metrics.get('test_rmse', np.nan),
+                                'Test_MAE': metrics.get('test_mae', np.nan),
+                                'Processing_Time': results.get('processing_time', np.nan),
+                                'Best_Score': results.get('best_score', np.nan),
+                                'Allocated_Cores': results.get('allocated_cores', [])
+                            })
+            except Exception as e:
+                print(f"⚠️  加载维度 {n_dim}D 结果失败: {str(e)}")
+    
+    # 保存汇总指标
+    if all_metrics:
+        metrics_df = pd.DataFrame(all_metrics)
+        metrics_df.to_csv('optimized_model_metrics_1D-10D.csv', index=False)
+        print(f"📊 汇总指标已保存到: optimized_model_metrics_1D-10D.csv")
+        
+        # 按维度显示最佳模型
+        print("\n🏆 各维度最佳模型 (按测试集R2):")
+        for n_dim in sorted(set(metrics_df['Dimension'])):
+            dim_metrics = metrics_df[metrics_df['Dimension'] == n_dim]
+            if not dim_metrics.empty and dim_metrics['Test_R2'].notna().any():
+                best_idx = dim_metrics['Test_R2'].idxmax()
+                best_model = dim_metrics.loc[best_idx]
+                print(f"   {n_dim}D: {best_model['Model']} (R2={best_model['Test_R2']:.4f}, 使用核心: {best_model['Allocated_Cores']})")
+    else:
+        print("⚠️  没有找到任何模型指标")
+    
+    # 合并所有Excel文件到一个文件
+    merge_excel_files(n_components_list)
+    
+    # 生成可视化图表
+    generate_visualizations(all_results)
+
+# ============================
+# 6. 合并Excel文件
+# ============================
+def merge_excel_files(n_components_list):
+    """合并所有维度的Excel文件到一个文件"""
+    print("\n📊 合并所有Excel文件...")
+    
+    try:
+        # 使用xlsxwriter创建新文件
+        with pd.ExcelWriter('optimized_transformed_features_1D-10D.xlsx', engine='xlsxwriter') as writer:
+            for n_dim in n_components_list:
+                excel_file = f'optimized_transformed_features_{n_dim}D.xlsx'
+                if os.path.exists(excel_file):
+                    try:
+                        df = pd.read_excel(excel_file)
+                        df.to_excel(writer, sheet_name=f'{n_dim}D', index=False)
+                        print(f"✅ 合并维度 {n_dim}D 的数据")
+                    except Exception as e:
+                        print(f"⚠️  合并维度 {n_dim}D 失败: {str(e)}")
+        
+        print(f"📊 所有转换后特征已保存至: optimized_transformed_features_1D-10D.xlsx")
+    except Exception as e:
+        print(f"❌ 合并Excel文件失败: {str(e)}")
+
+# ============================
+# 7. 生成可视化图表
+# ============================
+def generate_visualizations(all_results):
+    """生成可视化图表"""
+    print("\n📈 生成可视化图表...")
+    
+    # 收集数据
+    dimensions = []
+    best_scores = []
+    
+    for n_dim, results in all_results.items():
+        if results and results.get('best_score') is not None:
+            dimensions.append(n_dim)
+            best_scores.append(results['best_score'])
+    
+    if not dimensions:
+        print("⚠️  没有足够的数据生成图表")
+        return
+    
+    # 图表1: 最佳得分随维度的变化
+    plt.figure(figsize=(10, 6))
+    plt.plot(dimensions, best_scores, 'bo-', linewidth=2, markersize=8)
+    plt.xlabel('Feature Dimension (D)', fontsize=12)
+    plt.ylabel('Best Optimization Score', fontsize=12)
+    plt.title('Symbolic Transformer Optimization Score vs Dimension', fontsize=14)
+    plt.grid(True, alpha=0.3)
+    plt.xticks(dimensions)
+    plt.tight_layout()
+    plt.savefig('optimization_score_vs_dimension.png', dpi=300)
+    plt.close()
+    print("✅ 图表1已保存: optimization_score_vs_dimension.png")
+    
+    # 图表2: 模型性能比较
+    plt.figure(figsize=(14, 8))
+    
+    # 收集所有模型的测试R2
+    model_performance = {}
+    
+    for n_dim, results in all_results.items():
+        if results and 'model_metrics' in results:
+            for model_name, metrics in results['model_metrics'].items():
+                if isinstance(metrics, dict) and 'test_r2' in metrics:
+                    if model_name not in model_performance:
+                        model_performance[model_name] = {'dims': [], 'r2': []}
+                    model_performance[model_name]['dims'].append(n_dim)
+                    model_performance[model_name]['r2'].append(metrics['test_r2'])
+    
+    colors = plt.cm.tab10(np.linspace(0, 1, len(model_performance)))
+    
+    for (model_name, data), color in zip(model_performance.items(), colors):
+        if data['dims'] and data['r2']:
+            # 按维度排序
+            sorted_data = sorted(zip(data['dims'], data['r2']))
+            dims_sorted, r2_sorted = zip(*sorted_data)
+            plt.plot(dims_sorted, r2_sorted, 'o-', linewidth=2, 
+                    label=model_name, color=color, markersize=6)
+    
+    plt.xlabel('Feature Dimension (D)', fontsize=12)
+    plt.ylabel('Test R2 Score', fontsize=12)
+    plt.title('Test R2 vs Dimension (1D-10D)', fontsize=14)
+    plt.grid(True, alpha=0.3)
+    plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left', fontsize=10)
+    plt.xticks(sorted(dimensions))
+    plt.tight_layout()
+    plt.savefig('test_r2_vs_dimension.png', dpi=300, bbox_inches='tight')
+    plt.close()
+    print("✅ 图表2已保存: test_r2_vs_dimension.png")
+    
+    # 图表3: 测试集RMSE对比
+    plt.figure(figsize=(14, 8))
+    
+    model_performance_rmse = {}
+    
+    for n_dim, results in all_results.items():
+        if results and 'model_metrics' in results:
+            for model_name, metrics in results['model_metrics'].items():
+                if isinstance(metrics, dict) and 'test_rmse' in metrics:
+                    if model_name not in model_performance_rmse:
+                        model_performance_rmse[model_name] = {'dims': [], 'rmse': []}
+                    model_performance_rmse[model_name]['dims'].append(n_dim)
+                    model_performance_rmse[model_name]['rmse'].append(metrics['test_rmse'])
+    
+    for (model_name, data), color in zip(model_performance_rmse.items(), colors):
+        if data['dims'] and data['rmse']:
+            sorted_data = sorted(zip(data['dims'], data['rmse']))
+            dims_sorted, rmse_sorted = zip(*sorted_data)
+            plt.plot(dims_sorted, rmse_sorted, 's-', linewidth=2, 
+                    label=model_name, color=color, markersize=6)
+    
+    plt.xlabel('Feature Dimension (D)', fontsize=12)
+    plt.ylabel('Test RMSE', fontsize=12)
+    plt.title('Test RMSE vs Dimension (1D-10D)', fontsize=14)
+    plt.grid(True, alpha=0.3)
+    plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left', fontsize=10)
+    plt.xticks(sorted(dimensions))
+    plt.tight_layout()
+    plt.savefig('test_rmse_vs_dimension.png', dpi=300, bbox_inches='tight')
+    plt.close()
+    print("✅ 图表3已保存: test_rmse_vs_dimension.png")
+    
+    print("✅ 所有可视化图表已生成")
+
+# ============================
+# 8. 程序入口
+# ============================
+if __name__ == "__main__":
+    print("符号回归特征转换系统 - 智能并行版本")
+    print("-"*50)
+    print(f"开始时间: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+    print(f"Python版本: {sys.version}")
+    print(f"工作目录: {os.getcwd()}")
+    print(f"CPU核心数: {cpu_manager.total_cores}")
+    
+    # 检查psutil是否安装
+    try:
+        import psutil
+    except ImportError:
+        print("❌ 需要安装psutil库: pip install psutil")
+        sys.exit(1)
+    
+    # 开始智能并行处理
+    main_smart_parallel()
+    
+    print("\n" + "="*70)
+    print("           所有处理完成!")
+    print("="*70)

@@ -1,0 +1,2 @@
+p_crossover,p_subtree_mutation,p_hoist_mutation,p_point_mutation,population_size,generations,function_set,parsimony_coefficient,tournament_size,n_components,random_state,verbose,n_jobs
+0.4014220358959268,0.19821394436756026,0.098614093764019,0.23240399344434298,30000,30,"['add', 'sub', 'mul', 'div', 'abs', 'sqrt']",0.00011335431394085084,15,4,42,0,2
