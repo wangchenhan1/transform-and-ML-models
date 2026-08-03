@@ -1,0 +1,33 @@
+BEST GRADIENT BOOSTING REGRESSOR MODEL SUMMARY
+==================================================
+
+MODEL CONFIGURATION:
+------------------------------
+Best Random State: 64
+Dataset: 37 samples, 21 features
+
+OPTIMAL HYPERPARAMETERS:
+------------------------------
+n_estimators: 250
+min_weight_fraction_leaf: 0
+min_samples_split: 4
+min_samples_leaf: 5
+min_impurity_decrease: 0.008
+max_features: 4
+max_depth: 8
+learning_rate: 0.5
+alpha: 0.8
+
+PERFORMANCE METRICS:
+------------------------------
+Metric     | Training   | Testing   
+---------- | ---------- | ----------
+R²         |     0.9872 |     0.8472
+MAE        |     0.0430 |     0.1480
+RMSE       |     0.0527 |     0.1835
+MSE        |     0.0028 |     0.0337
+
+PERFORMANCE ANALYSIS:
+------------------------------
+Overfitting Gap: 0.1400
+Status: Potential overfitting detected
