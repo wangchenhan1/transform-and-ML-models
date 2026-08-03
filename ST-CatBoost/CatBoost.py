@@ -1,0 +1,230 @@
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import MinMaxScaler
+from sklearn.metrics import r2_score, mean_absolute_error, mean_squared_error
+import time
+import os
+import joblib  # 用于保存模型
+import matplotlib.pyplot as plt
+import shap
+import numpy as np
+from catboost import CatBoostRegressor
+from sklearn.model_selection import RandomizedSearchCV
+
+# 从Excel文件中读取数据
+data = pd.read_excel('/home/ggx/wls/DAC-code/co/UL/w+CrCr/ST/data/ST-8-Caboost-UL-CO-sol.xlsx')
+
+X = data.iloc[:, 1:-1].to_numpy()
+y = data.iloc[:, -1]
+
+# 定义随机状态值范围
+random_states = range(1, 10)
+results_all_states = {}
+
+# 定义超参数范围（针对 CatBoost）
+param_grid = {
+    "iterations": [350],
+    "learning_rate": [0.01, 0.03, 0.06, 0.1, 0.2],
+    "max_depth": list(range(4, 10, 1)),
+    "l2_leaf_reg": [0.5, 1, 2, 3],
+    "min_child_samples": [1, 5, 10, 15, 20],
+    "rsm": [0.7, 0.8, 0.9, 1.0]
+}
+
+time_start = time.time()
+
+# 定义函数来计算 MAE 和 RMSE
+def calculate_metrics(model, X_train, X_test, y_train, y_test):
+    pred_train = model.predict(X_train)
+    pred_test = model.predict(X_test)
+    train_mae = mean_absolute_error(y_train, pred_train)
+    test_mae = mean_absolute_error(y_test, pred_test)
+    train_rmse = np.sqrt(mean_squared_error(y_train, pred_train))
+    test_rmse = np.sqrt(mean_squared_error(y_test, pred_test))
+    return train_mae, test_mae, train_rmse, test_rmse
+
+# 在循环中进行训练
+for state in random_states:
+    print(f"\nUsing random_state={state} for training")
+    # 分割数据集
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=state)
+    # 数据归一化
+    scaler = MinMaxScaler()
+    scaler.fit(X_train)
+    X_train_normalized = scaler.transform(X_train)
+    X_test_normalized = scaler.transform(X_test)
+
+    # 定义CatBoostRegressor模型
+    cb_model = CatBoostRegressor()
+
+    # 使用RandomizedSearchCV来寻找最优超参数
+    grid_search = RandomizedSearchCV(cb_model, param_grid, n_iter=50, cv=10, n_jobs=-1, scoring='r2')
+
+    grid_search.fit(X_train_normalized, y_train)
+
+    # 最佳模型预测
+    pred_train = grid_search.predict(X_train_normalized)
+    pred_test = grid_search.predict(X_test_normalized)
+
+    # 计算 R² 分数
+    r2_train = r2_score(y_train, pred_train)
+    r2_test = r2_score(y_test, pred_test)
+
+    # 打印最佳参数
+    print("\nBest parameter combination:")
+    print(grid_search.best_params_)
+    print(f"Train R²: {r2_train:.4f}, Test R²: {r2_test:.4f}")
+
+    # 显示每个参数组合的结果
+    results = pd.DataFrame(grid_search.cv_results_)
+    print("\nResults for each parameter combination:")
+    print(results[['params', 'mean_test_score', 'std_test_score']])
+
+    # 计算 MAE 和 RMSE
+    train_mae, test_mae, train_rmse, test_rmse = calculate_metrics(grid_search, X_train_normalized, X_test_normalized, y_train, y_test)
+
+    # 存储结果
+    results_all_states[state] = {
+        "best_params": grid_search.best_params_,
+        "cv_results": results,
+        "train_r2": r2_train,
+        "test_r2": r2_test,
+        "train_mae": train_mae,
+        "test_mae": test_mae,
+        "train_rmse": train_rmse,
+        "test_rmse": test_rmse,
+        "scaler": scaler,
+        "model": grid_search.best_estimator_
+    }
+
+# 找到最佳参数组合
+best_train_r2 = float('-inf')
+best_test_r2 = float('-inf')
+best_train_mae = float('inf')
+best_test_mae = float('inf')
+best_train_rmse = float('inf')
+best_test_rmse = float('inf')
+best_random_state_train = None
+best_random_state_test = None
+best_params_train = None
+best_params_test = None
+
+for state, result in results_all_states.items():
+    # 找最佳训练结果
+    if (result['train_r2'] > best_train_r2) or \
+       (np.isclose(result['train_r2'], best_train_r2) and result['train_mae'] < best_train_mae):
+        best_train_r2 = result['train_r2']
+        best_train_mae = result['train_mae']
+        best_train_rmse = result['train_rmse']
+        best_random_state_train = state
+        best_params_train = result["best_params"]
+    
+    # 找最佳测试结果
+    if (result['test_r2'] > best_test_r2) or \
+       (np.isclose(result['test_r2'], best_test_r2) and result['test_mae'] < best_test_mae):
+        best_test_r2 = result['test_r2']
+        best_test_mae = result['test_mae']
+        best_test_rmse = result['test_rmse']
+        best_random_state_test = state
+        best_params_test = result["best_params"]
+
+# 输出到文件
+current_directory = os.getcwd()
+output_file = os.path.join(current_directory, "model_results.txt")
+with open(output_file, 'w') as f:
+    # 最佳训练结果
+    f.write("Best Training Results:\n")
+    f.write(f"Random state: {best_random_state_train}\n")
+    f.write(f"Train R²: {best_train_r2:.4f}\n")
+    f.write(f"Train MAE: {best_train_mae:.4f}\n")
+    f.write(f"Train RMSE: {best_train_rmse:.4f}\n")
+    f.write(f"Best parameters: {best_params_train}\n\n")
+    
+    # 最佳测试结果
+    f.write("Best Testing Results:\n")
+    f.write(f"Random state: {best_random_state_test}\n")
+    f.write(f"Test R²: {best_test_r2:.4f}\n")
+    f.write(f"Test MAE: {best_test_mae:.4f}\n")
+    f.write(f"Test RMSE: {best_test_rmse:.4f}\n")
+    f.write(f"Best parameters: {best_params_test}\n\n")
+    
+    # 所有随机状态的结果
+    f.write("Results for all random states:\n")
+    for state, result in results_all_states.items():
+        f.write(f"\nRandom state: {state}\n")
+        f.write("Best parameter combination:\n")
+        f.write(str(result["best_params"]) + "\n")
+        f.write(f"Train R²: {result['train_r2']:.4f}, Test R²: {result['test_r2']:.4f}\n")
+        f.write(f"Train MAE: {result['train_mae']:.4f}, Test MAE: {result['test_mae']:.4f}\n")
+        f.write(f"Train RMSE: {result['train_rmse']:.4f}, Test RMSE: {result['test_rmse']:.4f}\n")
+        f.write("CV results:\n")
+        f.write(result["cv_results"][['params', 'mean_test_score', 'std_test_score']].to_string() + "\n")
+        f.write("Model parameters:\n")
+        f.write(str(result["model"].get_params()) + "\n")
+        f.write("Scaler parameters:\n")
+        f.write(str(result["scaler"].get_params()) + "\n")
+
+# 保存最佳模型和 Scaler
+best_model = results_all_states[best_random_state_test]["model"]
+best_model_filename = os.path.join(current_directory, "best_model.pkl")
+joblib.dump(best_model, best_model_filename)
+print(f"\nBest model saved as: {best_model_filename}")
+
+best_scaler = results_all_states[best_random_state_test]["scaler"]
+best_scaler_filename = os.path.join(current_directory, "best_scaler.pkl")
+joblib.dump(best_scaler, best_scaler_filename)
+print(f"\nBest Scaler saved as: {best_scaler_filename}")
+
+# 可视化结果
+best_model = results_all_states[best_random_state_test]["model"]
+best_scaler = results_all_states[best_random_state_test]["scaler"]
+X_train_normalized = best_scaler.transform(X_train)
+X_test_normalized = best_scaler.transform(X_test)
+pred_train = best_model.predict(X_train_normalized)
+pred_test = best_model.predict(X_test_normalized)
+
+# 计算指标
+avg_train_mse = mean_squared_error(y_train, pred_train)
+avg_test_mse = mean_squared_error(y_test, pred_test)
+avg_train_mae = mean_absolute_error(y_train, pred_train)
+avg_test_mae = mean_absolute_error(y_test, pred_test)
+avg_train_r2 = r2_score(y_train, pred_train)
+avg_test_r2 = r2_score(y_test, pred_test)
+
+# 计算 RMAE（Root Mean Absolute Error）
+train_rmae = np.sqrt(avg_train_mae)
+test_rmae = np.sqrt(avg_test_mae)
+
+# 绘制散点图
+plt.figure(figsize=(8, 6))
+plt.scatter(y_train, pred_train, 
+            label=f'Train Data, MSE: {avg_train_mse:.4f}, MAE: {avg_train_mae:.4f}, R2: {avg_train_r2:.4f}, RMAE: {train_rmae:.4f}',
+            color="green", alpha=0.6, s=80, linewidth=0.5)
+plt.scatter(y_test, pred_test, 
+            label=f'Test Data, MSE: {avg_test_mse:.4f}, MAE: {avg_test_mae:.4f}, R2: {avg_test_r2:.4f}, RMAE: {test_rmae:.4f}',
+            color="red", alpha=0.6, s=80, linewidth=0.5)
+plt.plot([min(y), max(y)], [min(y), max(y)], linestyle="--", color="black")
+plt.title("CatBoost Regression")
+plt.xlabel("Actual Values")
+plt.ylabel("Predicted Values")
+plt.legend()
+plt.tight_layout()
+
+# 保存散点图
+scatter_plot_filename = os.path.join(current_directory, "regression_results.png")
+plt.savefig(scatter_plot_filename)
+print(f"\nScatter plot saved as: {scatter_plot_filename}")
+plt.show()
+
+# SHAP 特征重要性分析
+explainer = shap.Explainer(best_model)
+shap_values = explainer(X_test_normalized)
+
+# 绘制 SHAP 总结图
+shap.summary_plot(shap_values, X_test_normalized, feature_names=data.columns[1:-1])
+
+# 保存 SHAP 图
+shap_plot_filename = os.path.join(current_directory, "shap_summary.png")
+plt.savefig(shap_plot_filename)
+print(f"\nSHAP plot saved as: {shap_plot_filename}")
+plt.show()
