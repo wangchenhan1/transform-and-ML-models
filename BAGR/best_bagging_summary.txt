@@ -1,0 +1,25 @@
+最佳Bagging回归模型摘要
+==================================================
+
+最佳随机状态: 64
+数据集: 37样本, 21特征
+
+最优超参数:
+------------------------------
+n_estimators: 750
+max_samples: 0.8
+max_features: 0.6
+estimator__min_samples_split: 2
+estimator__min_samples_leaf: 1
+estimator__max_features: log2
+estimator__max_depth: 5
+bootstrap_features: True
+bootstrap: True
+
+性能指标:
+------------------------------
+指标         | 训练集        | 测试集       
+R²        | 0.7830   | 0.5167
+MAE       | 0.1744  | 0.2789
+RMSE      | 0.2167 | 0.3263
+MSE       | 0.0470  | 0.1064

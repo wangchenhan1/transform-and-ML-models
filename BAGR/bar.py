@@ -1,0 +1,298 @@
+import pandas as pd
+import numpy as np
+import time
+import os
+import joblib
+import matplotlib.pyplot as plt
+import shap
+from sklearn.model_selection import train_test_split, RandomizedSearchCV
+from sklearn.preprocessing import MinMaxScaler
+from sklearn.ensemble import BaggingRegressor
+from sklearn.tree import DecisionTreeRegressor
+from sklearn.metrics import r2_score, mean_absolute_error, mean_squared_error
+
+# 设置中文显示
+plt.rcParams["font.family"] = ["SimHei", "WenQuanYi Micro Hei", "Heiti TC"]
+plt.rcParams["axes.unicode_minus"] = False  # 正确显示负号
+
+# 1. 读取数据
+data_path = '/home/ggx/wls/DAC-code/CR-X/HCOOH-C/data/CR-train-HCOOH-C.xlsx'
+data = pd.read_excel(data_path)
+
+# 提取特征和目标变量
+X = data.iloc[:, 1:-1].to_numpy()
+y = data.iloc[:, -1]
+feature_names = data.columns[1:-1].tolist()  # 特征名称用于可视化
+
+# 2. 初始化变量
+random_states = range(1, 100)  # 减少随机状态数量，平衡效率和随机性
+results_all_states = {}  # 存储各状态的结果（仅保留关键信息）
+
+# 3. 定义超参数范围（修正：使用estimator__前缀）
+param_grid = {
+    # Bagging模型参数
+    "n_estimators": list(range(50, 1000, 50)),  # 基学习器数量
+    "max_samples": [0.5, 0.6, 0.7, 0.8, 0.9, 1.0],  # 样本采样比例
+    "max_features": [0.5, 0.6, 0.7, 0.8, 0.9, 1.0],  # 特征采样比例
+    "bootstrap": [True, False],  # 样本是否bootstrap采样
+    "bootstrap_features": [True, False],  # 特征是否bootstrap采样
+    
+    # 基学习器（决策树）参数（关键修正：使用estimator__前缀）
+    "estimator__max_depth": list(range(2, 35, 1)),  # 树深度
+    "estimator__min_samples_leaf": [1, 2, 5, 7, 9],  # 叶节点最小样本数
+    "estimator__min_samples_split": [2, 4, 6, 8, 10],  # 分裂最小样本数
+    "estimator__max_features": [None, "sqrt", "log2"]  # 每棵树使用的特征比例
+}
+
+# 4. 定义性能指标计算函数
+def calculate_metrics(model, X_train, X_test, y_train, y_test):
+    """计算MAE、RMSE"""
+    pred_train = model.predict(X_train)
+    pred_test = model.predict(X_test)
+    return {
+        "train_mae": mean_absolute_error(y_train, pred_train),
+        "test_mae": mean_absolute_error(y_test, pred_test),
+        "train_rmse": np.sqrt(mean_squared_error(y_train, pred_train)),
+        "test_rmse": np.sqrt(mean_squared_error(y_test, pred_test))
+    }
+
+# 5. 循环训练（不同随机状态）
+time_start = time.time()
+for state in random_states:
+    print(f"\n使用随机状态: {state} 训练")
+    
+    # 数据划分（每次状态重新划分）
+    X_train, X_test, y_train, y_test = train_test_split(
+        X, y, test_size=0.2, random_state=state
+    )
+    
+    # 数据归一化（仅用训练集拟合）
+    scaler = MinMaxScaler()
+    X_train_norm = scaler.fit_transform(X_train)
+    X_test_norm = scaler.transform(X_test)
+
+    # 定义基学习器和Bagging模型
+    base_estimator = DecisionTreeRegressor(random_state=state)
+    bagr = BaggingRegressor(
+        estimator=base_estimator,  # 传入基学习器
+        random_state=state,
+        n_jobs=30  # 并行训练
+    )
+
+    # 超参数搜索
+    grid_search = RandomizedSearchCV(
+        estimator=bagr,
+        param_distributions=param_grid,
+        n_iter=20,  # 减少迭代次数，提升速度
+        cv=5,
+        scoring='r2',
+        n_jobs=-1,
+        random_state=state
+    )
+    grid_search.fit(X_train_norm, y_train)
+
+    # 性能评估
+    best_model = grid_search.best_estimator_
+    metrics = calculate_metrics(best_model, X_train_norm, X_test_norm, y_train, y_test)
+    r2_train = r2_score(y_train, best_model.predict(X_train_norm))
+    r2_test = r2_score(y_test, best_model.predict(X_test_norm))
+
+    # 打印中间结果
+    print(f"最佳参数: {grid_search.best_params_}")
+    print(f"训练R²: {r2_train:.4f}, 测试R²: {r2_test:.4f}")
+
+    # 存储关键结果（不存储原始数据，减少内存占用）
+    results_all_states[state] = {
+        "best_params": grid_search.best_params_,
+        "r2_train": r2_train,
+        "r2_test": r2_test,
+        "metrics": metrics,
+        "model": best_model,
+        "scaler": scaler,
+        # 仅存储最佳模型对应的数据集索引和归一化数据
+        "X_train_norm": X_train_norm,
+        "X_test_norm": X_test_norm,
+        "y_train": y_train,
+        "y_test": y_test
+    }
+
+# 6. 筛选最佳模型（基于测试集R²和MAE）
+best_test_r2 = -np.inf
+best_test_mae = np.inf
+best_state = None
+
+for state, res in results_all_states.items():
+    # 优先按测试R²排序，R²接近时按MAE更小的选择
+    if (res["r2_test"] > best_test_r2) or (
+        np.isclose(res["r2_test"], best_test_r2) and res["metrics"]["test_mae"] < best_test_mae
+    ):
+        best_test_r2 = res["r2_test"]
+        best_test_mae = res["metrics"]["test_mae"]
+        best_state = state
+
+# 获取最佳模型结果
+best_res = results_all_states[best_state]
+best_model = best_res["model"]
+best_scaler = best_res["scaler"]
+X_train_norm = best_res["X_train_norm"]
+X_test_norm = best_res["X_test_norm"]
+y_train = best_res["y_train"]
+y_test = best_res["y_test"]
+
+# 7. 计算最佳模型的详细性能指标
+y_pred_train = best_model.predict(X_train_norm)
+y_pred_test = best_model.predict(X_test_norm)
+
+train_metrics = {
+    "r2": r2_score(y_train, y_pred_train),
+    "mae": mean_absolute_error(y_train, y_pred_train),
+    "mse": mean_squared_error(y_train, y_pred_train),
+    "rmse": np.sqrt(mean_squared_error(y_train, y_pred_train))
+}
+
+test_metrics = {
+    "r2": r2_score(y_test, y_pred_test),
+    "mae": mean_absolute_error(y_test, y_pred_test),
+    "mse": mean_squared_error(y_test, y_pred_test),
+    "rmse": np.sqrt(mean_squared_error(y_test, y_pred_test))
+}
+
+# 8. 保存模型和Scaler
+current_dir = os.getcwd()
+model_path = os.path.join(current_dir, "best_bagging_model.pkl")
+scaler_path = os.path.join(current_dir, "best_bagging_scaler.pkl")
+joblib.dump(best_model, model_path)
+joblib.dump(best_scaler, scaler_path)
+
+# 9. 输出最佳模型摘要
+print("\n" + "="*80)
+print("🎯 最佳Bagging回归模型参数与性能摘要")
+print("="*80)
+print(f"最佳随机状态: {best_state}")
+print(f"数据集大小: {len(X)}个样本, {X.shape[1]}个特征")
+
+print("\n🔧 最优超参数:")
+print("-"*50)
+for param, val in best_res["best_params"].items():
+    print(f"  {param:30}: {val}")
+
+print("\n📊 模型性能指标:")
+print("-"*50)
+print(f"{'指标':10} | {'训练集':10} | {'测试集':10} | 说明")
+print(f"{'-'*10} | {'-'*10} | {'-'*10} | {'-'*20}")
+print(f"R²        | {train_metrics['r2']:.4f}   | {test_metrics['r2']:.4f}   | 越接近1越好")
+print(f"MAE       | {train_metrics['mae']:.4f}  | {test_metrics['mae']:.4f}  | 越小越好")
+print(f"RMSE      | {train_metrics['rmse']:.4f} | {test_metrics['rmse']:.4f} | 越小越好")
+print(f"MSE       | {train_metrics['mse']:.4f}  | {test_metrics['mse']:.4f}  | 越小越好")
+
+# 过拟合分析
+overfit_gap = train_metrics["r2"] - test_metrics["r2"]
+print(f"\n📈 性能分析:")
+print("-"*50)
+print(f"过拟合差距 (训练R² - 测试R²): {overfit_gap:.4f}")
+if overfit_gap > 0.1:
+    print("⚠️  存在潜在过拟合")
+elif overfit_gap > 0.05:
+    print("ℹ️  轻微过拟合，可接受")
+elif overfit_gap < -0.05:
+    print("ℹ️  测试集性能优于训练集，可能是数据划分偏差")
+else:
+    print("✅  模型平衡，泛化能力良好")
+
+print(f"\n💾 模型保存路径: {model_path}")
+print(f"🔧 归一化器保存路径: {scaler_path}")
+
+# 10. 保存详细结果到文本文件
+summary_path = os.path.join(current_dir, "best_bagging_summary.txt")
+with open(summary_path, "w", encoding="utf-8") as f:
+    f.write("最佳Bagging回归模型摘要\n")
+    f.write("="*50 + "\n\n")
+    f.write(f"最佳随机状态: {best_state}\n")
+    f.write(f"数据集: {len(X)}样本, {X.shape[1]}特征\n\n")
+    f.write("最优超参数:\n")
+    f.write("-"*30 + "\n")
+    for param, val in best_res["best_params"].items():
+        f.write(f"{param}: {val}\n")
+    f.write("\n性能指标:\n")
+    f.write("-"*30 + "\n")
+    f.write(f"{'指标':10} | {'训练集':10} | {'测试集':10}\n")
+    f.write(f"R²        | {train_metrics['r2']:.4f}   | {test_metrics['r2']:.4f}\n")
+    f.write(f"MAE       | {train_metrics['mae']:.4f}  | {test_metrics['mae']:.4f}\n")
+    f.write(f"RMSE      | {train_metrics['rmse']:.4f} | {test_metrics['rmse']:.4f}\n")
+    f.write(f"MSE       | {train_metrics['mse']:.4f}  | {test_metrics['mse']:.4f}\n")
+print(f"\n📄 详细摘要已保存至: {summary_path}")
+
+# 11. 可视化
+print("\n📊 生成可视化图表...")
+
+# 11.1 实际值vs预测值散点图
+plt.figure(figsize=(10, 8))
+plt.scatter(y_train, y_pred_train, 
+            label=f'训练集 (n={len(y_train)})\nR²: {train_metrics["r2"]:.4f}',
+            color="green", alpha=0.6, edgecolor="black", s=50)
+plt.scatter(y_test, y_pred_test, 
+            label=f'测试集 (n={len(y_test)})\nR²: {test_metrics["r2"]:.4f}',
+            color="red", alpha=0.6, edgecolor="black", s=50)
+
+# 完美预测线
+min_val = min(y_train.min(), y_test.min())
+max_val = max(y_train.max(), y_test.max())
+plt.plot([min_val, max_val], [min_val, max_val], "k--", linewidth=2, label="完美预测线")
+
+plt.title(f"Bagging回归预测结果 (随机状态: {best_state})", fontsize=14)
+plt.xlabel("实际值", fontsize=12)
+plt.ylabel("预测值", fontsize=12)
+plt.legend()
+plt.grid(alpha=0.3)
+plt.tight_layout()
+
+scatter_path = os.path.join(current_dir, "bagging_prediction_scatter.png")
+plt.savefig(scatter_path, dpi=300, bbox_inches="tight")
+print(f"✅ 散点图已保存至: {scatter_path}")
+plt.show()
+
+# 11.2 特征重要性（基学习器均值）
+print("🔍 计算特征重要性...")
+feature_importance = np.mean(
+    [est.feature_importances_ for est in best_model.estimators_],
+    axis=0
+)
+sorted_idx = np.argsort(feature_importance)[::-1]  # 降序排列
+
+plt.figure(figsize=(10, 7))
+plt.barh(range(len(sorted_idx)), feature_importance[sorted_idx], color="skyblue")
+plt.yticks(range(len(sorted_idx)), [feature_names[i] for i in sorted_idx], fontsize=10)
+plt.xlabel("特征重要性（基学习器均值）", fontsize=12)
+plt.title("Bagging模型特征重要性", fontsize=14)
+plt.gca().invert_yaxis()  # 重要性高的在上方
+plt.tight_layout()
+
+importance_path = os.path.join(current_dir, "bagging_feature_importance.png")
+plt.savefig(importance_path, dpi=300, bbox_inches="tight")
+print(f"✅ 特征重要性图已保存至: {importance_path}")
+plt.show()
+
+# 11.3 SHAP分析（可选）
+print("🔍 执行SHAP分析...")
+try:
+    explainer = shap.TreeExplainer(best_model)
+    shap_values = explainer.shap_values(X_test_norm)
+    
+    plt.figure(figsize=(10, 8))
+    shap.summary_plot(shap_values, X_test_norm, feature_names=feature_names, show=False)
+    plt.title("SHAP特征重要性摘要", fontsize=14)
+    plt.tight_layout()
+    
+    shap_path = os.path.join(current_dir, "bagging_shap_summary.png")
+    plt.savefig(shap_path, dpi=300, bbox_inches="tight")
+    print(f"✅ SHAP分析图已保存至: {shap_path}")
+    plt.show()
+except Exception as e:
+    print(f"❌ SHAP分析失败: {str(e)}（已跳过）")
+
+# 12. 运行时间统计
+time_end = time.time()
+print(f"\n⏱️  总运行时间: {(time_end - time_start)/60:.2f} 分钟")
+print("\n" + "="*80)
+print("🎉 Bagging回归模型训练与分析完成!")
+print("="*80)

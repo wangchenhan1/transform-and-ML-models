@@ -1,0 +1,930 @@
+
+使用随机状态: 1 训练
+/home/ggx/software/anaconda3/lib/python3.10/site-packages/numpy/ma/core.py:2892: RuntimeWarning: invalid value encountered in cast
+  _data = np.array(data, dtype=dtype, copy=copy,
+最佳参数: {'n_estimators': 450, 'max_samples': 0.9, 'max_features': 0.8, 'estimator__min_samples_split': 4, 'estimator__min_samples_leaf': 1, 'estimator__max_features': None, 'estimator__max_depth': 8, 'bootstrap_features': False, 'bootstrap': False}
+训练R²: 0.9931, 测试R²: 0.8600
+
+使用随机状态: 2 训练
+最佳参数: {'n_estimators': 700, 'max_samples': 0.9, 'max_features': 0.8, 'estimator__min_samples_split': 4, 'estimator__min_samples_leaf': 1, 'estimator__max_features': None, 'estimator__max_depth': 8, 'bootstrap_features': False, 'bootstrap': True}
+训练R²: 0.9604, 测试R²: 0.9058
+
+使用随机状态: 3 训练
+最佳参数: {'n_estimators': 300, 'max_samples': 0.6, 'max_features': 0.6, 'estimator__min_samples_split': 4, 'estimator__min_samples_leaf': 1, 'estimator__max_features': None, 'estimator__max_depth': 7, 'bootstrap_features': True, 'bootstrap': True}
+训练R²: 0.9490, 测试R²: 0.9535
+
+使用随机状态: 4 训练
+最佳参数: {'n_estimators': 750, 'max_samples': 0.8, 'max_features': 0.9, 'estimator__min_samples_split': 4, 'estimator__min_samples_leaf': 2, 'estimator__max_features': 'sqrt', 'estimator__max_depth': 6, 'bootstrap_features': False, 'bootstrap': False}
+训练R²: 0.9784, 测试R²: 0.9697
+
+使用随机状态: 5 训练
+最佳参数: {'n_estimators': 300, 'max_samples': 1.0, 'max_features': 0.6, 'estimator__min_samples_split': 4, 'estimator__min_samples_leaf': 1, 'estimator__max_features': 'log2', 'estimator__max_depth': 4, 'bootstrap_features': True, 'bootstrap': False}
+训练R²: 0.9779, 测试R²: 0.9593
+
+使用随机状态: 6 训练
+最佳参数: {'n_estimators': 100, 'max_samples': 0.9, 'max_features': 0.7, 'estimator__min_samples_split': 4, 'estimator__min_samples_leaf': 1, 'estimator__max_features': None, 'estimator__max_depth': 8, 'bootstrap_features': True, 'bootstrap': False}
+训练R²: 0.9949, 测试R²: 0.8941
+
+使用随机状态: 7 训练
+最佳参数: {'n_estimators': 700, 'max_samples': 0.8, 'max_features': 0.6, 'estimator__min_samples_split': 2, 'estimator__min_samples_leaf': 1, 'estimator__max_features': 'log2', 'estimator__max_depth': 2, 'bootstrap_features': False, 'bootstrap': True}
+训练R²: 0.9639, 测试R²: 0.8956
+
+使用随机状态: 8 训练
+最佳参数: {'n_estimators': 700, 'max_samples': 0.5, 'max_features': 0.7, 'estimator__min_samples_split': 2, 'estimator__min_samples_leaf': 1, 'estimator__max_features': None, 'estimator__max_depth': 9, 'bootstrap_features': True, 'bootstrap': False}
+训练R²: 0.9833, 测试R²: 0.8828
+
+使用随机状态: 9 训练
+最佳参数: {'n_estimators': 700, 'max_samples': 0.9, 'max_features': 0.7, 'estimator__min_samples_split': 2, 'estimator__min_samples_leaf': 1, 'estimator__max_features': 'sqrt', 'estimator__max_depth': 5, 'bootstrap_features': False, 'bootstrap': True}
+训练R²: 0.9831, 测试R²: 0.9751
+
+使用随机状态: 10 训练
+最佳参数: {'n_estimators': 150, 'max_samples': 0.9, 'max_features': 0.8, 'estimator__min_samples_split': 4, 'estimator__min_samples_leaf': 1, 'estimator__max_features': 'sqrt', 'estimator__max_depth': 7, 'bootstrap_features': False, 'bootstrap': False}
+训练R²: 0.9823, 测试R²: 0.9495
+
+使用随机状态: 11 训练
+最佳参数: {'n_estimators': 150, 'max_samples': 0.8, 'max_features': 0.6, 'estimator__min_samples_split': 2, 'estimator__min_samples_leaf': 1, 'estimator__max_features': 'sqrt', 'estimator__max_depth': 8, 'bootstrap_features': True, 'bootstrap': True}
+训练R²: 0.9829, 测试R²: 0.9435
+
+使用随机状态: 12 训练
+最佳参数: {'n_estimators': 400, 'max_samples': 0.8, 'max_features': 0.8, 'estimator__min_samples_split': 2, 'estimator__min_samples_leaf': 1, 'estimator__max_features': 'log2', 'estimator__max_depth': 7, 'bootstrap_features': False, 'bootstrap': False}
+训练R²: 0.9965, 测试R²: 0.9514
+
+使用随机状态: 13 训练
+最佳参数: {'n_estimators': 150, 'max_samples': 0.9, 'max_features': 0.7, 'estimator__min_samples_split': 2, 'estimator__min_samples_leaf': 1, 'estimator__max_features': 'sqrt', 'estimator__max_depth': 8, 'bootstrap_features': True, 'bootstrap': True}
+训练R²: 0.9836, 测试R²: 0.9678
+
+使用随机状态: 14 训练
+最佳参数: {'n_estimators': 550, 'max_samples': 1.0, 'max_features': 0.6, 'estimator__min_samples_split': 2, 'estimator__min_samples_leaf': 2, 'estimator__max_features': 'log2', 'estimator__max_depth': 8, 'bootstrap_features': True, 'bootstrap': True}
+训练R²: 0.9676, 测试R²: 0.9560
+
+使用随机状态: 15 训练
+最佳参数: {'n_estimators': 700, 'max_samples': 0.9, 'max_features': 1.0, 'estimator__min_samples_split': 4, 'estimator__min_samples_leaf': 1, 'estimator__max_features': None, 'estimator__max_depth': 2, 'bootstrap_features': True, 'bootstrap': True}
+训练R²: 0.9613, 测试R²: 0.9572
+
+使用随机状态: 16 训练
+最佳参数: {'n_estimators': 450, 'max_samples': 0.9, 'max_features': 0.7, 'estimator__min_samples_split': 2, 'estimator__min_samples_leaf': 1, 'estimator__max_features': 'sqrt', 'estimator__max_depth': 6, 'bootstrap_features': True, 'bootstrap': False}
+训练R²: 0.9987, 测试R²: 0.9357
+
+使用随机状态: 17 训练
+最佳参数: {'n_estimators': 750, 'max_samples': 0.6, 'max_features': 0.7, 'estimator__min_samples_split': 6, 'estimator__min_samples_leaf': 1, 'estimator__max_features': None, 'estimator__max_depth': 6, 'bootstrap_features': False, 'bootstrap': False}
+训练R²: 0.9561, 测试R²: 0.8271
+
+使用随机状态: 18 训练
+最佳参数: {'n_estimators': 700, 'max_samples': 0.5, 'max_features': 0.8, 'estimator__min_samples_split': 2, 'estimator__min_samples_leaf': 2, 'estimator__max_features': 'log2', 'estimator__max_depth': 9, 'bootstrap_features': False, 'bootstrap': False}
+训练R²: 0.9458, 测试R²: 0.9694
+
+使用随机状态: 19 训练
+最佳参数: {'n_estimators': 350, 'max_samples': 0.8, 'max_features': 0.8, 'estimator__min_samples_split': 4, 'estimator__min_samples_leaf': 1, 'estimator__max_features': 'log2', 'estimator__max_depth': 3, 'bootstrap_features': True, 'bootstrap': True}
+训练R²: 0.9735, 测试R²: 0.8792
+
+使用随机状态: 20 训练
+最佳参数: {'n_estimators': 750, 'max_samples': 1.0, 'max_features': 0.9, 'estimator__min_samples_split': 4, 'estimator__min_samples_leaf': 1, 'estimator__max_features': None, 'estimator__max_depth': 4, 'bootstrap_features': False, 'bootstrap': True}
+训练R²: 0.9823, 测试R²: 0.9360
+
+使用随机状态: 21 训练
+最佳参数: {'n_estimators': 650, 'max_samples': 0.5, 'max_features': 1.0, 'estimator__min_samples_split': 2, 'estimator__min_samples_leaf': 1, 'estimator__max_features': None, 'estimator__max_depth': 9, 'bootstrap_features': True, 'bootstrap': False}
+训练R²: 0.9822, 测试R²: 0.9249
+
+使用随机状态: 22 训练
+最佳参数: {'n_estimators': 500, 'max_samples': 0.6, 'max_features': 0.5, 'estimator__min_samples_split': 2, 'estimator__min_samples_leaf': 1, 'estimator__max_features': None, 'estimator__max_depth': 3, 'bootstrap_features': False, 'bootstrap': False}
+训练R²: 0.9799, 测试R²: 0.9687
+
+使用随机状态: 23 训练
+最佳参数: {'n_estimators': 400, 'max_samples': 0.5, 'max_features': 0.9, 'estimator__min_samples_split': 2, 'estimator__min_samples_leaf': 1, 'estimator__max_features': None, 'estimator__max_depth': 2, 'bootstrap_features': False, 'bootstrap': False}
+训练R²: 0.9659, 测试R²: 0.8988
+
+使用随机状态: 24 训练
+最佳参数: {'n_estimators': 250, 'max_samples': 0.6, 'max_features': 0.7, 'estimator__min_samples_split': 4, 'estimator__min_samples_leaf': 2, 'estimator__max_features': 'log2', 'estimator__max_depth': 6, 'bootstrap_features': False, 'bootstrap': True}
+训练R²: 0.9602, 测试R²: 0.8434
+
+使用随机状态: 25 训练
+最佳参数: {'n_estimators': 450, 'max_samples': 1.0, 'max_features': 0.7, 'estimator__min_samples_split': 4, 'estimator__min_samples_leaf': 1, 'estimator__max_features': None, 'estimator__max_depth': 3, 'bootstrap_features': True, 'bootstrap': False}
+训练R²: 0.9705, 测试R²: 0.9633
+
+使用随机状态: 26 训练
+最佳参数: {'n_estimators': 100, 'max_samples': 0.8, 'max_features': 0.5, 'estimator__min_samples_split': 2, 'estimator__min_samples_leaf': 1, 'estimator__max_features': 'sqrt', 'estimator__max_depth': 5, 'bootstrap_features': False, 'bootstrap': False}
+训练R²: 0.9932, 测试R²: 0.9730
+
+使用随机状态: 27 训练
+最佳参数: {'n_estimators': 500, 'max_samples': 0.9, 'max_features': 0.6, 'estimator__min_samples_split': 2, 'estimator__min_samples_leaf': 2, 'estimator__max_features': 'sqrt', 'estimator__max_depth': 4, 'bootstrap_features': True, 'bootstrap': True}
+训练R²: 0.9563, 测试R²: 0.9469
+
+使用随机状态: 28 训练
+最佳参数: {'n_estimators': 100, 'max_samples': 0.8, 'max_features': 0.7, 'estimator__min_samples_split': 10, 'estimator__min_samples_leaf': 5, 'estimator__max_features': 'sqrt', 'estimator__max_depth': 5, 'bootstrap_features': False, 'bootstrap': False}
+训练R²: 0.9050, 测试R²: 0.8983
+
+使用随机状态: 29 训练
+最佳参数: {'n_estimators': 400, 'max_samples': 0.7, 'max_features': 1.0, 'estimator__min_samples_split': 2, 'estimator__min_samples_leaf': 1, 'estimator__max_features': None, 'estimator__max_depth': 7, 'bootstrap_features': False, 'bootstrap': False}
+训练R²: 0.9907, 测试R²: 0.9766
+
+使用随机状态: 30 训练
+最佳参数: {'n_estimators': 150, 'max_samples': 1.0, 'max_features': 0.8, 'estimator__min_samples_split': 2, 'estimator__min_samples_leaf': 2, 'estimator__max_features': 'sqrt', 'estimator__max_depth': 2, 'bootstrap_features': True, 'bootstrap': True}
+训练R²: 0.9667, 测试R²: 0.8903
+
+使用随机状态: 31 训练
+最佳参数: {'n_estimators': 350, 'max_samples': 0.5, 'max_features': 0.8, 'estimator__min_samples_split': 6, 'estimator__min_samples_leaf': 1, 'estimator__max_features': 'sqrt', 'estimator__max_depth': 4, 'bootstrap_features': False, 'bootstrap': True}
+训练R²: 0.8939, 测试R²: 0.9114
+
+使用随机状态: 32 训练
+最佳参数: {'n_estimators': 50, 'max_samples': 0.7, 'max_features': 0.9, 'estimator__min_samples_split': 4, 'estimator__min_samples_leaf': 2, 'estimator__max_features': 'sqrt', 'estimator__max_depth': 2, 'bootstrap_features': True, 'bootstrap': False}
+训练R²: 0.9617, 测试R²: 0.9096
+
+使用随机状态: 33 训练
+最佳参数: {'n_estimators': 350, 'max_samples': 0.9, 'max_features': 0.7, 'estimator__min_samples_split': 2, 'estimator__min_samples_leaf': 2, 'estimator__max_features': None, 'estimator__max_depth': 3, 'bootstrap_features': True, 'bootstrap': False}
+训练R²: 0.9730, 测试R²: 0.9163
+
+使用随机状态: 34 训练
+最佳参数: {'n_estimators': 450, 'max_samples': 0.9, 'max_features': 0.6, 'estimator__min_samples_split': 4, 'estimator__min_samples_leaf': 2, 'estimator__max_features': 'sqrt', 'estimator__max_depth': 6, 'bootstrap_features': True, 'bootstrap': False}
+训练R²: 0.9757, 测试R²: 0.9721
+
+使用随机状态: 35 训练
+最佳参数: {'n_estimators': 400, 'max_samples': 0.7, 'max_features': 0.6, 'estimator__min_samples_split': 2, 'estimator__min_samples_leaf': 1, 'estimator__max_features': 'sqrt', 'estimator__max_depth': 3, 'bootstrap_features': False, 'bootstrap': True}
+训练R²: 0.9699, 测试R²: 0.9525
+
+使用随机状态: 36 训练
+最佳参数: {'n_estimators': 700, 'max_samples': 0.6, 'max_features': 0.7, 'estimator__min_samples_split': 2, 'estimator__min_samples_leaf': 1, 'estimator__max_features': None, 'estimator__max_depth': 6, 'bootstrap_features': False, 'bootstrap': True}
+训练R²: 0.9788, 测试R²: 0.9354
+
+使用随机状态: 37 训练
+最佳参数: {'n_estimators': 300, 'max_samples': 1.0, 'max_features': 0.9, 'estimator__min_samples_split': 8, 'estimator__min_samples_leaf': 1, 'estimator__max_features': None, 'estimator__max_depth': 5, 'bootstrap_features': True, 'bootstrap': False}
+训练R²: 0.9738, 测试R²: 0.9558
+
+使用随机状态: 38 训练
+最佳参数: {'n_estimators': 550, 'max_samples': 0.9, 'max_features': 0.8, 'estimator__min_samples_split': 4, 'estimator__min_samples_leaf': 2, 'estimator__max_features': 'sqrt', 'estimator__max_depth': 6, 'bootstrap_features': False, 'bootstrap': False}
+训练R²: 0.9709, 测试R²: 0.9699
+
+使用随机状态: 39 训练
+最佳参数: {'n_estimators': 550, 'max_samples': 0.8, 'max_features': 0.8, 'estimator__min_samples_split': 4, 'estimator__min_samples_leaf': 1, 'estimator__max_features': 'sqrt', 'estimator__max_depth': 9, 'bootstrap_features': False, 'bootstrap': False}
+训练R²: 0.9898, 测试R²: 0.3894
+
+使用随机状态: 40 训练
+最佳参数: {'n_estimators': 650, 'max_samples': 0.9, 'max_features': 0.8, 'estimator__min_samples_split': 4, 'estimator__min_samples_leaf': 1, 'estimator__max_features': 'sqrt', 'estimator__max_depth': 7, 'bootstrap_features': True, 'bootstrap': False}
+训练R²: 0.9888, 测试R²: 0.8865
+
+使用随机状态: 41 训练
+最佳参数: {'n_estimators': 600, 'max_samples': 0.8, 'max_features': 0.7, 'estimator__min_samples_split': 2, 'estimator__min_samples_leaf': 1, 'estimator__max_features': 'sqrt', 'estimator__max_depth': 9, 'bootstrap_features': True, 'bootstrap': False}
+训练R²: 0.9975, 测试R²: 0.9049
+
+使用随机状态: 42 训练
+最佳参数: {'n_estimators': 300, 'max_samples': 1.0, 'max_features': 0.8, 'estimator__min_samples_split': 4, 'estimator__min_samples_leaf': 1, 'estimator__max_features': 'log2', 'estimator__max_depth': 2, 'bootstrap_features': False, 'bootstrap': False}
+训练R²: 0.9643, 测试R²: 0.9413
+
+使用随机状态: 43 训练
+最佳参数: {'n_estimators': 350, 'max_samples': 0.6, 'max_features': 0.5, 'estimator__min_samples_split': 4, 'estimator__min_samples_leaf': 1, 'estimator__max_features': 'log2', 'estimator__max_depth': 8, 'bootstrap_features': False, 'bootstrap': False}
+训练R²: 0.9636, 测试R²: 0.9593
+
+使用随机状态: 44 训练
+最佳参数: {'n_estimators': 350, 'max_samples': 0.8, 'max_features': 0.5, 'estimator__min_samples_split': 10, 'estimator__min_samples_leaf': 2, 'estimator__max_features': 'log2', 'estimator__max_depth': 5, 'bootstrap_features': False, 'bootstrap': True}
+训练R²: 0.8945, 测试R²: 0.8817
+
+使用随机状态: 45 训练
+最佳参数: {'n_estimators': 600, 'max_samples': 0.7, 'max_features': 0.9, 'estimator__min_samples_split': 4, 'estimator__min_samples_leaf': 2, 'estimator__max_features': None, 'estimator__max_depth': 2, 'bootstrap_features': True, 'bootstrap': False}
+训练R²: 0.9450, 测试R²: 0.9485
+
+使用随机状态: 46 训练
+最佳参数: {'n_estimators': 550, 'max_samples': 0.8, 'max_features': 0.9, 'estimator__min_samples_split': 4, 'estimator__min_samples_leaf': 1, 'estimator__max_features': None, 'estimator__max_depth': 5, 'bootstrap_features': False, 'bootstrap': False}
+训练R²: 0.9881, 测试R²: 0.8756
+
+使用随机状态: 47 训练
+最佳参数: {'n_estimators': 750, 'max_samples': 1.0, 'max_features': 0.9, 'estimator__min_samples_split': 10, 'estimator__min_samples_leaf': 1, 'estimator__max_features': 'log2', 'estimator__max_depth': 7, 'bootstrap_features': True, 'bootstrap': True}
+训练R²: 0.9040, 测试R²: 0.8964
+
+使用随机状态: 48 训练
+最佳参数: {'n_estimators': 150, 'max_samples': 0.6, 'max_features': 0.7, 'estimator__min_samples_split': 6, 'estimator__min_samples_leaf': 1, 'estimator__max_features': None, 'estimator__max_depth': 2, 'bootstrap_features': False, 'bootstrap': True}
+训练R²: 0.8985, 测试R²: 0.9147
+
+使用随机状态: 49 训练
+最佳参数: {'n_estimators': 750, 'max_samples': 1.0, 'max_features': 0.5, 'estimator__min_samples_split': 2, 'estimator__min_samples_leaf': 1, 'estimator__max_features': None, 'estimator__max_depth': 4, 'bootstrap_features': False, 'bootstrap': False}
+训练R²: 0.9926, 测试R²: 0.9617
+
+使用随机状态: 50 训练
+最佳参数: {'n_estimators': 700, 'max_samples': 0.6, 'max_features': 0.6, 'estimator__min_samples_split': 2, 'estimator__min_samples_leaf': 1, 'estimator__max_features': None, 'estimator__max_depth': 6, 'bootstrap_features': True, 'bootstrap': False}
+训练R²: 0.9929, 测试R²: 0.8800
+
+使用随机状态: 51 训练
+最佳参数: {'n_estimators': 100, 'max_samples': 0.8, 'max_features': 0.8, 'estimator__min_samples_split': 2, 'estimator__min_samples_leaf': 1, 'estimator__max_features': 'log2', 'estimator__max_depth': 2, 'bootstrap_features': True, 'bootstrap': False}
+训练R²: 0.9710, 测试R²: 0.7872
+
+使用随机状态: 52 训练
+最佳参数: {'n_estimators': 150, 'max_samples': 0.6, 'max_features': 0.8, 'estimator__min_samples_split': 4, 'estimator__min_samples_leaf': 1, 'estimator__max_features': 'sqrt', 'estimator__max_depth': 3, 'bootstrap_features': False, 'bootstrap': False}
+训练R²: 0.9719, 测试R²: 0.8919
+
+使用随机状态: 53 训练
+最佳参数: {'n_estimators': 450, 'max_samples': 1.0, 'max_features': 0.5, 'estimator__min_samples_split': 4, 'estimator__min_samples_leaf': 2, 'estimator__max_features': None, 'estimator__max_depth': 5, 'bootstrap_features': True, 'bootstrap': False}
+训练R²: 0.9862, 测试R²: 0.8843
+
+使用随机状态: 54 训练
+最佳参数: {'n_estimators': 650, 'max_samples': 0.8, 'max_features': 0.9, 'estimator__min_samples_split': 2, 'estimator__min_samples_leaf': 1, 'estimator__max_features': 'sqrt', 'estimator__max_depth': 7, 'bootstrap_features': False, 'bootstrap': True}
+训练R²: 0.9852, 测试R²: 0.9662
+
+使用随机状态: 55 训练
+最佳参数: {'n_estimators': 450, 'max_samples': 0.9, 'max_features': 0.8, 'estimator__min_samples_split': 2, 'estimator__min_samples_leaf': 1, 'estimator__max_features': None, 'estimator__max_depth': 4, 'bootstrap_features': False, 'bootstrap': False}
+训练R²: 0.9920, 测试R²: 0.9484
+
+使用随机状态: 56 训练
+最佳参数: {'n_estimators': 650, 'max_samples': 0.6, 'max_features': 0.8, 'estimator__min_samples_split': 2, 'estimator__min_samples_leaf': 1, 'estimator__max_features': 'sqrt', 'estimator__max_depth': 3, 'bootstrap_features': False, 'bootstrap': True}
+训练R²: 0.9722, 测试R²: 0.8968
+
+使用随机状态: 57 训练
+最佳参数: {'n_estimators': 250, 'max_samples': 0.9, 'max_features': 0.8, 'estimator__min_samples_split': 2, 'estimator__min_samples_leaf': 1, 'estimator__max_features': None, 'estimator__max_depth': 3, 'bootstrap_features': False, 'bootstrap': False}
+训练R²: 0.9853, 测试R²: 0.9435
+
+使用随机状态: 58 训练
+最佳参数: {'n_estimators': 250, 'max_samples': 0.8, 'max_features': 0.5, 'estimator__min_samples_split': 4, 'estimator__min_samples_leaf': 1, 'estimator__max_features': 'sqrt', 'estimator__max_depth': 3, 'bootstrap_features': False, 'bootstrap': False}
+训练R²: 0.9793, 测试R²: 0.9839
+
+使用随机状态: 59 训练
+最佳参数: {'n_estimators': 150, 'max_samples': 1.0, 'max_features': 0.6, 'estimator__min_samples_split': 2, 'estimator__min_samples_leaf': 1, 'estimator__max_features': 'log2', 'estimator__max_depth': 8, 'bootstrap_features': True, 'bootstrap': False}
+训练R²: 0.9999, 测试R²: 0.8909
+
+使用随机状态: 60 训练
+最佳参数: {'n_estimators': 450, 'max_samples': 0.9, 'max_features': 0.9, 'estimator__min_samples_split': 2, 'estimator__min_samples_leaf': 1, 'estimator__max_features': None, 'estimator__max_depth': 2, 'bootstrap_features': True, 'bootstrap': False}
+训练R²: 0.9589, 测试R²: 0.9438
+
+使用随机状态: 61 训练
+最佳参数: {'n_estimators': 50, 'max_samples': 0.6, 'max_features': 0.7, 'estimator__min_samples_split': 4, 'estimator__min_samples_leaf': 1, 'estimator__max_features': 'log2', 'estimator__max_depth': 5, 'bootstrap_features': False, 'bootstrap': True}
+训练R²: 0.9585, 测试R²: 0.8424
+
+使用随机状态: 62 训练
+最佳参数: {'n_estimators': 400, 'max_samples': 0.5, 'max_features': 0.6, 'estimator__min_samples_split': 2, 'estimator__min_samples_leaf': 1, 'estimator__max_features': 'sqrt', 'estimator__max_depth': 2, 'bootstrap_features': True, 'bootstrap': False}
+训练R²: 0.9630, 测试R²: 0.9711
+
+使用随机状态: 63 训练
+最佳参数: {'n_estimators': 300, 'max_samples': 0.9, 'max_features': 1.0, 'estimator__min_samples_split': 4, 'estimator__min_samples_leaf': 2, 'estimator__max_features': 'log2', 'estimator__max_depth': 8, 'bootstrap_features': True, 'bootstrap': True}
+训练R²: 0.9662, 测试R²: 0.5682
+
+使用随机状态: 64 训练
+最佳参数: {'n_estimators': 600, 'max_samples': 1.0, 'max_features': 0.8, 'estimator__min_samples_split': 6, 'estimator__min_samples_leaf': 2, 'estimator__max_features': 'log2', 'estimator__max_depth': 3, 'bootstrap_features': True, 'bootstrap': False}
+训练R²: 0.9695, 测试R²: 0.9789
+
+使用随机状态: 65 训练
+最佳参数: {'n_estimators': 150, 'max_samples': 0.9, 'max_features': 0.9, 'estimator__min_samples_split': 2, 'estimator__min_samples_leaf': 1, 'estimator__max_features': 'sqrt', 'estimator__max_depth': 7, 'bootstrap_features': True, 'bootstrap': True}
+训练R²: 0.9879, 测试R²: 0.9295
+
+使用随机状态: 66 训练
+最佳参数: {'n_estimators': 600, 'max_samples': 1.0, 'max_features': 0.7, 'estimator__min_samples_split': 4, 'estimator__min_samples_leaf': 1, 'estimator__max_features': 'log2', 'estimator__max_depth': 4, 'bootstrap_features': False, 'bootstrap': False}
+训练R²: 0.9797, 测试R²: 0.9641
+
+使用随机状态: 67 训练
+最佳参数: {'n_estimators': 150, 'max_samples': 0.9, 'max_features': 0.9, 'estimator__min_samples_split': 2, 'estimator__min_samples_leaf': 1, 'estimator__max_features': 'log2', 'estimator__max_depth': 2, 'bootstrap_features': True, 'bootstrap': False}
+训练R²: 0.9647, 测试R²: 0.9674
+
+使用随机状态: 68 训练
+最佳参数: {'n_estimators': 450, 'max_samples': 0.8, 'max_features': 0.7, 'estimator__min_samples_split': 6, 'estimator__min_samples_leaf': 2, 'estimator__max_features': 'sqrt', 'estimator__max_depth': 8, 'bootstrap_features': False, 'bootstrap': True}
+训练R²: 0.9239, 测试R²: 0.8827
+
+使用随机状态: 69 训练
+最佳参数: {'n_estimators': 250, 'max_samples': 0.9, 'max_features': 0.5, 'estimator__min_samples_split': 4, 'estimator__min_samples_leaf': 1, 'estimator__max_features': 'log2', 'estimator__max_depth': 7, 'bootstrap_features': True, 'bootstrap': False}
+训练R²: 0.9921, 测试R²: 0.9438
+
+使用随机状态: 70 训练
+最佳参数: {'n_estimators': 600, 'max_samples': 0.6, 'max_features': 0.7, 'estimator__min_samples_split': 4, 'estimator__min_samples_leaf': 1, 'estimator__max_features': 'log2', 'estimator__max_depth': 3, 'bootstrap_features': False, 'bootstrap': False}
+训练R²: 0.9592, 测试R²: 0.9929
+
+使用随机状态: 71 训练
+最佳参数: {'n_estimators': 550, 'max_samples': 0.9, 'max_features': 0.7, 'estimator__min_samples_split': 2, 'estimator__min_samples_leaf': 1, 'estimator__max_features': None, 'estimator__max_depth': 7, 'bootstrap_features': True, 'bootstrap': True}
+训练R²: 0.9888, 测试R²: 0.9347
+
+使用随机状态: 72 训练
+最佳参数: {'n_estimators': 500, 'max_samples': 0.8, 'max_features': 0.8, 'estimator__min_samples_split': 2, 'estimator__min_samples_leaf': 1, 'estimator__max_features': 'log2', 'estimator__max_depth': 9, 'bootstrap_features': True, 'bootstrap': False}
+训练R²: 0.9958, 测试R²: 0.9624
+
+使用随机状态: 73 训练
+最佳参数: {'n_estimators': 400, 'max_samples': 0.8, 'max_features': 0.6, 'estimator__min_samples_split': 2, 'estimator__min_samples_leaf': 2, 'estimator__max_features': 'log2', 'estimator__max_depth': 9, 'bootstrap_features': True, 'bootstrap': False}
+训练R²: 0.9807, 测试R²: 0.8036
+
+使用随机状态: 74 训练
+最佳参数: {'n_estimators': 450, 'max_samples': 0.5, 'max_features': 1.0, 'estimator__min_samples_split': 2, 'estimator__min_samples_leaf': 1, 'estimator__max_features': 'sqrt', 'estimator__max_depth': 9, 'bootstrap_features': True, 'bootstrap': False}
+训练R²: 0.9791, 测试R²: 0.9703
+
+使用随机状态: 75 训练
+最佳参数: {'n_estimators': 300, 'max_samples': 0.8, 'max_features': 0.9, 'estimator__min_samples_split': 4, 'estimator__min_samples_leaf': 2, 'estimator__max_features': None, 'estimator__max_depth': 8, 'bootstrap_features': True, 'bootstrap': False}
+训练R²: 0.9712, 测试R²: 0.9706
+
+使用随机状态: 76 训练
+最佳参数: {'n_estimators': 150, 'max_samples': 0.8, 'max_features': 0.6, 'estimator__min_samples_split': 2, 'estimator__min_samples_leaf': 1, 'estimator__max_features': None, 'estimator__max_depth': 8, 'bootstrap_features': False, 'bootstrap': False}
+训练R²: 0.9959, 测试R²: 0.9788
+
+使用随机状态: 77 训练
+最佳参数: {'n_estimators': 600, 'max_samples': 0.9, 'max_features': 0.5, 'estimator__min_samples_split': 2, 'estimator__min_samples_leaf': 2, 'estimator__max_features': 'log2', 'estimator__max_depth': 6, 'bootstrap_features': False, 'bootstrap': True}
+训练R²: 0.9697, 测试R²: 0.8794
+
+使用随机状态: 78 训练
+最佳参数: {'n_estimators': 750, 'max_samples': 0.7, 'max_features': 0.6, 'estimator__min_samples_split': 2, 'estimator__min_samples_leaf': 1, 'estimator__max_features': 'log2', 'estimator__max_depth': 4, 'bootstrap_features': True, 'bootstrap': True}
+训练R²: 0.9739, 测试R²: 0.8910
+
+使用随机状态: 79 训练
+最佳参数: {'n_estimators': 750, 'max_samples': 0.8, 'max_features': 0.7, 'estimator__min_samples_split': 2, 'estimator__min_samples_leaf': 2, 'estimator__max_features': None, 'estimator__max_depth': 5, 'bootstrap_features': True, 'bootstrap': False}
+训练R²: 0.9781, 测试R²: 0.8809
+
+使用随机状态: 80 训练
+最佳参数: {'n_estimators': 450, 'max_samples': 0.8, 'max_features': 0.6, 'estimator__min_samples_split': 6, 'estimator__min_samples_leaf': 5, 'estimator__max_features': 'sqrt', 'estimator__max_depth': 4, 'bootstrap_features': False, 'bootstrap': True}
+训练R²: 0.8926, 测试R²: 0.8417
+
+使用随机状态: 81 训练
+最佳参数: {'n_estimators': 300, 'max_samples': 0.8, 'max_features': 0.6, 'estimator__min_samples_split': 4, 'estimator__min_samples_leaf': 1, 'estimator__max_features': None, 'estimator__max_depth': 6, 'bootstrap_features': True, 'bootstrap': False}
+训练R²: 0.9909, 测试R²: 0.9065
+
+使用随机状态: 82 训练
+最佳参数: {'n_estimators': 400, 'max_samples': 0.8, 'max_features': 0.5, 'estimator__min_samples_split': 4, 'estimator__min_samples_leaf': 2, 'estimator__max_features': 'log2', 'estimator__max_depth': 3, 'bootstrap_features': True, 'bootstrap': True}
+训练R²: 0.9423, 测试R²: 0.9642
+
+使用随机状态: 83 训练
+最佳参数: {'n_estimators': 650, 'max_samples': 0.8, 'max_features': 1.0, 'estimator__min_samples_split': 2, 'estimator__min_samples_leaf': 1, 'estimator__max_features': 'sqrt', 'estimator__max_depth': 9, 'bootstrap_features': False, 'bootstrap': False}
+训练R²: 0.9970, 测试R²: 0.9588
+
+使用随机状态: 84 训练
+最佳参数: {'n_estimators': 500, 'max_samples': 0.7, 'max_features': 0.8, 'estimator__min_samples_split': 2, 'estimator__min_samples_leaf': 1, 'estimator__max_features': None, 'estimator__max_depth': 9, 'bootstrap_features': True, 'bootstrap': False}
+训练R²: 0.9910, 测试R²: 0.9639
+
+使用随机状态: 85 训练
+最佳参数: {'n_estimators': 300, 'max_samples': 0.5, 'max_features': 0.9, 'estimator__min_samples_split': 4, 'estimator__min_samples_leaf': 1, 'estimator__max_features': None, 'estimator__max_depth': 6, 'bootstrap_features': True, 'bootstrap': True}
+训练R²: 0.9536, 测试R²: 0.8148
+
+使用随机状态: 86 训练
+最佳参数: {'n_estimators': 250, 'max_samples': 0.9, 'max_features': 0.7, 'estimator__min_samples_split': 2, 'estimator__min_samples_leaf': 1, 'estimator__max_features': 'log2', 'estimator__max_depth': 9, 'bootstrap_features': False, 'bootstrap': True}
+训练R²: 0.9891, 测试R²: 0.8815
+
+使用随机状态: 87 训练
+最佳参数: {'n_estimators': 100, 'max_samples': 0.9, 'max_features': 0.6, 'estimator__min_samples_split': 2, 'estimator__min_samples_leaf': 1, 'estimator__max_features': 'sqrt', 'estimator__max_depth': 4, 'bootstrap_features': True, 'bootstrap': False}
+训练R²: 0.9957, 测试R²: 0.9136
+
+使用随机状态: 88 训练
+最佳参数: {'n_estimators': 400, 'max_samples': 1.0, 'max_features': 0.9, 'estimator__min_samples_split': 4, 'estimator__min_samples_leaf': 2, 'estimator__max_features': 'log2', 'estimator__max_depth': 5, 'bootstrap_features': False, 'bootstrap': False}
+训练R²: 0.9840, 测试R²: 0.8762
+
+使用随机状态: 89 训练
+最佳参数: {'n_estimators': 50, 'max_samples': 0.5, 'max_features': 0.6, 'estimator__min_samples_split': 2, 'estimator__min_samples_leaf': 1, 'estimator__max_features': 'log2', 'estimator__max_depth': 4, 'bootstrap_features': False, 'bootstrap': False}
+训练R²: 0.9687, 测试R²: 0.9702
+
+使用随机状态: 90 训练
+最佳参数: {'n_estimators': 700, 'max_samples': 0.9, 'max_features': 1.0, 'estimator__min_samples_split': 4, 'estimator__min_samples_leaf': 1, 'estimator__max_features': 'sqrt', 'estimator__max_depth': 5, 'bootstrap_features': False, 'bootstrap': False}
+训练R²: 0.9920, 测试R²: 0.9140
+
+使用随机状态: 91 训练
+最佳参数: {'n_estimators': 150, 'max_samples': 1.0, 'max_features': 0.5, 'estimator__min_samples_split': 4, 'estimator__min_samples_leaf': 2, 'estimator__max_features': 'sqrt', 'estimator__max_depth': 9, 'bootstrap_features': False, 'bootstrap': False}
+训练R²: 0.9829, 测试R²: 0.8939
+
+使用随机状态: 92 训练
+最佳参数: {'n_estimators': 400, 'max_samples': 0.6, 'max_features': 0.7, 'estimator__min_samples_split': 2, 'estimator__min_samples_leaf': 1, 'estimator__max_features': 'sqrt', 'estimator__max_depth': 4, 'bootstrap_features': True, 'bootstrap': False}
+训练R²: 0.9877, 测试R²: 0.8932
+
+使用随机状态: 93 训练
+最佳参数: {'n_estimators': 650, 'max_samples': 0.9, 'max_features': 1.0, 'estimator__min_samples_split': 4, 'estimator__min_samples_leaf': 2, 'estimator__max_features': None, 'estimator__max_depth': 9, 'bootstrap_features': False, 'bootstrap': False}
+训练R²: 0.9818, 测试R²: 0.8932
+
+使用随机状态: 94 训练
+最佳参数: {'n_estimators': 450, 'max_samples': 1.0, 'max_features': 1.0, 'estimator__min_samples_split': 2, 'estimator__min_samples_leaf': 2, 'estimator__max_features': 'log2', 'estimator__max_depth': 6, 'bootstrap_features': True, 'bootstrap': True}
+训练R²: 0.9636, 测试R²: 0.9588
+
+使用随机状态: 95 训练
+最佳参数: {'n_estimators': 350, 'max_samples': 0.7, 'max_features': 0.6, 'estimator__min_samples_split': 4, 'estimator__min_samples_leaf': 1, 'estimator__max_features': None, 'estimator__max_depth': 7, 'bootstrap_features': False, 'bootstrap': True}
+训练R²: 0.9452, 测试R²: 0.9279
+
+使用随机状态: 96 训练
+最佳参数: {'n_estimators': 150, 'max_samples': 1.0, 'max_features': 0.6, 'estimator__min_samples_split': 2, 'estimator__min_samples_leaf': 1, 'estimator__max_features': 'log2', 'estimator__max_depth': 4, 'bootstrap_features': False, 'bootstrap': False}
+训练R²: 0.9947, 测试R²: 0.9298
+
+使用随机状态: 97 训练
+最佳参数: {'n_estimators': 750, 'max_samples': 0.7, 'max_features': 0.9, 'estimator__min_samples_split': 2, 'estimator__min_samples_leaf': 1, 'estimator__max_features': 'sqrt', 'estimator__max_depth': 8, 'bootstrap_features': False, 'bootstrap': True}
+训练R²: 0.9845, 测试R²: 0.7578
+
+使用随机状态: 98 训练
+最佳参数: {'n_estimators': 550, 'max_samples': 0.9, 'max_features': 0.8, 'estimator__min_samples_split': 2, 'estimator__min_samples_leaf': 1, 'estimator__max_features': None, 'estimator__max_depth': 2, 'bootstrap_features': True, 'bootstrap': True}
+训练R²: 0.9684, 测试R²: 0.8902
+
+使用随机状态: 99 训练
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+findfont: Font family 'SimHei' not found.
+findfont: Font family 'Heiti TC' not found.
+最佳参数: {'n_estimators': 500, 'max_samples': 0.7, 'max_features': 1.0, 'estimator__min_samples_split': 2, 'estimator__min_samples_leaf': 1, 'estimator__max_features': None, 'estimator__max_depth': 4, 'bootstrap_features': False, 'bootstrap': True}
+训练R²: 0.9826, 测试R²: 0.6873
+
+================================================================================
+🎯 最佳Bagging回归模型参数与性能摘要
+================================================================================
+最佳随机状态: 70
+数据集大小: 37个样本, 2个特征
+
+🔧 最优超参数:
+--------------------------------------------------
+  n_estimators                  : 600
+  max_samples                   : 0.6
+  max_features                  : 0.7
+  estimator__min_samples_split  : 4
+  estimator__min_samples_leaf   : 1
+  estimator__max_features       : log2
+  estimator__max_depth          : 3
+  bootstrap_features            : False
+  bootstrap                     : False
+
+📊 模型性能指标:
+--------------------------------------------------
+指标         | 训练集        | 测试集        | 说明
+---------- | ---------- | ---------- | --------------------
+R²        | 0.9592   | 0.9929   | 越接近1越好
+MAE       | 0.0704  | 0.0365  | 越小越好
+RMSE      | 0.0919 | 0.0424 | 越小越好
+MSE       | 0.0084  | 0.0018  | 越小越好
+
+📈 性能分析:
+--------------------------------------------------
+过拟合差距 (训练R² - 测试R²): -0.0337
+✅  模型平衡，泛化能力良好
+
+💾 模型保存路径: /home/ggx/wls/DAC-code/CR-X/HCOOH-C/BAGR/ST/2D/best_bagging_model.pkl
+🔧 归一化器保存路径: /home/ggx/wls/DAC-code/CR-X/HCOOH-C/BAGR/ST/2D/best_bagging_scaler.pkl
+
+📄 详细摘要已保存至: /home/ggx/wls/DAC-code/CR-X/HCOOH-C/BAGR/ST/2D/best_bagging_summary.txt
+
+📊 生成可视化图表...
+✅ 散点图已保存至: /home/ggx/wls/DAC-code/CR-X/HCOOH-C/BAGR/ST/2D/bagging_prediction_scatter.png
+🔍 计算特征重要性...
+✅ 特征重要性图已保存至: /home/ggx/wls/DAC-code/CR-X/HCOOH-C/BAGR/ST/2D/bagging_feature_importance.png
+🔍 执行SHAP分析...
+❌ SHAP分析失败: Model type not yet supported by TreeExplainer: <class 'sklearn.ensemble._bagging.BaggingRegressor'>（已跳过）
+
+⏱️  总运行时间: 30.18 分钟
+
+================================================================================
+🎉 Bagging回归模型训练与分析完成!
+================================================================================
