@@ -1,0 +1,179 @@
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.feature_selection import RFE
+from sklearn.metrics import mean_squared_error, mean_absolute_error
+from sklearn.ensemble import (
+    RandomForestRegressor,
+    GradientBoostingRegressor,
+    AdaBoostRegressor,
+    BaggingRegressor
+)
+from sklearn.tree import DecisionTreeRegressor
+from xgboost import XGBRegressor
+from lightgbm import LGBMRegressor
+from catboost import CatBoostRegressor
+from sklearn.neighbors import KNeighborsRegressor
+from sklearn.svm import SVR
+import matplotlib.pyplot as plt
+import numpy as np
+import os
+
+# 创建保存结果的目录
+output_dir = "RFE_Results"
+os.makedirs(output_dir, exist_ok=True)
+
+# 读取数据
+data = pd.read_excel('/home/ggx/wls/DAC-code/co/UL/data/UL-CO-sol.xlsx')
+
+# 准备特征和目标
+X = data.iloc[:, 1:-1]  # 特征
+y = data.iloc[:, -1]  # 目标
+
+# 划分数据集
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# 定义递归特征消除 (RFE) 函数
+def perform_rfe_single_model(model, X_train, y_train, X_test, y_test, model_name):
+    feature_count = len(X_train.columns)
+    step = 1
+    mse_scores = []
+    mae_scores = []
+    feature_counts = []
+    selected_features = []
+
+    for i in range(feature_count, 0, -step):
+        # 使用当前特征子集训练模型
+        selected_features_train = X_train.iloc[:, :i]
+        selected_features_test = X_test.iloc[:, :i]
+        model.fit(selected_features_train, y_train)
+        
+        # 获取特征重要性（如果是 BaggingRegressor）
+        if isinstance(model, BaggingRegressor):
+            importances = np.mean([estimator.feature_importances_ for estimator in model.estimators_], axis=0)
+        else:
+            importances = model.feature_importances_ if hasattr(model, 'feature_importances_') else model.coef_
+        
+        # 排序特征
+        sorted_indices = np.argsort(importances)[::-1]
+        X_train = X_train.iloc[:, sorted_indices]
+        X_test = X_test.iloc[:, sorted_indices]
+
+        # 重新训练模型
+        model.fit(selected_features_train, y_train)
+        y_pred = model.predict(selected_features_test)
+        
+        # 计算 MSE 和 MAE
+        mse = mean_squared_error(y_test, y_pred)
+        mae = mean_absolute_error(y_test, y_pred)
+        
+        mse_scores.append(mse)
+        mae_scores.append(mae)
+        feature_counts.append(i)
+        selected_features.append(list(X_train.columns[:i]))
+
+    # 返回 MSE、MAE 的结果
+    results_df = pd.DataFrame({
+        "Number_of_Features": feature_counts[::-1],
+        model_name + "_MSE": mse_scores[::-1],
+        model_name + "_MAE": mae_scores[::-1]
+    })
+    return results_df, selected_features[::-1]
+
+# 定义回归模型
+models = {
+    "RandomForest": RandomForestRegressor(random_state=42),
+    "GBR": GradientBoostingRegressor(random_state=42),
+    "XGBR": XGBRegressor(random_state=42),
+    "LGBR": LGBMRegressor(random_state=42),
+    "CatBoost": CatBoostRegressor(random_state=42, verbose=0),
+    "AdaBoost": AdaBoostRegressor(random_state=42),
+    "BAGR": BaggingRegressor(estimator=DecisionTreeRegressor(), random_state=42)
+}
+
+results_df = None
+selected_features_dict = {}
+
+# 对每个模型运行 RFE
+for model_name, model in models.items():
+    print(f"Running RFE for {model_name}...")
+    model_results, selected_features = perform_rfe_single_model(
+        model, X_train, y_train, X_test, y_test, model_name
+    )
+    selected_features_dict[model_name] = selected_features
+    if results_df is None:
+        results_df = model_results
+    else:
+        results_df = results_df.merge(model_results, on="Number_of_Features", how="outer")
+
+# 保存结果到文件
+results_df.to_csv(os.path.join(output_dir, 'RFE_results.csv'), index=False)
+with open(os.path.join(output_dir, "selected_features.txt"), "w") as f:
+    for model_name, features in selected_features_dict.items():
+        f.write(f"Model: {model_name}\n")
+        for i, feature_set in enumerate(features):
+            f.write(f"  Features ({len(feature_set)}): {feature_set}\n")
+        f.write("\n")
+
+# 创建最佳特征数据集并导出 Excel
+for model_name in models.keys():
+    optimal_features_mse = results_df.loc[results_df[model_name + "_MSE"].idxmin(), "Number_of_Features"]
+    optimal_features_mae = results_df.loc[results_df[model_name + "_MAE"].idxmin(), "Number_of_Features"]
+
+    optimal_features_mse_names = selected_features_dict[model_name][optimal_features_mse-1]
+    optimal_features_mae_names = selected_features_dict[model_name][optimal_features_mae-1]
+
+    print(f"{model_name} - Optimal Features (MSE): {optimal_features_mse} features - {optimal_features_mse_names}")
+    print(f"{model_name} - Optimal Features (MAE): {optimal_features_mae} features - {optimal_features_mae_names}")
+
+    with open(os.path.join(output_dir, f"{model_name}_optimal_features.txt"), "w") as f:
+        f.write(f"Optimal Features for {model_name} (MSE): {optimal_features_mse} features\n")
+        f.write(f"Features: {optimal_features_mse_names}\n\n")
+        f.write(f"Optimal Features for {model_name} (MAE): {optimal_features_mae} features\n")
+        f.write(f"Features: {optimal_features_mae_names}\n")
+
+    optimal_features_data_mse = data[optimal_features_mse_names + [data.columns[-1]]]
+    optimal_features_data_mae = data[optimal_features_mae_names + [data.columns[-1]]]
+
+    optimal_features_data_mse.to_excel(os.path.join(output_dir, f"{model_name}_Optimal_Features_MSE.xlsx"), index=False)
+    optimal_features_data_mae.to_excel(os.path.join(output_dir, f"{model_name}_Optimal_Features_MAE.xlsx"), index=False)
+
+# 绘制 MSE 和 MAE 曲线
+plt.figure(figsize=(8, 6))
+for column in results_df.columns[1:]:
+    if 'MSE' in column:
+        plt.plot(
+            results_df["Number_of_Features"],
+            results_df[column],
+            label=column,
+            marker='o',
+            linewidth=1.5
+        )
+plt.title('Feature Reduction - MSE vs Number of Features', fontsize=14)
+plt.xlabel('Number of Features', fontsize=12)
+plt.ylabel('Mean Squared Error (MSE)', fontsize=12)
+plt.legend(title="Models", fontsize=10, loc="best")
+plt.grid(axis='y', alpha=0.5)
+plt.gca().spines['top'].set_visible(False)
+plt.gca().spines['right'].set_visible(False)
+plt.tight_layout()
+plt.savefig(os.path.join(output_dir, 'RFE_plot_MSE.png'))
+
+plt.figure(figsize=(8, 6))
+for column in results_df.columns[1:]:
+    if 'MAE' in column:
+        plt.plot(
+            results_df["Number_of_Features"],
+            results_df[column],
+            label=column,
+            marker='o',
+            linewidth=1.5
+        )
+plt.title('Feature Reduction - MAE vs Number of Features', fontsize=14)
+plt.xlabel('Number of Features', fontsize=12)
+plt.ylabel('Mean Absolute Error (MAE)', fontsize=12)
+plt.legend(title="Models", fontsize=10, loc="best")
+plt.grid(axis='y', alpha=0.5)
+plt.gca().spines['top'].set_visible(False)
+plt.gca().spines['right'].set_visible(False)
+plt.tight_layout()
+plt.savefig(os.path.join(output_dir, 'RFE_plot_MAE.png'))
