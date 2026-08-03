@@ -1,0 +1,2417 @@
+/home/ggx/anaconda3/lib/python3.12/site-packages/xgboost/core.py:265: FutureWarning: Your system has an old version of glibc (< 2.28). We will stop supporting Linux distros with glibc older than 2.28 after **May 31, 2025**. Please upgrade to a recent Linux distro (with glibc 2.28+) to use future versions of XGBoost.
+Note: You have installed the 'manylinux2014' variant of XGBoost. Certain features such as GPU algorithms or federated learning are not available. To use these features, please upgrade to a recent Linux distro with glibc 2.28+, and install the 'manylinux_2_28' variant.
+  warnings.warn(
+
+Using random_state=1 for training
+/home/ggx/anaconda3/lib/python3.12/site-packages/xgboost/core.py:265: FutureWarning: Your system has an old version of glibc (< 2.28). We will stop supporting Linux distros with glibc older than 2.28 after **May 31, 2025**. Please upgrade to a recent Linux distro (with glibc 2.28+) to use future versions of XGBoost.
+Note: You have installed the 'manylinux2014' variant of XGBoost. Certain features such as GPU algorithms or federated learning are not available. To use these features, please upgrade to a recent Linux distro with glibc 2.28+, and install the 'manylinux_2_28' variant.
+  warnings.warn(
+/home/ggx/anaconda3/lib/python3.12/site-packages/xgboost/core.py:265: FutureWarning: Your system has an old version of glibc (< 2.28). We will stop supporting Linux distros with glibc older than 2.28 after **May 31, 2025**. Please upgrade to a recent Linux distro (with glibc 2.28+) to use future versions of XGBoost.
+Note: You have installed the 'manylinux2014' variant of XGBoost. Certain features such as GPU algorithms or federated learning are not available. To use these features, please upgrade to a recent Linux distro with glibc 2.28+, and install the 'manylinux_2_28' variant.
+  warnings.warn(
+/home/ggx/anaconda3/lib/python3.12/site-packages/xgboost/core.py:265: FutureWarning: Your system has an old version of glibc (< 2.28). We will stop supporting Linux distros with glibc older than 2.28 after **May 31, 2025**. Please upgrade to a recent Linux distro (with glibc 2.28+) to use future versions of XGBoost.
+Note: You have installed the 'manylinux2014' variant of XGBoost. Certain features such as GPU algorithms or federated learning are not available. To use these features, please upgrade to a recent Linux distro with glibc 2.28+, and install the 'manylinux_2_28' variant.
+  warnings.warn(
+/home/ggx/anaconda3/lib/python3.12/site-packages/xgboost/core.py:265: FutureWarning: Your system has an old version of glibc (< 2.28). We will stop supporting Linux distros with glibc older than 2.28 after **May 31, 2025**. Please upgrade to a recent Linux distro (with glibc 2.28+) to use future versions of XGBoost.
+Note: You have installed the 'manylinux2014' variant of XGBoost. Certain features such as GPU algorithms or federated learning are not available. To use these features, please upgrade to a recent Linux distro with glibc 2.28+, and install the 'manylinux_2_28' variant.
+  warnings.warn(
+/home/ggx/anaconda3/lib/python3.12/site-packages/xgboost/core.py:265: FutureWarning: Your system has an old version of glibc (< 2.28). We will stop supporting Linux distros with glibc older than 2.28 after **May 31, 2025**. Please upgrade to a recent Linux distro (with glibc 2.28+) to use future versions of XGBoost.
+Note: You have installed the 'manylinux2014' variant of XGBoost. Certain features such as GPU algorithms or federated learning are not available. To use these features, please upgrade to a recent Linux distro with glibc 2.28+, and install the 'manylinux_2_28' variant.
+  warnings.warn(
+/home/ggx/anaconda3/lib/python3.12/site-packages/xgboost/core.py:265: FutureWarning: Your system has an old version of glibc (< 2.28). We will stop supporting Linux distros with glibc older than 2.28 after **May 31, 2025**. Please upgrade to a recent Linux distro (with glibc 2.28+) to use future versions of XGBoost.
+Note: You have installed the 'manylinux2014' variant of XGBoost. Certain features such as GPU algorithms or federated learning are not available. To use these features, please upgrade to a recent Linux distro with glibc 2.28+, and install the 'manylinux_2_28' variant.
+  warnings.warn(
+/home/ggx/anaconda3/lib/python3.12/site-packages/xgboost/core.py:265: FutureWarning: Your system has an old version of glibc (< 2.28). We will stop supporting Linux distros with glibc older than 2.28 after **May 31, 2025**. Please upgrade to a recent Linux distro (with glibc 2.28+) to use future versions of XGBoost.
+Note: You have installed the 'manylinux2014' variant of XGBoost. Certain features such as GPU algorithms or federated learning are not available. To use these features, please upgrade to a recent Linux distro with glibc 2.28+, and install the 'manylinux_2_28' variant.
+  warnings.warn(
+/home/ggx/anaconda3/lib/python3.12/site-packages/xgboost/core.py:265: FutureWarning: Your system has an old version of glibc (< 2.28). We will stop supporting Linux distros with glibc older than 2.28 after **May 31, 2025**. Please upgrade to a recent Linux distro (with glibc 2.28+) to use future versions of XGBoost.
+Note: You have installed the 'manylinux2014' variant of XGBoost. Certain features such as GPU algorithms or federated learning are not available. To use these features, please upgrade to a recent Linux distro with glibc 2.28+, and install the 'manylinux_2_28' variant.
+  warnings.warn(
+/home/ggx/anaconda3/lib/python3.12/site-packages/xgboost/core.py:265: FutureWarning: Your system has an old version of glibc (< 2.28). We will stop supporting Linux distros with glibc older than 2.28 after **May 31, 2025**. Please upgrade to a recent Linux distro (with glibc 2.28+) to use future versions of XGBoost.
+Note: You have installed the 'manylinux2014' variant of XGBoost. Certain features such as GPU algorithms or federated learning are not available. To use these features, please upgrade to a recent Linux distro with glibc 2.28+, and install the 'manylinux_2_28' variant.
+  warnings.warn(
+/home/ggx/anaconda3/lib/python3.12/site-packages/xgboost/core.py:265: FutureWarning: Your system has an old version of glibc (< 2.28). We will stop supporting Linux distros with glibc older than 2.28 after **May 31, 2025**. Please upgrade to a recent Linux distro (with glibc 2.28+) to use future versions of XGBoost.
+Note: You have installed the 'manylinux2014' variant of XGBoost. Certain features such as GPU algorithms or federated learning are not available. To use these features, please upgrade to a recent Linux distro with glibc 2.28+, and install the 'manylinux_2_28' variant.
+  warnings.warn(
+/home/ggx/anaconda3/lib/python3.12/site-packages/xgboost/core.py:265: FutureWarning: Your system has an old version of glibc (< 2.28). We will stop supporting Linux distros with glibc older than 2.28 after **May 31, 2025**. Please upgrade to a recent Linux distro (with glibc 2.28+) to use future versions of XGBoost.
+Note: You have installed the 'manylinux2014' variant of XGBoost. Certain features such as GPU algorithms or federated learning are not available. To use these features, please upgrade to a recent Linux distro with glibc 2.28+, and install the 'manylinux_2_28' variant.
+  warnings.warn(
+/home/ggx/anaconda3/lib/python3.12/site-packages/xgboost/core.py:265: FutureWarning: Your system has an old version of glibc (< 2.28). We will stop supporting Linux distros with glibc older than 2.28 after **May 31, 2025**. Please upgrade to a recent Linux distro (with glibc 2.28+) to use future versions of XGBoost.
+Note: You have installed the 'manylinux2014' variant of XGBoost. Certain features such as GPU algorithms or federated learning are not available. To use these features, please upgrade to a recent Linux distro with glibc 2.28+, and install the 'manylinux_2_28' variant.
+  warnings.warn(
+/home/ggx/anaconda3/lib/python3.12/site-packages/xgboost/core.py:265: FutureWarning: Your system has an old version of glibc (< 2.28). We will stop supporting Linux distros with glibc older than 2.28 after **May 31, 2025**. Please upgrade to a recent Linux distro (with glibc 2.28+) to use future versions of XGBoost.
+Note: You have installed the 'manylinux2014' variant of XGBoost. Certain features such as GPU algorithms or federated learning are not available. To use these features, please upgrade to a recent Linux distro with glibc 2.28+, and install the 'manylinux_2_28' variant.
+  warnings.warn(
+/home/ggx/anaconda3/lib/python3.12/site-packages/xgboost/core.py:265: FutureWarning: Your system has an old version of glibc (< 2.28). We will stop supporting Linux distros with glibc older than 2.28 after **May 31, 2025**. Please upgrade to a recent Linux distro (with glibc 2.28+) to use future versions of XGBoost.
+Note: You have installed the 'manylinux2014' variant of XGBoost. Certain features such as GPU algorithms or federated learning are not available. To use these features, please upgrade to a recent Linux distro with glibc 2.28+, and install the 'manylinux_2_28' variant.
+  warnings.warn(
+/home/ggx/anaconda3/lib/python3.12/site-packages/xgboost/core.py:265: FutureWarning: Your system has an old version of glibc (< 2.28). We will stop supporting Linux distros with glibc older than 2.28 after **May 31, 2025**. Please upgrade to a recent Linux distro (with glibc 2.28+) to use future versions of XGBoost.
+Note: You have installed the 'manylinux2014' variant of XGBoost. Certain features such as GPU algorithms or federated learning are not available. To use these features, please upgrade to a recent Linux distro with glibc 2.28+, and install the 'manylinux_2_28' variant.
+  warnings.warn(
+/home/ggx/anaconda3/lib/python3.12/site-packages/xgboost/core.py:265: FutureWarning: Your system has an old version of glibc (< 2.28). We will stop supporting Linux distros with glibc older than 2.28 after **May 31, 2025**. Please upgrade to a recent Linux distro (with glibc 2.28+) to use future versions of XGBoost.
+Note: You have installed the 'manylinux2014' variant of XGBoost. Certain features such as GPU algorithms or federated learning are not available. To use these features, please upgrade to a recent Linux distro with glibc 2.28+, and install the 'manylinux_2_28' variant.
+  warnings.warn(
+/home/ggx/anaconda3/lib/python3.12/site-packages/xgboost/core.py:265: FutureWarning: Your system has an old version of glibc (< 2.28). We will stop supporting Linux distros with glibc older than 2.28 after **May 31, 2025**. Please upgrade to a recent Linux distro (with glibc 2.28+) to use future versions of XGBoost.
+Note: You have installed the 'manylinux2014' variant of XGBoost. Certain features such as GPU algorithms or federated learning are not available. To use these features, please upgrade to a recent Linux distro with glibc 2.28+, and install the 'manylinux_2_28' variant.
+  warnings.warn(
+/home/ggx/anaconda3/lib/python3.12/site-packages/xgboost/core.py:265: FutureWarning: Your system has an old version of glibc (< 2.28). We will stop supporting Linux distros with glibc older than 2.28 after **May 31, 2025**. Please upgrade to a recent Linux distro (with glibc 2.28+) to use future versions of XGBoost.
+Note: You have installed the 'manylinux2014' variant of XGBoost. Certain features such as GPU algorithms or federated learning are not available. To use these features, please upgrade to a recent Linux distro with glibc 2.28+, and install the 'manylinux_2_28' variant.
+  warnings.warn(
+/home/ggx/anaconda3/lib/python3.12/site-packages/xgboost/core.py:265: FutureWarning: Your system has an old version of glibc (< 2.28). We will stop supporting Linux distros with glibc older than 2.28 after **May 31, 2025**. Please upgrade to a recent Linux distro (with glibc 2.28+) to use future versions of XGBoost.
+Note: You have installed the 'manylinux2014' variant of XGBoost. Certain features such as GPU algorithms or federated learning are not available. To use these features, please upgrade to a recent Linux distro with glibc 2.28+, and install the 'manylinux_2_28' variant.
+  warnings.warn(
+/home/ggx/anaconda3/lib/python3.12/site-packages/xgboost/core.py:265: FutureWarning: Your system has an old version of glibc (< 2.28). We will stop supporting Linux distros with glibc older than 2.28 after **May 31, 2025**. Please upgrade to a recent Linux distro (with glibc 2.28+) to use future versions of XGBoost.
+Note: You have installed the 'manylinux2014' variant of XGBoost. Certain features such as GPU algorithms or federated learning are not available. To use these features, please upgrade to a recent Linux distro with glibc 2.28+, and install the 'manylinux_2_28' variant.
+  warnings.warn(
+/home/ggx/anaconda3/lib/python3.12/site-packages/xgboost/core.py:265: FutureWarning: Your system has an old version of glibc (< 2.28). We will stop supporting Linux distros with glibc older than 2.28 after **May 31, 2025**. Please upgrade to a recent Linux distro (with glibc 2.28+) to use future versions of XGBoost.
+Note: You have installed the 'manylinux2014' variant of XGBoost. Certain features such as GPU algorithms or federated learning are not available. To use these features, please upgrade to a recent Linux distro with glibc 2.28+, and install the 'manylinux_2_28' variant.
+  warnings.warn(
+/home/ggx/anaconda3/lib/python3.12/site-packages/xgboost/core.py:265: FutureWarning: Your system has an old version of glibc (< 2.28). We will stop supporting Linux distros with glibc older than 2.28 after **May 31, 2025**. Please upgrade to a recent Linux distro (with glibc 2.28+) to use future versions of XGBoost.
+Note: You have installed the 'manylinux2014' variant of XGBoost. Certain features such as GPU algorithms or federated learning are not available. To use these features, please upgrade to a recent Linux distro with glibc 2.28+, and install the 'manylinux_2_28' variant.
+  warnings.warn(
+/home/ggx/anaconda3/lib/python3.12/site-packages/xgboost/core.py:265: FutureWarning: Your system has an old version of glibc (< 2.28). We will stop supporting Linux distros with glibc older than 2.28 after **May 31, 2025**. Please upgrade to a recent Linux distro (with glibc 2.28+) to use future versions of XGBoost.
+Note: You have installed the 'manylinux2014' variant of XGBoost. Certain features such as GPU algorithms or federated learning are not available. To use these features, please upgrade to a recent Linux distro with glibc 2.28+, and install the 'manylinux_2_28' variant.
+  warnings.warn(
+/home/ggx/anaconda3/lib/python3.12/site-packages/xgboost/core.py:265: FutureWarning: Your system has an old version of glibc (< 2.28). We will stop supporting Linux distros with glibc older than 2.28 after **May 31, 2025**. Please upgrade to a recent Linux distro (with glibc 2.28+) to use future versions of XGBoost.
+Note: You have installed the 'manylinux2014' variant of XGBoost. Certain features such as GPU algorithms or federated learning are not available. To use these features, please upgrade to a recent Linux distro with glibc 2.28+, and install the 'manylinux_2_28' variant.
+  warnings.warn(
+/home/ggx/anaconda3/lib/python3.12/site-packages/xgboost/core.py:265: FutureWarning: Your system has an old version of glibc (< 2.28). We will stop supporting Linux distros with glibc older than 2.28 after **May 31, 2025**. Please upgrade to a recent Linux distro (with glibc 2.28+) to use future versions of XGBoost.
+Note: You have installed the 'manylinux2014' variant of XGBoost. Certain features such as GPU algorithms or federated learning are not available. To use these features, please upgrade to a recent Linux distro with glibc 2.28+, and install the 'manylinux_2_28' variant.
+  warnings.warn(
+/home/ggx/anaconda3/lib/python3.12/site-packages/xgboost/core.py:265: FutureWarning: Your system has an old version of glibc (< 2.28). We will stop supporting Linux distros with glibc older than 2.28 after **May 31, 2025**. Please upgrade to a recent Linux distro (with glibc 2.28+) to use future versions of XGBoost.
+Note: You have installed the 'manylinux2014' variant of XGBoost. Certain features such as GPU algorithms or federated learning are not available. To use these features, please upgrade to a recent Linux distro with glibc 2.28+, and install the 'manylinux_2_28' variant.
+  warnings.warn(
+/home/ggx/anaconda3/lib/python3.12/site-packages/xgboost/core.py:265: FutureWarning: Your system has an old version of glibc (< 2.28). We will stop supporting Linux distros with glibc older than 2.28 after **May 31, 2025**. Please upgrade to a recent Linux distro (with glibc 2.28+) to use future versions of XGBoost.
+Note: You have installed the 'manylinux2014' variant of XGBoost. Certain features such as GPU algorithms or federated learning are not available. To use these features, please upgrade to a recent Linux distro with glibc 2.28+, and install the 'manylinux_2_28' variant.
+  warnings.warn(
+/home/ggx/anaconda3/lib/python3.12/site-packages/xgboost/core.py:265: FutureWarning: Your system has an old version of glibc (< 2.28). We will stop supporting Linux distros with glibc older than 2.28 after **May 31, 2025**. Please upgrade to a recent Linux distro (with glibc 2.28+) to use future versions of XGBoost.
+Note: You have installed the 'manylinux2014' variant of XGBoost. Certain features such as GPU algorithms or federated learning are not available. To use these features, please upgrade to a recent Linux distro with glibc 2.28+, and install the 'manylinux_2_28' variant.
+  warnings.warn(
+/home/ggx/anaconda3/lib/python3.12/site-packages/xgboost/core.py:265: FutureWarning: Your system has an old version of glibc (< 2.28). We will stop supporting Linux distros with glibc older than 2.28 after **May 31, 2025**. Please upgrade to a recent Linux distro (with glibc 2.28+) to use future versions of XGBoost.
+Note: You have installed the 'manylinux2014' variant of XGBoost. Certain features such as GPU algorithms or federated learning are not available. To use these features, please upgrade to a recent Linux distro with glibc 2.28+, and install the 'manylinux_2_28' variant.
+  warnings.warn(
+/home/ggx/anaconda3/lib/python3.12/site-packages/xgboost/core.py:265: FutureWarning: Your system has an old version of glibc (< 2.28). We will stop supporting Linux distros with glibc older than 2.28 after **May 31, 2025**. Please upgrade to a recent Linux distro (with glibc 2.28+) to use future versions of XGBoost.
+Note: You have installed the 'manylinux2014' variant of XGBoost. Certain features such as GPU algorithms or federated learning are not available. To use these features, please upgrade to a recent Linux distro with glibc 2.28+, and install the 'manylinux_2_28' variant.
+  warnings.warn(
+/home/ggx/anaconda3/lib/python3.12/site-packages/xgboost/core.py:265: FutureWarning: Your system has an old version of glibc (< 2.28). We will stop supporting Linux distros with glibc older than 2.28 after **May 31, 2025**. Please upgrade to a recent Linux distro (with glibc 2.28+) to use future versions of XGBoost.
+Note: You have installed the 'manylinux2014' variant of XGBoost. Certain features such as GPU algorithms or federated learning are not available. To use these features, please upgrade to a recent Linux distro with glibc 2.28+, and install the 'manylinux_2_28' variant.
+  warnings.warn(
+/home/ggx/anaconda3/lib/python3.12/site-packages/xgboost/core.py:265: FutureWarning: Your system has an old version of glibc (< 2.28). We will stop supporting Linux distros with glibc older than 2.28 after **May 31, 2025**. Please upgrade to a recent Linux distro (with glibc 2.28+) to use future versions of XGBoost.
+Note: You have installed the 'manylinux2014' variant of XGBoost. Certain features such as GPU algorithms or federated learning are not available. To use these features, please upgrade to a recent Linux distro with glibc 2.28+, and install the 'manylinux_2_28' variant.
+  warnings.warn(
+/home/ggx/anaconda3/lib/python3.12/site-packages/xgboost/core.py:265: FutureWarning: Your system has an old version of glibc (< 2.28). We will stop supporting Linux distros with glibc older than 2.28 after **May 31, 2025**. Please upgrade to a recent Linux distro (with glibc 2.28+) to use future versions of XGBoost.
+Note: You have installed the 'manylinux2014' variant of XGBoost. Certain features such as GPU algorithms or federated learning are not available. To use these features, please upgrade to a recent Linux distro with glibc 2.28+, and install the 'manylinux_2_28' variant.
+  warnings.warn(
+/home/ggx/anaconda3/lib/python3.12/site-packages/xgboost/core.py:265: FutureWarning: Your system has an old version of glibc (< 2.28). We will stop supporting Linux distros with glibc older than 2.28 after **May 31, 2025**. Please upgrade to a recent Linux distro (with glibc 2.28+) to use future versions of XGBoost.
+Note: You have installed the 'manylinux2014' variant of XGBoost. Certain features such as GPU algorithms or federated learning are not available. To use these features, please upgrade to a recent Linux distro with glibc 2.28+, and install the 'manylinux_2_28' variant.
+  warnings.warn(
+/home/ggx/anaconda3/lib/python3.12/site-packages/xgboost/core.py:265: FutureWarning: Your system has an old version of glibc (< 2.28). We will stop supporting Linux distros with glibc older than 2.28 after **May 31, 2025**. Please upgrade to a recent Linux distro (with glibc 2.28+) to use future versions of XGBoost.
+Note: You have installed the 'manylinux2014' variant of XGBoost. Certain features such as GPU algorithms or federated learning are not available. To use these features, please upgrade to a recent Linux distro with glibc 2.28+, and install the 'manylinux_2_28' variant.
+  warnings.warn(
+/home/ggx/anaconda3/lib/python3.12/site-packages/xgboost/core.py:265: FutureWarning: Your system has an old version of glibc (< 2.28). We will stop supporting Linux distros with glibc older than 2.28 after **May 31, 2025**. Please upgrade to a recent Linux distro (with glibc 2.28+) to use future versions of XGBoost.
+Note: You have installed the 'manylinux2014' variant of XGBoost. Certain features such as GPU algorithms or federated learning are not available. To use these features, please upgrade to a recent Linux distro with glibc 2.28+, and install the 'manylinux_2_28' variant.
+  warnings.warn(
+/home/ggx/anaconda3/lib/python3.12/site-packages/xgboost/core.py:265: FutureWarning: Your system has an old version of glibc (< 2.28). We will stop supporting Linux distros with glibc older than 2.28 after **May 31, 2025**. Please upgrade to a recent Linux distro (with glibc 2.28+) to use future versions of XGBoost.
+Note: You have installed the 'manylinux2014' variant of XGBoost. Certain features such as GPU algorithms or federated learning are not available. To use these features, please upgrade to a recent Linux distro with glibc 2.28+, and install the 'manylinux_2_28' variant.
+  warnings.warn(
+/home/ggx/anaconda3/lib/python3.12/site-packages/xgboost/core.py:265: FutureWarning: Your system has an old version of glibc (< 2.28). We will stop supporting Linux distros with glibc older than 2.28 after **May 31, 2025**. Please upgrade to a recent Linux distro (with glibc 2.28+) to use future versions of XGBoost.
+Note: You have installed the 'manylinux2014' variant of XGBoost. Certain features such as GPU algorithms or federated learning are not available. To use these features, please upgrade to a recent Linux distro with glibc 2.28+, and install the 'manylinux_2_28' variant.
+  warnings.warn(
+/home/ggx/anaconda3/lib/python3.12/site-packages/xgboost/core.py:265: FutureWarning: Your system has an old version of glibc (< 2.28). We will stop supporting Linux distros with glibc older than 2.28 after **May 31, 2025**. Please upgrade to a recent Linux distro (with glibc 2.28+) to use future versions of XGBoost.
+Note: You have installed the 'manylinux2014' variant of XGBoost. Certain features such as GPU algorithms or federated learning are not available. To use these features, please upgrade to a recent Linux distro with glibc 2.28+, and install the 'manylinux_2_28' variant.
+  warnings.warn(
+/home/ggx/anaconda3/lib/python3.12/site-packages/xgboost/core.py:265: FutureWarning: Your system has an old version of glibc (< 2.28). We will stop supporting Linux distros with glibc older than 2.28 after **May 31, 2025**. Please upgrade to a recent Linux distro (with glibc 2.28+) to use future versions of XGBoost.
+Note: You have installed the 'manylinux2014' variant of XGBoost. Certain features such as GPU algorithms or federated learning are not available. To use these features, please upgrade to a recent Linux distro with glibc 2.28+, and install the 'manylinux_2_28' variant.
+  warnings.warn(
+/home/ggx/anaconda3/lib/python3.12/site-packages/xgboost/core.py:265: FutureWarning: Your system has an old version of glibc (< 2.28). We will stop supporting Linux distros with glibc older than 2.28 after **May 31, 2025**. Please upgrade to a recent Linux distro (with glibc 2.28+) to use future versions of XGBoost.
+Note: You have installed the 'manylinux2014' variant of XGBoost. Certain features such as GPU algorithms or federated learning are not available. To use these features, please upgrade to a recent Linux distro with glibc 2.28+, and install the 'manylinux_2_28' variant.
+  warnings.warn(
+/home/ggx/anaconda3/lib/python3.12/site-packages/xgboost/core.py:265: FutureWarning: Your system has an old version of glibc (< 2.28). We will stop supporting Linux distros with glibc older than 2.28 after **May 31, 2025**. Please upgrade to a recent Linux distro (with glibc 2.28+) to use future versions of XGBoost.
+Note: You have installed the 'manylinux2014' variant of XGBoost. Certain features such as GPU algorithms or federated learning are not available. To use these features, please upgrade to a recent Linux distro with glibc 2.28+, and install the 'manylinux_2_28' variant.
+  warnings.warn(
+/home/ggx/anaconda3/lib/python3.12/site-packages/xgboost/core.py:265: FutureWarning: Your system has an old version of glibc (< 2.28). We will stop supporting Linux distros with glibc older than 2.28 after **May 31, 2025**. Please upgrade to a recent Linux distro (with glibc 2.28+) to use future versions of XGBoost.
+Note: You have installed the 'manylinux2014' variant of XGBoost. Certain features such as GPU algorithms or federated learning are not available. To use these features, please upgrade to a recent Linux distro with glibc 2.28+, and install the 'manylinux_2_28' variant.
+  warnings.warn(
+/home/ggx/anaconda3/lib/python3.12/site-packages/xgboost/core.py:265: FutureWarning: Your system has an old version of glibc (< 2.28). We will stop supporting Linux distros with glibc older than 2.28 after **May 31, 2025**. Please upgrade to a recent Linux distro (with glibc 2.28+) to use future versions of XGBoost.
+Note: You have installed the 'manylinux2014' variant of XGBoost. Certain features such as GPU algorithms or federated learning are not available. To use these features, please upgrade to a recent Linux distro with glibc 2.28+, and install the 'manylinux_2_28' variant.
+  warnings.warn(
+/home/ggx/anaconda3/lib/python3.12/site-packages/xgboost/core.py:265: FutureWarning: Your system has an old version of glibc (< 2.28). We will stop supporting Linux distros with glibc older than 2.28 after **May 31, 2025**. Please upgrade to a recent Linux distro (with glibc 2.28+) to use future versions of XGBoost.
+Note: You have installed the 'manylinux2014' variant of XGBoost. Certain features such as GPU algorithms or federated learning are not available. To use these features, please upgrade to a recent Linux distro with glibc 2.28+, and install the 'manylinux_2_28' variant.
+  warnings.warn(
+/home/ggx/anaconda3/lib/python3.12/site-packages/xgboost/core.py:265: FutureWarning: Your system has an old version of glibc (< 2.28). We will stop supporting Linux distros with glibc older than 2.28 after **May 31, 2025**. Please upgrade to a recent Linux distro (with glibc 2.28+) to use future versions of XGBoost.
+Note: You have installed the 'manylinux2014' variant of XGBoost. Certain features such as GPU algorithms or federated learning are not available. To use these features, please upgrade to a recent Linux distro with glibc 2.28+, and install the 'manylinux_2_28' variant.
+  warnings.warn(
+/home/ggx/anaconda3/lib/python3.12/site-packages/xgboost/core.py:265: FutureWarning: Your system has an old version of glibc (< 2.28). We will stop supporting Linux distros with glibc older than 2.28 after **May 31, 2025**. Please upgrade to a recent Linux distro (with glibc 2.28+) to use future versions of XGBoost.
+Note: You have installed the 'manylinux2014' variant of XGBoost. Certain features such as GPU algorithms or federated learning are not available. To use these features, please upgrade to a recent Linux distro with glibc 2.28+, and install the 'manylinux_2_28' variant.
+  warnings.warn(
+/home/ggx/anaconda3/lib/python3.12/site-packages/xgboost/core.py:265: FutureWarning: Your system has an old version of glibc (< 2.28). We will stop supporting Linux distros with glibc older than 2.28 after **May 31, 2025**. Please upgrade to a recent Linux distro (with glibc 2.28+) to use future versions of XGBoost.
+Note: You have installed the 'manylinux2014' variant of XGBoost. Certain features such as GPU algorithms or federated learning are not available. To use these features, please upgrade to a recent Linux distro with glibc 2.28+, and install the 'manylinux_2_28' variant.
+  warnings.warn(
+/home/ggx/anaconda3/lib/python3.12/site-packages/xgboost/core.py:265: FutureWarning: Your system has an old version of glibc (< 2.28). We will stop supporting Linux distros with glibc older than 2.28 after **May 31, 2025**. Please upgrade to a recent Linux distro (with glibc 2.28+) to use future versions of XGBoost.
+Note: You have installed the 'manylinux2014' variant of XGBoost. Certain features such as GPU algorithms or federated learning are not available. To use these features, please upgrade to a recent Linux distro with glibc 2.28+, and install the 'manylinux_2_28' variant.
+  warnings.warn(
+/home/ggx/anaconda3/lib/python3.12/site-packages/xgboost/core.py:265: FutureWarning: Your system has an old version of glibc (< 2.28). We will stop supporting Linux distros with glibc older than 2.28 after **May 31, 2025**. Please upgrade to a recent Linux distro (with glibc 2.28+) to use future versions of XGBoost.
+Note: You have installed the 'manylinux2014' variant of XGBoost. Certain features such as GPU algorithms or federated learning are not available. To use these features, please upgrade to a recent Linux distro with glibc 2.28+, and install the 'manylinux_2_28' variant.
+  warnings.warn(
+/home/ggx/anaconda3/lib/python3.12/site-packages/xgboost/core.py:265: FutureWarning: Your system has an old version of glibc (< 2.28). We will stop supporting Linux distros with glibc older than 2.28 after **May 31, 2025**. Please upgrade to a recent Linux distro (with glibc 2.28+) to use future versions of XGBoost.
+Note: You have installed the 'manylinux2014' variant of XGBoost. Certain features such as GPU algorithms or federated learning are not available. To use these features, please upgrade to a recent Linux distro with glibc 2.28+, and install the 'manylinux_2_28' variant.
+  warnings.warn(
+/home/ggx/anaconda3/lib/python3.12/site-packages/xgboost/core.py:265: FutureWarning: Your system has an old version of glibc (< 2.28). We will stop supporting Linux distros with glibc older than 2.28 after **May 31, 2025**. Please upgrade to a recent Linux distro (with glibc 2.28+) to use future versions of XGBoost.
+Note: You have installed the 'manylinux2014' variant of XGBoost. Certain features such as GPU algorithms or federated learning are not available. To use these features, please upgrade to a recent Linux distro with glibc 2.28+, and install the 'manylinux_2_28' variant.
+  warnings.warn(
+/home/ggx/anaconda3/lib/python3.12/site-packages/xgboost/core.py:265: FutureWarning: Your system has an old version of glibc (< 2.28). We will stop supporting Linux distros with glibc older than 2.28 after **May 31, 2025**. Please upgrade to a recent Linux distro (with glibc 2.28+) to use future versions of XGBoost.
+Note: You have installed the 'manylinux2014' variant of XGBoost. Certain features such as GPU algorithms or federated learning are not available. To use these features, please upgrade to a recent Linux distro with glibc 2.28+, and install the 'manylinux_2_28' variant.
+  warnings.warn(
+/home/ggx/anaconda3/lib/python3.12/site-packages/xgboost/core.py:265: FutureWarning: Your system has an old version of glibc (< 2.28). We will stop supporting Linux distros with glibc older than 2.28 after **May 31, 2025**. Please upgrade to a recent Linux distro (with glibc 2.28+) to use future versions of XGBoost.
+Note: You have installed the 'manylinux2014' variant of XGBoost. Certain features such as GPU algorithms or federated learning are not available. To use these features, please upgrade to a recent Linux distro with glibc 2.28+, and install the 'manylinux_2_28' variant.
+  warnings.warn(
+/home/ggx/anaconda3/lib/python3.12/site-packages/xgboost/core.py:265: FutureWarning: Your system has an old version of glibc (< 2.28). We will stop supporting Linux distros with glibc older than 2.28 after **May 31, 2025**. Please upgrade to a recent Linux distro (with glibc 2.28+) to use future versions of XGBoost.
+Note: You have installed the 'manylinux2014' variant of XGBoost. Certain features such as GPU algorithms or federated learning are not available. To use these features, please upgrade to a recent Linux distro with glibc 2.28+, and install the 'manylinux_2_28' variant.
+  warnings.warn(
+/home/ggx/anaconda3/lib/python3.12/site-packages/xgboost/core.py:265: FutureWarning: Your system has an old version of glibc (< 2.28). We will stop supporting Linux distros with glibc older than 2.28 after **May 31, 2025**. Please upgrade to a recent Linux distro (with glibc 2.28+) to use future versions of XGBoost.
+Note: You have installed the 'manylinux2014' variant of XGBoost. Certain features such as GPU algorithms or federated learning are not available. To use these features, please upgrade to a recent Linux distro with glibc 2.28+, and install the 'manylinux_2_28' variant.
+  warnings.warn(
+/home/ggx/anaconda3/lib/python3.12/site-packages/xgboost/core.py:265: FutureWarning: Your system has an old version of glibc (< 2.28). We will stop supporting Linux distros with glibc older than 2.28 after **May 31, 2025**. Please upgrade to a recent Linux distro (with glibc 2.28+) to use future versions of XGBoost.
+Note: You have installed the 'manylinux2014' variant of XGBoost. Certain features such as GPU algorithms or federated learning are not available. To use these features, please upgrade to a recent Linux distro with glibc 2.28+, and install the 'manylinux_2_28' variant.
+  warnings.warn(
+/home/ggx/anaconda3/lib/python3.12/site-packages/xgboost/core.py:265: FutureWarning: Your system has an old version of glibc (< 2.28). We will stop supporting Linux distros with glibc older than 2.28 after **May 31, 2025**. Please upgrade to a recent Linux distro (with glibc 2.28+) to use future versions of XGBoost.
+Note: You have installed the 'manylinux2014' variant of XGBoost. Certain features such as GPU algorithms or federated learning are not available. To use these features, please upgrade to a recent Linux distro with glibc 2.28+, and install the 'manylinux_2_28' variant.
+  warnings.warn(
+/home/ggx/anaconda3/lib/python3.12/site-packages/xgboost/core.py:265: FutureWarning: Your system has an old version of glibc (< 2.28). We will stop supporting Linux distros with glibc older than 2.28 after **May 31, 2025**. Please upgrade to a recent Linux distro (with glibc 2.28+) to use future versions of XGBoost.
+Note: You have installed the 'manylinux2014' variant of XGBoost. Certain features such as GPU algorithms or federated learning are not available. To use these features, please upgrade to a recent Linux distro with glibc 2.28+, and install the 'manylinux_2_28' variant.
+  warnings.warn(
+/home/ggx/anaconda3/lib/python3.12/site-packages/xgboost/core.py:265: FutureWarning: Your system has an old version of glibc (< 2.28). We will stop supporting Linux distros with glibc older than 2.28 after **May 31, 2025**. Please upgrade to a recent Linux distro (with glibc 2.28+) to use future versions of XGBoost.
+Note: You have installed the 'manylinux2014' variant of XGBoost. Certain features such as GPU algorithms or federated learning are not available. To use these features, please upgrade to a recent Linux distro with glibc 2.28+, and install the 'manylinux_2_28' variant.
+  warnings.warn(
+/home/ggx/anaconda3/lib/python3.12/site-packages/xgboost/core.py:265: FutureWarning: Your system has an old version of glibc (< 2.28). We will stop supporting Linux distros with glibc older than 2.28 after **May 31, 2025**. Please upgrade to a recent Linux distro (with glibc 2.28+) to use future versions of XGBoost.
+Note: You have installed the 'manylinux2014' variant of XGBoost. Certain features such as GPU algorithms or federated learning are not available. To use these features, please upgrade to a recent Linux distro with glibc 2.28+, and install the 'manylinux_2_28' variant.
+  warnings.warn(
+/home/ggx/anaconda3/lib/python3.12/site-packages/xgboost/core.py:265: FutureWarning: Your system has an old version of glibc (< 2.28). We will stop supporting Linux distros with glibc older than 2.28 after **May 31, 2025**. Please upgrade to a recent Linux distro (with glibc 2.28+) to use future versions of XGBoost.
+Note: You have installed the 'manylinux2014' variant of XGBoost. Certain features such as GPU algorithms or federated learning are not available. To use these features, please upgrade to a recent Linux distro with glibc 2.28+, and install the 'manylinux_2_28' variant.
+  warnings.warn(
+/home/ggx/anaconda3/lib/python3.12/site-packages/xgboost/core.py:265: FutureWarning: Your system has an old version of glibc (< 2.28). We will stop supporting Linux distros with glibc older than 2.28 after **May 31, 2025**. Please upgrade to a recent Linux distro (with glibc 2.28+) to use future versions of XGBoost.
+Note: You have installed the 'manylinux2014' variant of XGBoost. Certain features such as GPU algorithms or federated learning are not available. To use these features, please upgrade to a recent Linux distro with glibc 2.28+, and install the 'manylinux_2_28' variant.
+  warnings.warn(
+/home/ggx/anaconda3/lib/python3.12/site-packages/xgboost/core.py:265: FutureWarning: Your system has an old version of glibc (< 2.28). We will stop supporting Linux distros with glibc older than 2.28 after **May 31, 2025**. Please upgrade to a recent Linux distro (with glibc 2.28+) to use future versions of XGBoost.
+Note: You have installed the 'manylinux2014' variant of XGBoost. Certain features such as GPU algorithms or federated learning are not available. To use these features, please upgrade to a recent Linux distro with glibc 2.28+, and install the 'manylinux_2_28' variant.
+  warnings.warn(
+/home/ggx/anaconda3/lib/python3.12/site-packages/xgboost/core.py:265: FutureWarning: Your system has an old version of glibc (< 2.28). We will stop supporting Linux distros with glibc older than 2.28 after **May 31, 2025**. Please upgrade to a recent Linux distro (with glibc 2.28+) to use future versions of XGBoost.
+Note: You have installed the 'manylinux2014' variant of XGBoost. Certain features such as GPU algorithms or federated learning are not available. To use these features, please upgrade to a recent Linux distro with glibc 2.28+, and install the 'manylinux_2_28' variant.
+  warnings.warn(
+/home/ggx/anaconda3/lib/python3.12/site-packages/xgboost/core.py:265: FutureWarning: Your system has an old version of glibc (< 2.28). We will stop supporting Linux distros with glibc older than 2.28 after **May 31, 2025**. Please upgrade to a recent Linux distro (with glibc 2.28+) to use future versions of XGBoost.
+Note: You have installed the 'manylinux2014' variant of XGBoost. Certain features such as GPU algorithms or federated learning are not available. To use these features, please upgrade to a recent Linux distro with glibc 2.28+, and install the 'manylinux_2_28' variant.
+  warnings.warn(
+/home/ggx/anaconda3/lib/python3.12/site-packages/xgboost/core.py:265: FutureWarning: Your system has an old version of glibc (< 2.28). We will stop supporting Linux distros with glibc older than 2.28 after **May 31, 2025**. Please upgrade to a recent Linux distro (with glibc 2.28+) to use future versions of XGBoost.
+Note: You have installed the 'manylinux2014' variant of XGBoost. Certain features such as GPU algorithms or federated learning are not available. To use these features, please upgrade to a recent Linux distro with glibc 2.28+, and install the 'manylinux_2_28' variant.
+  warnings.warn(
+/home/ggx/anaconda3/lib/python3.12/site-packages/xgboost/core.py:265: FutureWarning: Your system has an old version of glibc (< 2.28). We will stop supporting Linux distros with glibc older than 2.28 after **May 31, 2025**. Please upgrade to a recent Linux distro (with glibc 2.28+) to use future versions of XGBoost.
+Note: You have installed the 'manylinux2014' variant of XGBoost. Certain features such as GPU algorithms or federated learning are not available. To use these features, please upgrade to a recent Linux distro with glibc 2.28+, and install the 'manylinux_2_28' variant.
+  warnings.warn(
+/home/ggx/anaconda3/lib/python3.12/site-packages/xgboost/core.py:265: FutureWarning: Your system has an old version of glibc (< 2.28). We will stop supporting Linux distros with glibc older than 2.28 after **May 31, 2025**. Please upgrade to a recent Linux distro (with glibc 2.28+) to use future versions of XGBoost.
+Note: You have installed the 'manylinux2014' variant of XGBoost. Certain features such as GPU algorithms or federated learning are not available. To use these features, please upgrade to a recent Linux distro with glibc 2.28+, and install the 'manylinux_2_28' variant.
+  warnings.warn(
+/home/ggx/anaconda3/lib/python3.12/site-packages/xgboost/core.py:265: FutureWarning: Your system has an old version of glibc (< 2.28). We will stop supporting Linux distros with glibc older than 2.28 after **May 31, 2025**. Please upgrade to a recent Linux distro (with glibc 2.28+) to use future versions of XGBoost.
+Note: You have installed the 'manylinux2014' variant of XGBoost. Certain features such as GPU algorithms or federated learning are not available. To use these features, please upgrade to a recent Linux distro with glibc 2.28+, and install the 'manylinux_2_28' variant.
+  warnings.warn(
+/home/ggx/anaconda3/lib/python3.12/site-packages/xgboost/core.py:265: FutureWarning: Your system has an old version of glibc (< 2.28). We will stop supporting Linux distros with glibc older than 2.28 after **May 31, 2025**. Please upgrade to a recent Linux distro (with glibc 2.28+) to use future versions of XGBoost.
+Note: You have installed the 'manylinux2014' variant of XGBoost. Certain features such as GPU algorithms or federated learning are not available. To use these features, please upgrade to a recent Linux distro with glibc 2.28+, and install the 'manylinux_2_28' variant.
+  warnings.warn(
+/home/ggx/anaconda3/lib/python3.12/site-packages/xgboost/core.py:265: FutureWarning: Your system has an old version of glibc (< 2.28). We will stop supporting Linux distros with glibc older than 2.28 after **May 31, 2025**. Please upgrade to a recent Linux distro (with glibc 2.28+) to use future versions of XGBoost.
+Note: You have installed the 'manylinux2014' variant of XGBoost. Certain features such as GPU algorithms or federated learning are not available. To use these features, please upgrade to a recent Linux distro with glibc 2.28+, and install the 'manylinux_2_28' variant.
+  warnings.warn(
+/home/ggx/anaconda3/lib/python3.12/site-packages/xgboost/core.py:265: FutureWarning: Your system has an old version of glibc (< 2.28). We will stop supporting Linux distros with glibc older than 2.28 after **May 31, 2025**. Please upgrade to a recent Linux distro (with glibc 2.28+) to use future versions of XGBoost.
+Note: You have installed the 'manylinux2014' variant of XGBoost. Certain features such as GPU algorithms or federated learning are not available. To use these features, please upgrade to a recent Linux distro with glibc 2.28+, and install the 'manylinux_2_28' variant.
+  warnings.warn(
+/home/ggx/anaconda3/lib/python3.12/site-packages/xgboost/core.py:265: FutureWarning: Your system has an old version of glibc (< 2.28). We will stop supporting Linux distros with glibc older than 2.28 after **May 31, 2025**. Please upgrade to a recent Linux distro (with glibc 2.28+) to use future versions of XGBoost.
+Note: You have installed the 'manylinux2014' variant of XGBoost. Certain features such as GPU algorithms or federated learning are not available. To use these features, please upgrade to a recent Linux distro with glibc 2.28+, and install the 'manylinux_2_28' variant.
+  warnings.warn(
+/home/ggx/anaconda3/lib/python3.12/site-packages/xgboost/core.py:265: FutureWarning: Your system has an old version of glibc (< 2.28). We will stop supporting Linux distros with glibc older than 2.28 after **May 31, 2025**. Please upgrade to a recent Linux distro (with glibc 2.28+) to use future versions of XGBoost.
+Note: You have installed the 'manylinux2014' variant of XGBoost. Certain features such as GPU algorithms or federated learning are not available. To use these features, please upgrade to a recent Linux distro with glibc 2.28+, and install the 'manylinux_2_28' variant.
+  warnings.warn(
+/home/ggx/anaconda3/lib/python3.12/site-packages/xgboost/core.py:265: FutureWarning: Your system has an old version of glibc (< 2.28). We will stop supporting Linux distros with glibc older than 2.28 after **May 31, 2025**. Please upgrade to a recent Linux distro (with glibc 2.28+) to use future versions of XGBoost.
+Note: You have installed the 'manylinux2014' variant of XGBoost. Certain features such as GPU algorithms or federated learning are not available. To use these features, please upgrade to a recent Linux distro with glibc 2.28+, and install the 'manylinux_2_28' variant.
+  warnings.warn(
+
+Best parameter combination:
+{'subsample': 1.0, 'reg_lambda': 0.1, 'reg_alpha': 0.1, 'n_estimators': 1150, 'min_child_weight': 14, 'max_depth': 12, 'learning_rate': 0.01, 'colsample_bytree': 0.8}
+Train R²: 0.8702, Test R²: 0.6284
+
+Results for each parameter combination:
+                                               params  ...  std_test_score
+0   {'subsample': 0.7, 'reg_lambda': 0.5, 'reg_alp...  ...        2.004627
+1   {'subsample': 0.6, 'reg_lambda': 60, 'reg_alph...  ...        1.609358
+2   {'subsample': 0.9, 'reg_lambda': 90, 'reg_alph...  ...        3.106682
+3   {'subsample': 0.7, 'reg_lambda': 20, 'reg_alph...  ...        1.628790
+4   {'subsample': 0.7, 'reg_lambda': 40, 'reg_alph...  ...        1.638876
+..                                                ...  ...             ...
+95  {'subsample': 0.6, 'reg_lambda': 0.5, 'reg_alp...  ...        1.762696
+96  {'subsample': 0.7, 'reg_lambda': 50, 'reg_alph...  ...        2.671268
+97  {'subsample': 0.6, 'reg_lambda': 70, 'reg_alph...  ...        7.319821
+98  {'subsample': 0.9, 'reg_lambda': 100, 'reg_alp...  ...        3.407130
+99  {'subsample': 0.9, 'reg_lambda': 60, 'reg_alph...  ...        2.733453
+
+[100 rows x 3 columns]
+
+Using random_state=2 for training
+
+Best parameter combination:
+{'subsample': 0.9, 'reg_lambda': 60, 'reg_alpha': 0, 'n_estimators': 1250, 'min_child_weight': 5, 'max_depth': 2, 'learning_rate': 0.01, 'colsample_bytree': 0.6}
+Train R²: 0.8502, Test R²: 0.7536
+
+Results for each parameter combination:
+                                               params  ...  std_test_score
+0   {'subsample': 0.8, 'reg_lambda': 40, 'reg_alph...  ...        0.520396
+1   {'subsample': 1.0, 'reg_lambda': 0.5, 'reg_alp...  ...        0.833417
+2   {'subsample': 0.6, 'reg_lambda': 0.1, 'reg_alp...  ...        0.682829
+3   {'subsample': 0.7, 'reg_lambda': 80, 'reg_alph...  ...        0.624231
+4   {'subsample': 0.7, 'reg_lambda': 100, 'reg_alp...  ...        0.548459
+..                                                ...  ...             ...
+95  {'subsample': 0.6, 'reg_lambda': 70, 'reg_alph...  ...        0.521893
+96  {'subsample': 1.0, 'reg_lambda': 10, 'reg_alph...  ...        0.682630
+97  {'subsample': 0.7, 'reg_lambda': 30, 'reg_alph...  ...        0.570578
+98  {'subsample': 0.9, 'reg_lambda': 100, 'reg_alp...  ...        0.503247
+99  {'subsample': 0.8, 'reg_lambda': 0.5, 'reg_alp...  ...        0.672394
+
+[100 rows x 3 columns]
+
+Using random_state=3 for training
+
+Best parameter combination:
+{'subsample': 0.9, 'reg_lambda': 70, 'reg_alpha': 0, 'n_estimators': 1550, 'min_child_weight': 7, 'max_depth': 9, 'learning_rate': 0.01, 'colsample_bytree': 0.6}
+Train R²: 0.8716, Test R²: 0.7824
+
+Results for each parameter combination:
+                                               params  ...  std_test_score
+0   {'subsample': 0.6, 'reg_lambda': 50, 'reg_alph...  ...        2.634124
+1   {'subsample': 0.8, 'reg_lambda': 60, 'reg_alph...  ...        7.298593
+2   {'subsample': 0.9, 'reg_lambda': 90, 'reg_alph...  ...        5.467839
+3   {'subsample': 0.8, 'reg_lambda': 0.5, 'reg_alp...  ...        2.310700
+4   {'subsample': 0.7, 'reg_lambda': 0.1, 'reg_alp...  ...        6.940671
+..                                                ...  ...             ...
+95  {'subsample': 1.0, 'reg_lambda': 100, 'reg_alp...  ...        3.495762
+96  {'subsample': 0.7, 'reg_lambda': 50, 'reg_alph...  ...        9.860514
+97  {'subsample': 1.0, 'reg_lambda': 30, 'reg_alph...  ...        3.626217
+98  {'subsample': 0.8, 'reg_lambda': 60, 'reg_alph...  ...        3.011098
+99  {'subsample': 0.7, 'reg_lambda': 0.1, 'reg_alp...  ...        9.009658
+
+[100 rows x 3 columns]
+
+Using random_state=4 for training
+
+Best parameter combination:
+{'subsample': 1.0, 'reg_lambda': 100, 'reg_alpha': 0.1, 'n_estimators': 1750, 'min_child_weight': 7, 'max_depth': 15, 'learning_rate': 0.01, 'colsample_bytree': 0.8}
+Train R²: 0.8530, Test R²: 0.8367
+
+Results for each parameter combination:
+                                               params  ...  std_test_score
+0   {'subsample': 0.6, 'reg_lambda': 0.5, 'reg_alp...  ...        1.998690
+1   {'subsample': 0.9, 'reg_lambda': 1, 'reg_alpha...  ...        2.542046
+2   {'subsample': 0.7, 'reg_lambda': 0.1, 'reg_alp...  ...        3.127745
+3   {'subsample': 0.6, 'reg_lambda': 50, 'reg_alph...  ...        2.804705
+4   {'subsample': 1.0, 'reg_lambda': 50, 'reg_alph...  ...        2.993017
+..                                                ...  ...             ...
+95  {'subsample': 0.8, 'reg_lambda': 80, 'reg_alph...  ...        2.993396
+96  {'subsample': 0.6, 'reg_lambda': 50, 'reg_alph...  ...        3.565925
+97  {'subsample': 0.6, 'reg_lambda': 80, 'reg_alph...  ...        4.561134
+98  {'subsample': 1.0, 'reg_lambda': 70, 'reg_alph...  ...        3.455533
+99  {'subsample': 0.8, 'reg_lambda': 0.5, 'reg_alp...  ...        3.119533
+
+[100 rows x 3 columns]
+
+Using random_state=5 for training
+
+Best parameter combination:
+{'subsample': 0.6, 'reg_lambda': 1, 'reg_alpha': 0.01, 'n_estimators': 150, 'min_child_weight': 10, 'max_depth': 16, 'learning_rate': 0.01, 'colsample_bytree': 0.8}
+Train R²: 0.7407, Test R²: 0.7856
+
+Results for each parameter combination:
+                                               params  ...  std_test_score
+0   {'subsample': 0.6, 'reg_lambda': 1, 'reg_alpha...  ...        2.878760
+1   {'subsample': 0.8, 'reg_lambda': 10, 'reg_alph...  ...        3.588338
+2   {'subsample': 0.9, 'reg_lambda': 90, 'reg_alph...  ...        4.426558
+3   {'subsample': 0.8, 'reg_lambda': 40, 'reg_alph...  ...        3.347194
+4   {'subsample': 0.6, 'reg_lambda': 20, 'reg_alph...  ...        2.671195
+..                                                ...  ...             ...
+95  {'subsample': 0.6, 'reg_lambda': 10, 'reg_alph...  ...        3.262797
+96  {'subsample': 0.7, 'reg_lambda': 40, 'reg_alph...  ...        0.909917
+97  {'subsample': 0.9, 'reg_lambda': 100, 'reg_alp...  ...        2.084084
+98  {'subsample': 0.9, 'reg_lambda': 0.5, 'reg_alp...  ...        2.216843
+99  {'subsample': 0.9, 'reg_lambda': 30, 'reg_alph...  ...        0.961646
+
+[100 rows x 3 columns]
+
+Using random_state=6 for training
+
+Best parameter combination:
+{'subsample': 1.0, 'reg_lambda': 20, 'reg_alpha': 0, 'n_estimators': 650, 'min_child_weight': 3, 'max_depth': 2, 'learning_rate': 0.01, 'colsample_bytree': 0.7}
+Train R²: 0.8858, Test R²: 0.7187
+
+Results for each parameter combination:
+                                               params  ...  std_test_score
+0   {'subsample': 0.7, 'reg_lambda': 50, 'reg_alph...  ...        0.552976
+1   {'subsample': 0.7, 'reg_lambda': 30, 'reg_alph...  ...        0.475916
+2   {'subsample': 0.9, 'reg_lambda': 70, 'reg_alph...  ...        0.438601
+3   {'subsample': 0.7, 'reg_lambda': 20, 'reg_alph...  ...        0.551855
+4   {'subsample': 0.7, 'reg_lambda': 1, 'reg_alpha...  ...        0.641271
+..                                                ...  ...             ...
+95  {'subsample': 0.7, 'reg_lambda': 1, 'reg_alpha...  ...        0.465924
+96  {'subsample': 0.6, 'reg_lambda': 50, 'reg_alph...  ...        0.323488
+97  {'subsample': 0.8, 'reg_lambda': 1, 'reg_alpha...  ...        0.570925
+98  {'subsample': 0.9, 'reg_lambda': 30, 'reg_alph...  ...        0.430747
+99  {'subsample': 0.6, 'reg_lambda': 0.1, 'reg_alp...  ...        0.478861
+
+[100 rows x 3 columns]
+
+Using random_state=7 for training
+
+Best parameter combination:
+{'subsample': 0.7, 'reg_lambda': 1, 'reg_alpha': 0.01, 'n_estimators': 50, 'min_child_weight': 7, 'max_depth': 24, 'learning_rate': 0.05, 'colsample_bytree': 0.6}
+Train R²: 0.8647, Test R²: 0.7629
+
+Results for each parameter combination:
+                                               params  ...  std_test_score
+0   {'subsample': 1.0, 'reg_lambda': 30, 'reg_alph...  ...        1.001581
+1   {'subsample': 0.7, 'reg_lambda': 20, 'reg_alph...  ...        1.096389
+2   {'subsample': 0.7, 'reg_lambda': 60, 'reg_alph...  ...        0.938092
+3   {'subsample': 0.7, 'reg_lambda': 20, 'reg_alph...  ...        0.948423
+4   {'subsample': 1.0, 'reg_lambda': 0.1, 'reg_alp...  ...        0.741374
+..                                                ...  ...             ...
+95  {'subsample': 0.7, 'reg_lambda': 1, 'reg_alpha...  ...        0.590114
+96  {'subsample': 0.8, 'reg_lambda': 100, 'reg_alp...  ...        0.888671
+97  {'subsample': 1.0, 'reg_lambda': 40, 'reg_alph...  ...        0.932058
+98  {'subsample': 0.6, 'reg_lambda': 30, 'reg_alph...  ...        0.915276
+99  {'subsample': 0.8, 'reg_lambda': 90, 'reg_alph...  ...        0.926282
+
+[100 rows x 3 columns]
+
+Using random_state=8 for training
+
+Best parameter combination:
+{'subsample': 1.0, 'reg_lambda': 90, 'reg_alpha': 1, 'n_estimators': 1850, 'min_child_weight': 1, 'max_depth': 15, 'learning_rate': 0.3, 'colsample_bytree': 0.7}
+Train R²: 0.8945, Test R²: 0.7345
+
+Results for each parameter combination:
+                                               params  ...  std_test_score
+0   {'subsample': 0.9, 'reg_lambda': 10, 'reg_alph...  ...        0.342390
+1   {'subsample': 0.6, 'reg_lambda': 80, 'reg_alph...  ...        0.489326
+2   {'subsample': 0.8, 'reg_lambda': 40, 'reg_alph...  ...        1.276373
+3   {'subsample': 0.7, 'reg_lambda': 80, 'reg_alph...  ...        1.341769
+4   {'subsample': 0.8, 'reg_lambda': 80, 'reg_alph...  ...        0.430517
+..                                                ...  ...             ...
+95  {'subsample': 0.7, 'reg_lambda': 100, 'reg_alp...  ...        0.633147
+96  {'subsample': 0.6, 'reg_lambda': 0.1, 'reg_alp...  ...        0.473625
+97  {'subsample': 1.0, 'reg_lambda': 40, 'reg_alph...  ...        1.050710
+98  {'subsample': 1.0, 'reg_lambda': 30, 'reg_alph...  ...        0.864336
+99  {'subsample': 0.9, 'reg_lambda': 30, 'reg_alph...  ...        4.558844
+
+[100 rows x 3 columns]
+
+Using random_state=9 for training
+
+Best parameter combination:
+{'subsample': 1.0, 'reg_lambda': 10, 'reg_alpha': 1, 'n_estimators': 1150, 'min_child_weight': 2, 'max_depth': 9, 'learning_rate': 0.6, 'colsample_bytree': 0.8}
+Train R²: 0.8621, Test R²: 0.8833
+
+Results for each parameter combination:
+                                               params  ...  std_test_score
+0   {'subsample': 0.6, 'reg_lambda': 10, 'reg_alph...  ...        1.053095
+1   {'subsample': 0.7, 'reg_lambda': 50, 'reg_alph...  ...        0.708426
+2   {'subsample': 0.9, 'reg_lambda': 0.1, 'reg_alp...  ...        1.094229
+3   {'subsample': 0.6, 'reg_lambda': 100, 'reg_alp...  ...        0.878207
+4   {'subsample': 0.9, 'reg_lambda': 1, 'reg_alpha...  ...        0.571773
+..                                                ...  ...             ...
+95  {'subsample': 0.8, 'reg_lambda': 0.1, 'reg_alp...  ...        0.681430
+96  {'subsample': 0.7, 'reg_lambda': 20, 'reg_alph...  ...        0.431620
+97  {'subsample': 0.7, 'reg_lambda': 20, 'reg_alph...  ...        0.626765
+98  {'subsample': 1.0, 'reg_lambda': 80, 'reg_alph...  ...        0.459967
+99  {'subsample': 0.7, 'reg_lambda': 60, 'reg_alph...  ...        0.680572
+
+[100 rows x 3 columns]
+
+Using random_state=10 for training
+
+Best parameter combination:
+{'subsample': 0.7, 'reg_lambda': 1, 'reg_alpha': 1, 'n_estimators': 150, 'min_child_weight': 7, 'max_depth': 17, 'learning_rate': 0.05, 'colsample_bytree': 0.7}
+Train R²: 0.8675, Test R²: 0.7504
+
+Results for each parameter combination:
+                                               params  ...  std_test_score
+0   {'subsample': 0.9, 'reg_lambda': 60, 'reg_alph...  ...        0.850004
+1   {'subsample': 0.8, 'reg_lambda': 1, 'reg_alpha...  ...        1.045270
+2   {'subsample': 0.9, 'reg_lambda': 90, 'reg_alph...  ...        0.780306
+3   {'subsample': 1.0, 'reg_lambda': 10, 'reg_alph...  ...        1.126738
+4   {'subsample': 0.6, 'reg_lambda': 100, 'reg_alp...  ...        1.118081
+..                                                ...  ...             ...
+95  {'subsample': 0.6, 'reg_lambda': 40, 'reg_alph...  ...        1.321892
+96  {'subsample': 0.7, 'reg_lambda': 80, 'reg_alph...  ...        0.789585
+97  {'subsample': 0.8, 'reg_lambda': 40, 'reg_alph...  ...        1.226969
+98  {'subsample': 1.0, 'reg_lambda': 1, 'reg_alpha...  ...        1.112362
+99  {'subsample': 0.7, 'reg_lambda': 100, 'reg_alp...  ...        0.905378
+
+[100 rows x 3 columns]
+
+Using random_state=11 for training
+
+Best parameter combination:
+{'subsample': 0.9, 'reg_lambda': 50, 'reg_alpha': 1, 'n_estimators': 850, 'min_child_weight': 4, 'max_depth': 17, 'learning_rate': 0.01, 'colsample_bytree': 0.6}
+Train R²: 0.8165, Test R²: 0.6856
+
+Results for each parameter combination:
+                                               params  ...  std_test_score
+0   {'subsample': 0.9, 'reg_lambda': 70, 'reg_alph...  ...        2.343708
+1   {'subsample': 0.6, 'reg_lambda': 1, 'reg_alpha...  ...        2.646664
+2   {'subsample': 1.0, 'reg_lambda': 10, 'reg_alph...  ...        2.415393
+3   {'subsample': 1.0, 'reg_lambda': 50, 'reg_alph...  ...        2.494788
+4   {'subsample': 0.8, 'reg_lambda': 60, 'reg_alph...  ...        2.945133
+..                                                ...  ...             ...
+95  {'subsample': 1.0, 'reg_lambda': 20, 'reg_alph...  ...        2.517612
+96  {'subsample': 1.0, 'reg_lambda': 80, 'reg_alph...  ...        2.329179
+97  {'subsample': 0.7, 'reg_lambda': 10, 'reg_alph...  ...        2.792999
+98  {'subsample': 0.8, 'reg_lambda': 0.1, 'reg_alp...  ...        3.142068
+99  {'subsample': 0.8, 'reg_lambda': 90, 'reg_alph...  ...        2.555433
+
+[100 rows x 3 columns]
+
+Using random_state=12 for training
+
+Best parameter combination:
+{'subsample': 0.6, 'reg_lambda': 80, 'reg_alpha': 1, 'n_estimators': 1750, 'min_child_weight': 1, 'max_depth': 11, 'learning_rate': 0.1, 'colsample_bytree': 0.8}
+Train R²: 0.9059, Test R²: 0.7376
+
+Results for each parameter combination:
+                                               params  ...  std_test_score
+0   {'subsample': 0.7, 'reg_lambda': 70, 'reg_alph...  ...        0.513756
+1   {'subsample': 1.0, 'reg_lambda': 70, 'reg_alph...  ...        0.647742
+2   {'subsample': 0.9, 'reg_lambda': 90, 'reg_alph...  ...        1.079203
+3   {'subsample': 1.0, 'reg_lambda': 80, 'reg_alph...  ...        0.718130
+4   {'subsample': 0.9, 'reg_lambda': 20, 'reg_alph...  ...        0.905834
+..                                                ...  ...             ...
+95  {'subsample': 1.0, 'reg_lambda': 10, 'reg_alph...  ...        0.850069
+96  {'subsample': 1.0, 'reg_lambda': 30, 'reg_alph...  ...        0.708213
+97  {'subsample': 0.6, 'reg_lambda': 80, 'reg_alph...  ...        0.598140
+98  {'subsample': 1.0, 'reg_lambda': 80, 'reg_alph...  ...        1.131862
+99  {'subsample': 0.8, 'reg_lambda': 50, 'reg_alph...  ...        0.505495
+
+[100 rows x 3 columns]
+
+Using random_state=13 for training
+
+Best parameter combination:
+{'subsample': 0.6, 'reg_lambda': 0.5, 'reg_alpha': 1, 'n_estimators': 1950, 'min_child_weight': 5, 'max_depth': 23, 'learning_rate': 0.5, 'colsample_bytree': 0.6}
+Train R²: 0.9516, Test R²: 0.7684
+
+Results for each parameter combination:
+                                               params  ...  std_test_score
+0   {'subsample': 0.6, 'reg_lambda': 40, 'reg_alph...  ...        0.342152
+1   {'subsample': 0.9, 'reg_lambda': 10, 'reg_alph...  ...        0.518903
+2   {'subsample': 0.6, 'reg_lambda': 30, 'reg_alph...  ...        0.961290
+3   {'subsample': 0.6, 'reg_lambda': 100, 'reg_alp...  ...        0.595740
+4   {'subsample': 0.8, 'reg_lambda': 30, 'reg_alph...  ...        0.323517
+..                                                ...  ...             ...
+95  {'subsample': 0.6, 'reg_lambda': 10, 'reg_alph...  ...        1.208053
+96  {'subsample': 0.6, 'reg_lambda': 0.1, 'reg_alp...  ...        0.500522
+97  {'subsample': 0.7, 'reg_lambda': 50, 'reg_alph...  ...        0.450272
+98  {'subsample': 0.9, 'reg_lambda': 90, 'reg_alph...  ...        0.456484
+99  {'subsample': 0.9, 'reg_lambda': 50, 'reg_alph...  ...        0.455961
+
+[100 rows x 3 columns]
+
+Using random_state=14 for training
+
+Best parameter combination:
+{'subsample': 1.0, 'reg_lambda': 60, 'reg_alpha': 1, 'n_estimators': 1650, 'min_child_weight': 2, 'max_depth': 6, 'learning_rate': 0.1, 'colsample_bytree': 0.6}
+Train R²: 0.8694, Test R²: 0.8473
+
+Results for each parameter combination:
+                                               params  ...  std_test_score
+0   {'subsample': 0.8, 'reg_lambda': 100, 'reg_alp...  ...        1.517142
+1   {'subsample': 0.7, 'reg_lambda': 30, 'reg_alph...  ...        1.298948
+2   {'subsample': 0.7, 'reg_lambda': 40, 'reg_alph...  ...        3.232234
+3   {'subsample': 0.8, 'reg_lambda': 50, 'reg_alph...  ...        3.137303
+4   {'subsample': 1.0, 'reg_lambda': 0.5, 'reg_alp...  ...        3.183890
+..                                                ...  ...             ...
+95  {'subsample': 0.9, 'reg_lambda': 20, 'reg_alph...  ...        3.078753
+96  {'subsample': 1.0, 'reg_lambda': 20, 'reg_alph...  ...        1.342078
+97  {'subsample': 0.8, 'reg_lambda': 60, 'reg_alph...  ...        1.569830
+98  {'subsample': 1.0, 'reg_lambda': 0.5, 'reg_alp...  ...        1.646097
+99  {'subsample': 1.0, 'reg_lambda': 10, 'reg_alph...  ...        1.375350
+
+[100 rows x 3 columns]
+
+Using random_state=15 for training
+
+Best parameter combination:
+{'subsample': 1.0, 'reg_lambda': 20, 'reg_alpha': 1, 'n_estimators': 450, 'min_child_weight': 6, 'max_depth': 13, 'learning_rate': 0.05, 'colsample_bytree': 0.8}
+Train R²: 0.8889, Test R²: 0.6962
+
+Results for each parameter combination:
+                                               params  ...  std_test_score
+0   {'subsample': 0.7, 'reg_lambda': 0.1, 'reg_alp...  ...        0.748472
+1   {'subsample': 0.7, 'reg_lambda': 20, 'reg_alph...  ...        0.420131
+2   {'subsample': 0.6, 'reg_lambda': 40, 'reg_alph...  ...        0.604106
+3   {'subsample': 0.7, 'reg_lambda': 90, 'reg_alph...  ...        0.622960
+4   {'subsample': 0.9, 'reg_lambda': 20, 'reg_alph...  ...        0.479078
+..                                                ...  ...             ...
+95  {'subsample': 0.9, 'reg_lambda': 90, 'reg_alph...  ...        0.541282
+96  {'subsample': 1.0, 'reg_lambda': 0.1, 'reg_alp...  ...        0.588829
+97  {'subsample': 0.8, 'reg_lambda': 70, 'reg_alph...  ...        0.790577
+98  {'subsample': 0.8, 'reg_lambda': 10, 'reg_alph...  ...        0.601971
+99  {'subsample': 0.6, 'reg_lambda': 30, 'reg_alph...  ...        0.534849
+
+[100 rows x 3 columns]
+
+Using random_state=16 for training
+
+Best parameter combination:
+{'subsample': 0.9, 'reg_lambda': 60, 'reg_alpha': 0.01, 'n_estimators': 350, 'min_child_weight': 5, 'max_depth': 5, 'learning_rate': 0.05, 'colsample_bytree': 0.8}
+Train R²: 0.8918, Test R²: 0.7786
+
+Results for each parameter combination:
+                                               params  ...  std_test_score
+0   {'subsample': 0.6, 'reg_lambda': 10, 'reg_alph...  ...        0.716500
+1   {'subsample': 0.9, 'reg_lambda': 10, 'reg_alph...  ...        0.756299
+2   {'subsample': 0.7, 'reg_lambda': 40, 'reg_alph...  ...        0.536863
+3   {'subsample': 0.7, 'reg_lambda': 40, 'reg_alph...  ...        0.536119
+4   {'subsample': 0.6, 'reg_lambda': 90, 'reg_alph...  ...        0.588161
+..                                                ...  ...             ...
+95  {'subsample': 1.0, 'reg_lambda': 20, 'reg_alph...  ...        0.513379
+96  {'subsample': 0.8, 'reg_lambda': 0.5, 'reg_alp...  ...        0.644761
+97  {'subsample': 1.0, 'reg_lambda': 10, 'reg_alph...  ...        0.566101
+98  {'subsample': 0.9, 'reg_lambda': 30, 'reg_alph...  ...        0.462636
+99  {'subsample': 0.6, 'reg_lambda': 10, 'reg_alph...  ...        0.576864
+
+[100 rows x 3 columns]
+
+Using random_state=17 for training
+
+Best parameter combination:
+{'subsample': 0.6, 'reg_lambda': 70, 'reg_alpha': 1, 'n_estimators': 1350, 'min_child_weight': 3, 'max_depth': 15, 'learning_rate': 0.5, 'colsample_bytree': 0.8}
+Train R²: 0.9385, Test R²: 0.7630
+
+Results for each parameter combination:
+                                               params  ...  std_test_score
+0   {'subsample': 0.8, 'reg_lambda': 40, 'reg_alph...  ...        9.419175
+1   {'subsample': 0.7, 'reg_lambda': 50, 'reg_alph...  ...        2.908080
+2   {'subsample': 0.8, 'reg_lambda': 0.5, 'reg_alp...  ...        8.852072
+3   {'subsample': 0.6, 'reg_lambda': 10, 'reg_alph...  ...        0.658048
+4   {'subsample': 0.8, 'reg_lambda': 1, 'reg_alpha...  ...        1.045504
+..                                                ...  ...             ...
+95  {'subsample': 0.8, 'reg_lambda': 100, 'reg_alp...  ...        0.919464
+96  {'subsample': 0.7, 'reg_lambda': 80, 'reg_alph...  ...        0.749249
+97  {'subsample': 1.0, 'reg_lambda': 1, 'reg_alpha...  ...        0.524486
+98  {'subsample': 0.6, 'reg_lambda': 80, 'reg_alph...  ...        1.786469
+99  {'subsample': 0.6, 'reg_lambda': 70, 'reg_alph...  ...        0.549366
+
+[100 rows x 3 columns]
+
+Using random_state=18 for training
+
+Best parameter combination:
+{'subsample': 0.7, 'reg_lambda': 0.1, 'reg_alpha': 1, 'n_estimators': 550, 'min_child_weight': 2, 'max_depth': 3, 'learning_rate': 0.01, 'colsample_bytree': 0.8}
+Train R²: 0.8777, Test R²: 0.7421
+
+Results for each parameter combination:
+                                               params  ...  std_test_score
+0   {'subsample': 0.8, 'reg_lambda': 1, 'reg_alpha...  ...        0.884352
+1   {'subsample': 0.8, 'reg_lambda': 50, 'reg_alph...  ...        0.621804
+2   {'subsample': 0.8, 'reg_lambda': 60, 'reg_alph...  ...        0.864161
+3   {'subsample': 0.9, 'reg_lambda': 40, 'reg_alph...  ...        0.914661
+4   {'subsample': 0.9, 'reg_lambda': 70, 'reg_alph...  ...        0.737764
+..                                                ...  ...             ...
+95  {'subsample': 1.0, 'reg_lambda': 0.1, 'reg_alp...  ...        0.872160
+96  {'subsample': 1.0, 'reg_lambda': 80, 'reg_alph...  ...        0.758490
+97  {'subsample': 0.6, 'reg_lambda': 40, 'reg_alph...  ...        0.901751
+98  {'subsample': 0.6, 'reg_lambda': 60, 'reg_alph...  ...        1.029633
+99  {'subsample': 0.7, 'reg_lambda': 40, 'reg_alph...  ...        0.769571
+
+[100 rows x 3 columns]
+
+Using random_state=19 for training
+
+Best parameter combination:
+{'subsample': 0.6, 'reg_lambda': 70, 'reg_alpha': 1, 'n_estimators': 950, 'min_child_weight': 1, 'max_depth': 9, 'learning_rate': 0.6, 'colsample_bytree': 0.9}
+Train R²: 0.9425, Test R²: 0.7229
+
+Results for each parameter combination:
+                                               params  ...  std_test_score
+0   {'subsample': 0.7, 'reg_lambda': 0.5, 'reg_alp...  ...        0.774619
+1   {'subsample': 0.9, 'reg_lambda': 0.5, 'reg_alp...  ...        0.285913
+2   {'subsample': 0.7, 'reg_lambda': 100, 'reg_alp...  ...        0.918533
+3   {'subsample': 0.6, 'reg_lambda': 0.5, 'reg_alp...  ...        0.789035
+4   {'subsample': 1.0, 'reg_lambda': 90, 'reg_alph...  ...        0.433695
+..                                                ...  ...             ...
+95  {'subsample': 0.6, 'reg_lambda': 100, 'reg_alp...  ...        0.394164
+96  {'subsample': 0.9, 'reg_lambda': 70, 'reg_alph...  ...        0.237055
+97  {'subsample': 0.7, 'reg_lambda': 100, 'reg_alp...  ...        0.312667
+98  {'subsample': 0.6, 'reg_lambda': 100, 'reg_alp...  ...        0.335605
+99  {'subsample': 0.9, 'reg_lambda': 30, 'reg_alph...  ...        0.397570
+
+[100 rows x 3 columns]
+
+Using random_state=20 for training
+
+Best parameter combination:
+{'subsample': 1.0, 'reg_lambda': 40, 'reg_alpha': 1, 'n_estimators': 1950, 'min_child_weight': 9, 'max_depth': 2, 'learning_rate': 0.05, 'colsample_bytree': 0.9}
+Train R²: 0.8872, Test R²: 0.6032
+
+Results for each parameter combination:
+                                               params  ...  std_test_score
+0   {'subsample': 0.7, 'reg_lambda': 0.1, 'reg_alp...  ...        0.396408
+1   {'subsample': 0.9, 'reg_lambda': 40, 'reg_alph...  ...        0.974504
+2   {'subsample': 0.6, 'reg_lambda': 30, 'reg_alph...  ...        0.748550
+3   {'subsample': 0.6, 'reg_lambda': 0.1, 'reg_alp...  ...        1.114049
+4   {'subsample': 0.6, 'reg_lambda': 30, 'reg_alph...  ...        0.776456
+..                                                ...  ...             ...
+95  {'subsample': 0.8, 'reg_lambda': 20, 'reg_alph...  ...        0.964649
+96  {'subsample': 0.6, 'reg_lambda': 1, 'reg_alpha...  ...        0.391338
+97  {'subsample': 1.0, 'reg_lambda': 40, 'reg_alph...  ...        0.606377
+98  {'subsample': 1.0, 'reg_lambda': 10, 'reg_alph...  ...        0.964414
+99  {'subsample': 0.7, 'reg_lambda': 0.5, 'reg_alp...  ...        1.620358
+
+[100 rows x 3 columns]
+
+Using random_state=21 for training
+
+Best parameter combination:
+{'subsample': 0.9, 'reg_lambda': 90, 'reg_alpha': 1, 'n_estimators': 150, 'min_child_weight': 3, 'max_depth': 14, 'learning_rate': 0.5, 'colsample_bytree': 0.9}
+Train R²: 0.8883, Test R²: 0.7884
+
+Results for each parameter combination:
+                                               params  ...  std_test_score
+0   {'subsample': 0.6, 'reg_lambda': 20, 'reg_alph...  ...        1.566109
+1   {'subsample': 0.9, 'reg_lambda': 60, 'reg_alph...  ...        1.189988
+2   {'subsample': 1.0, 'reg_lambda': 1, 'reg_alpha...  ...        1.243587
+3   {'subsample': 0.8, 'reg_lambda': 40, 'reg_alph...  ...        1.292428
+4   {'subsample': 0.7, 'reg_lambda': 1, 'reg_alpha...  ...        1.207894
+..                                                ...  ...             ...
+95  {'subsample': 0.8, 'reg_lambda': 0.1, 'reg_alp...  ...        1.421332
+96  {'subsample': 0.7, 'reg_lambda': 90, 'reg_alph...  ...        1.183153
+97  {'subsample': 0.8, 'reg_lambda': 1, 'reg_alpha...  ...        1.059969
+98  {'subsample': 1.0, 'reg_lambda': 90, 'reg_alph...  ...        0.984564
+99  {'subsample': 0.9, 'reg_lambda': 70, 'reg_alph...  ...        1.454295
+
+[100 rows x 3 columns]
+
+Using random_state=22 for training
+
+Best parameter combination:
+{'subsample': 0.6, 'reg_lambda': 1, 'reg_alpha': 1, 'n_estimators': 350, 'min_child_weight': 4, 'max_depth': 21, 'learning_rate': 0.05, 'colsample_bytree': 0.6}
+Train R²: 0.8932, Test R²: 0.5906
+
+Results for each parameter combination:
+                                               params  ...  std_test_score
+0   {'subsample': 0.6, 'reg_lambda': 90, 'reg_alph...  ...        1.566179
+1   {'subsample': 0.7, 'reg_lambda': 0.5, 'reg_alp...  ...        0.848444
+2   {'subsample': 0.6, 'reg_lambda': 100, 'reg_alp...  ...        0.641769
+3   {'subsample': 0.9, 'reg_lambda': 100, 'reg_alp...  ...        0.976824
+4   {'subsample': 0.8, 'reg_lambda': 50, 'reg_alph...  ...        0.901165
+..                                                ...  ...             ...
+95  {'subsample': 0.7, 'reg_lambda': 30, 'reg_alph...  ...        1.155627
+96  {'subsample': 0.9, 'reg_lambda': 0.1, 'reg_alp...  ...        0.929058
+97  {'subsample': 0.8, 'reg_lambda': 60, 'reg_alph...  ...        0.751033
+98  {'subsample': 0.7, 'reg_lambda': 70, 'reg_alph...  ...        0.952886
+99  {'subsample': 1.0, 'reg_lambda': 90, 'reg_alph...  ...        0.889945
+
+[100 rows x 3 columns]
+
+Using random_state=23 for training
+
+Best parameter combination:
+{'subsample': 0.9, 'reg_lambda': 50, 'reg_alpha': 0.1, 'n_estimators': 750, 'min_child_weight': 3, 'max_depth': 24, 'learning_rate': 0.01, 'colsample_bytree': 0.9}
+Train R²: 0.8219, Test R²: 0.6442
+
+Results for each parameter combination:
+                                               params  ...  std_test_score
+0   {'subsample': 0.9, 'reg_lambda': 1, 'reg_alpha...  ...        2.936843
+1   {'subsample': 0.9, 'reg_lambda': 60, 'reg_alph...  ...        1.514681
+2   {'subsample': 0.7, 'reg_lambda': 0.1, 'reg_alp...  ...        3.617667
+3   {'subsample': 0.9, 'reg_lambda': 40, 'reg_alph...  ...        2.425016
+4   {'subsample': 0.8, 'reg_lambda': 1, 'reg_alpha...  ...        1.408604
+..                                                ...  ...             ...
+95  {'subsample': 0.9, 'reg_lambda': 50, 'reg_alph...  ...        1.840637
+96  {'subsample': 0.7, 'reg_lambda': 30, 'reg_alph...  ...        2.881902
+97  {'subsample': 0.6, 'reg_lambda': 50, 'reg_alph...  ...        2.126245
+98  {'subsample': 0.9, 'reg_lambda': 90, 'reg_alph...  ...        1.547518
+99  {'subsample': 0.6, 'reg_lambda': 80, 'reg_alph...  ...        1.700031
+
+[100 rows x 3 columns]
+
+Using random_state=24 for training
+
+Best parameter combination:
+{'subsample': 1.0, 'reg_lambda': 10, 'reg_alpha': 1, 'n_estimators': 950, 'min_child_weight': 10, 'max_depth': 18, 'learning_rate': 0.2, 'colsample_bytree': 0.8}
+Train R²: 0.8773, Test R²: 0.7242
+
+Results for each parameter combination:
+                                               params  ...  std_test_score
+0   {'subsample': 0.9, 'reg_lambda': 40, 'reg_alph...  ...        1.201102
+1   {'subsample': 0.6, 'reg_lambda': 10, 'reg_alph...  ...        1.337322
+2   {'subsample': 0.9, 'reg_lambda': 1, 'reg_alpha...  ...        2.159597
+3   {'subsample': 1.0, 'reg_lambda': 100, 'reg_alp...  ...        1.775674
+4   {'subsample': 0.7, 'reg_lambda': 1, 'reg_alpha...  ...        1.315210
+..                                                ...  ...             ...
+95  {'subsample': 0.9, 'reg_lambda': 60, 'reg_alph...  ...        1.776882
+96  {'subsample': 0.8, 'reg_lambda': 70, 'reg_alph...  ...        1.486907
+97  {'subsample': 0.6, 'reg_lambda': 70, 'reg_alph...  ...        1.724377
+98  {'subsample': 0.8, 'reg_lambda': 20, 'reg_alph...  ...        1.302435
+99  {'subsample': 0.8, 'reg_lambda': 0.5, 'reg_alp...  ...        2.060867
+
+[100 rows x 3 columns]
+
+Using random_state=25 for training
+
+Best parameter combination:
+{'subsample': 0.7, 'reg_lambda': 0.1, 'reg_alpha': 1, 'n_estimators': 650, 'min_child_weight': 2, 'max_depth': 3, 'learning_rate': 0.05, 'colsample_bytree': 0.7}
+Train R²: 0.9121, Test R²: 0.7431
+
+Results for each parameter combination:
+                                               params  ...  std_test_score
+0   {'subsample': 0.6, 'reg_lambda': 0.5, 'reg_alp...  ...        1.527774
+1   {'subsample': 1.0, 'reg_lambda': 80, 'reg_alph...  ...        1.200964
+2   {'subsample': 1.0, 'reg_lambda': 100, 'reg_alp...  ...        1.058767
+3   {'subsample': 0.9, 'reg_lambda': 1, 'reg_alpha...  ...        1.573122
+4   {'subsample': 1.0, 'reg_lambda': 90, 'reg_alph...  ...        1.310722
+..                                                ...  ...             ...
+95  {'subsample': 0.6, 'reg_lambda': 100, 'reg_alp...  ...        1.821079
+96  {'subsample': 1.0, 'reg_lambda': 20, 'reg_alph...  ...        1.126105
+97  {'subsample': 0.8, 'reg_lambda': 90, 'reg_alph...  ...        1.333450
+98  {'subsample': 1.0, 'reg_lambda': 0.5, 'reg_alp...  ...        1.274954
+99  {'subsample': 0.7, 'reg_lambda': 20, 'reg_alph...  ...        1.809538
+
+[100 rows x 3 columns]
+
+Using random_state=26 for training
+
+Best parameter combination:
+{'subsample': 1.0, 'reg_lambda': 10, 'reg_alpha': 1, 'n_estimators': 750, 'min_child_weight': 4, 'max_depth': 7, 'learning_rate': 0.6, 'colsample_bytree': 0.8}
+Train R²: 0.8838, Test R²: 0.7407
+
+Results for each parameter combination:
+                                               params  ...  std_test_score
+0   {'subsample': 0.7, 'reg_lambda': 40, 'reg_alph...  ...        1.316023
+1   {'subsample': 0.7, 'reg_lambda': 90, 'reg_alph...  ...        0.862201
+2   {'subsample': 0.7, 'reg_lambda': 70, 'reg_alph...  ...        0.941347
+3   {'subsample': 0.8, 'reg_lambda': 100, 'reg_alp...  ...        0.919235
+4   {'subsample': 0.6, 'reg_lambda': 60, 'reg_alph...  ...        0.404583
+..                                                ...  ...             ...
+95  {'subsample': 1.0, 'reg_lambda': 1, 'reg_alpha...  ...        0.440993
+96  {'subsample': 1.0, 'reg_lambda': 20, 'reg_alph...  ...        1.142029
+97  {'subsample': 0.7, 'reg_lambda': 10, 'reg_alph...  ...        1.160468
+98  {'subsample': 0.9, 'reg_lambda': 0.1, 'reg_alp...  ...        0.458400
+99  {'subsample': 0.7, 'reg_lambda': 0.5, 'reg_alp...  ...        1.125665
+
+[100 rows x 3 columns]
+
+Using random_state=27 for training
+
+Best parameter combination:
+{'subsample': 0.7, 'reg_lambda': 30, 'reg_alpha': 0.5, 'n_estimators': 550, 'min_child_weight': 4, 'max_depth': 2, 'learning_rate': 0.01, 'colsample_bytree': 0.7}
+Train R²: 0.7558, Test R²: 0.7398
+
+Results for each parameter combination:
+                                               params  ...  std_test_score
+0   {'subsample': 0.6, 'reg_lambda': 1, 'reg_alpha...  ...        9.130345
+1   {'subsample': 1.0, 'reg_lambda': 20, 'reg_alph...  ...        4.192971
+2   {'subsample': 0.7, 'reg_lambda': 80, 'reg_alph...  ...        3.999968
+3   {'subsample': 0.8, 'reg_lambda': 70, 'reg_alph...  ...        5.921595
+4   {'subsample': 0.7, 'reg_lambda': 40, 'reg_alph...  ...        5.783931
+..                                                ...  ...             ...
+95  {'subsample': 1.0, 'reg_lambda': 90, 'reg_alph...  ...        2.994518
+96  {'subsample': 0.9, 'reg_lambda': 0.5, 'reg_alp...  ...        7.360754
+97  {'subsample': 0.6, 'reg_lambda': 100, 'reg_alp...  ...        3.271003
+98  {'subsample': 0.7, 'reg_lambda': 0.1, 'reg_alp...  ...        9.773581
+99  {'subsample': 1.0, 'reg_lambda': 80, 'reg_alph...  ...        4.515657
+
+[100 rows x 3 columns]
+
+Using random_state=28 for training
+
+Best parameter combination:
+{'subsample': 0.7, 'reg_lambda': 0.5, 'reg_alpha': 0, 'n_estimators': 150, 'min_child_weight': 5, 'max_depth': 4, 'learning_rate': 0.01, 'colsample_bytree': 0.6}
+Train R²: 0.8295, Test R²: 0.7889
+
+Results for each parameter combination:
+                                               params  ...  std_test_score
+0   {'subsample': 0.9, 'reg_lambda': 10, 'reg_alph...  ...        2.978307
+1   {'subsample': 1.0, 'reg_lambda': 100, 'reg_alp...  ...        3.962343
+2   {'subsample': 0.7, 'reg_lambda': 50, 'reg_alph...  ...        4.371807
+3   {'subsample': 1.0, 'reg_lambda': 70, 'reg_alph...  ...        2.054516
+4   {'subsample': 0.7, 'reg_lambda': 0.5, 'reg_alp...  ...        2.036309
+..                                                ...  ...             ...
+95  {'subsample': 0.6, 'reg_lambda': 60, 'reg_alph...  ...        1.470819
+96  {'subsample': 1.0, 'reg_lambda': 10, 'reg_alph...  ...        5.850307
+97  {'subsample': 0.7, 'reg_lambda': 60, 'reg_alph...  ...        5.625854
+98  {'subsample': 0.8, 'reg_lambda': 90, 'reg_alph...  ...        4.666543
+99  {'subsample': 0.9, 'reg_lambda': 100, 'reg_alp...  ...        3.520687
+
+[100 rows x 3 columns]
+
+Using random_state=29 for training
+
+Best parameter combination:
+{'subsample': 0.9, 'reg_lambda': 70, 'reg_alpha': 1, 'n_estimators': 1050, 'min_child_weight': 7, 'max_depth': 7, 'learning_rate': 0.1, 'colsample_bytree': 0.9}
+Train R²: 0.8941, Test R²: 0.7007
+
+Results for each parameter combination:
+                                               params  ...  std_test_score
+0   {'subsample': 1.0, 'reg_lambda': 0.5, 'reg_alp...  ...        0.417125
+1   {'subsample': 0.9, 'reg_lambda': 100, 'reg_alp...  ...        0.417899
+2   {'subsample': 0.8, 'reg_lambda': 0.5, 'reg_alp...  ...        0.541636
+3   {'subsample': 1.0, 'reg_lambda': 60, 'reg_alph...  ...        1.774035
+4   {'subsample': 0.7, 'reg_lambda': 1, 'reg_alpha...  ...        0.425035
+..                                                ...  ...             ...
+95  {'subsample': 1.0, 'reg_lambda': 10, 'reg_alph...  ...        0.492444
+96  {'subsample': 0.9, 'reg_lambda': 1, 'reg_alpha...  ...        0.412932
+97  {'subsample': 0.6, 'reg_lambda': 1, 'reg_alpha...  ...        0.484048
+98  {'subsample': 0.7, 'reg_lambda': 60, 'reg_alph...  ...        0.615474
+99  {'subsample': 0.7, 'reg_lambda': 20, 'reg_alph...  ...        0.442069
+
+[100 rows x 3 columns]
+
+Using random_state=30 for training
+
+Best parameter combination:
+{'subsample': 0.9, 'reg_lambda': 0.1, 'reg_alpha': 1, 'n_estimators': 650, 'min_child_weight': 5, 'max_depth': 26, 'learning_rate': 0.3, 'colsample_bytree': 0.9}
+Train R²: 0.9208, Test R²: 0.7713
+
+Results for each parameter combination:
+                                               params  ...  std_test_score
+0   {'subsample': 0.8, 'reg_lambda': 100, 'reg_alp...  ...        2.382550
+1   {'subsample': 0.6, 'reg_lambda': 50, 'reg_alph...  ...        9.064074
+2   {'subsample': 0.7, 'reg_lambda': 70, 'reg_alph...  ...        7.827124
+3   {'subsample': 0.9, 'reg_lambda': 20, 'reg_alph...  ...        1.833292
+4   {'subsample': 0.6, 'reg_lambda': 20, 'reg_alph...  ...        2.199692
+..                                                ...  ...             ...
+95  {'subsample': 1.0, 'reg_lambda': 80, 'reg_alph...  ...       14.328248
+96  {'subsample': 0.7, 'reg_lambda': 0.5, 'reg_alp...  ...        2.656574
+97  {'subsample': 1.0, 'reg_lambda': 50, 'reg_alph...  ...       14.191694
+98  {'subsample': 0.7, 'reg_lambda': 0.1, 'reg_alp...  ...        1.854877
+99  {'subsample': 0.9, 'reg_lambda': 30, 'reg_alph...  ...        1.973154
+
+[100 rows x 3 columns]
+
+Using random_state=31 for training
+
+Best parameter combination:
+{'subsample': 0.6, 'reg_lambda': 80, 'reg_alpha': 0, 'n_estimators': 1050, 'min_child_weight': 10, 'max_depth': 28, 'learning_rate': 0.01, 'colsample_bytree': 0.8}
+Train R²: 0.7759, Test R²: 0.6438
+
+Results for each parameter combination:
+                                               params  ...  std_test_score
+0   {'subsample': 1.0, 'reg_lambda': 50, 'reg_alph...  ...        1.770008
+1   {'subsample': 0.6, 'reg_lambda': 1, 'reg_alpha...  ...        1.795515
+2   {'subsample': 0.8, 'reg_lambda': 90, 'reg_alph...  ...        0.972847
+3   {'subsample': 0.8, 'reg_lambda': 50, 'reg_alph...  ...        1.079661
+4   {'subsample': 1.0, 'reg_lambda': 70, 'reg_alph...  ...        1.801157
+..                                                ...  ...             ...
+95  {'subsample': 0.9, 'reg_lambda': 20, 'reg_alph...  ...        1.698695
+96  {'subsample': 0.8, 'reg_lambda': 60, 'reg_alph...  ...        2.028808
+97  {'subsample': 0.8, 'reg_lambda': 50, 'reg_alph...  ...        1.222772
+98  {'subsample': 0.6, 'reg_lambda': 80, 'reg_alph...  ...        0.989423
+99  {'subsample': 0.6, 'reg_lambda': 1, 'reg_alpha...  ...        1.311778
+
+[100 rows x 3 columns]
+
+Using random_state=32 for training
+
+Best parameter combination:
+{'subsample': 0.6, 'reg_lambda': 80, 'reg_alpha': 1, 'n_estimators': 650, 'min_child_weight': 2, 'max_depth': 16, 'learning_rate': 0.05, 'colsample_bytree': 0.9}
+Train R²: 0.8441, Test R²: 0.6939
+
+Results for each parameter combination:
+                                               params  ...  std_test_score
+0   {'subsample': 1.0, 'reg_lambda': 90, 'reg_alph...  ...        1.960669
+1   {'subsample': 0.6, 'reg_lambda': 0.5, 'reg_alp...  ...        8.326399
+2   {'subsample': 0.7, 'reg_lambda': 50, 'reg_alph...  ...        3.806420
+3   {'subsample': 1.0, 'reg_lambda': 70, 'reg_alph...  ...        4.906962
+4   {'subsample': 1.0, 'reg_lambda': 90, 'reg_alph...  ...        4.584328
+..                                                ...  ...             ...
+95  {'subsample': 1.0, 'reg_lambda': 90, 'reg_alph...  ...        4.248439
+96  {'subsample': 0.8, 'reg_lambda': 0.1, 'reg_alp...  ...        3.660704
+97  {'subsample': 1.0, 'reg_lambda': 80, 'reg_alph...  ...        1.902121
+98  {'subsample': 1.0, 'reg_lambda': 80, 'reg_alph...  ...        2.548857
+99  {'subsample': 0.6, 'reg_lambda': 40, 'reg_alph...  ...        2.116137
+
+[100 rows x 3 columns]
+
+Using random_state=33 for training
+
+Best parameter combination:
+{'subsample': 0.6, 'reg_lambda': 10, 'reg_alpha': 1, 'n_estimators': 450, 'min_child_weight': 5, 'max_depth': 20, 'learning_rate': 0.1, 'colsample_bytree': 0.7}
+Train R²: 0.9062, Test R²: 0.3658
+
+Results for each parameter combination:
+                                               params  ...  std_test_score
+0   {'subsample': 0.8, 'reg_lambda': 70, 'reg_alph...  ...        2.013134
+1   {'subsample': 0.9, 'reg_lambda': 1, 'reg_alpha...  ...        2.165312
+2   {'subsample': 0.8, 'reg_lambda': 0.5, 'reg_alp...  ...        2.199597
+3   {'subsample': 1.0, 'reg_lambda': 10, 'reg_alph...  ...        2.225115
+4   {'subsample': 0.6, 'reg_lambda': 20, 'reg_alph...  ...        2.428897
+..                                                ...  ...             ...
+95  {'subsample': 0.6, 'reg_lambda': 0.1, 'reg_alp...  ...        1.628546
+96  {'subsample': 0.9, 'reg_lambda': 30, 'reg_alph...  ...        2.095357
+97  {'subsample': 0.8, 'reg_lambda': 100, 'reg_alp...  ...        2.244134
+98  {'subsample': 0.9, 'reg_lambda': 40, 'reg_alph...  ...        1.881224
+99  {'subsample': 0.7, 'reg_lambda': 10, 'reg_alph...  ...        1.453230
+
+[100 rows x 3 columns]
+
+Using random_state=34 for training
+
+Best parameter combination:
+{'subsample': 0.8, 'reg_lambda': 0.1, 'reg_alpha': 1, 'n_estimators': 1250, 'min_child_weight': 5, 'max_depth': 29, 'learning_rate': 0.01, 'colsample_bytree': 0.8}
+Train R²: 0.8860, Test R²: 0.7277
+
+Results for each parameter combination:
+                                               params  ...  std_test_score
+0   {'subsample': 0.6, 'reg_lambda': 60, 'reg_alph...  ...        0.486899
+1   {'subsample': 0.7, 'reg_lambda': 100, 'reg_alp...  ...        0.524178
+2   {'subsample': 1.0, 'reg_lambda': 30, 'reg_alph...  ...        0.843998
+3   {'subsample': 0.9, 'reg_lambda': 20, 'reg_alph...  ...        0.559254
+4   {'subsample': 0.6, 'reg_lambda': 20, 'reg_alph...  ...        0.476536
+..                                                ...  ...             ...
+95  {'subsample': 0.7, 'reg_lambda': 60, 'reg_alph...  ...        0.480374
+96  {'subsample': 0.8, 'reg_lambda': 90, 'reg_alph...  ...        0.688058
+97  {'subsample': 0.7, 'reg_lambda': 20, 'reg_alph...  ...        0.476486
+98  {'subsample': 0.8, 'reg_lambda': 100, 'reg_alp...  ...        0.556067
+99  {'subsample': 0.6, 'reg_lambda': 50, 'reg_alph...  ...        0.568267
+
+[100 rows x 3 columns]
+
+Using random_state=35 for training
+
+Best parameter combination:
+{'subsample': 1.0, 'reg_lambda': 50, 'reg_alpha': 1, 'n_estimators': 1750, 'min_child_weight': 14, 'max_depth': 23, 'learning_rate': 0.6, 'colsample_bytree': 0.9}
+Train R²: 0.8264, Test R²: 0.7925
+
+Results for each parameter combination:
+                                               params  ...  std_test_score
+0   {'subsample': 0.6, 'reg_lambda': 20, 'reg_alph...  ...        1.943210
+1   {'subsample': 0.8, 'reg_lambda': 10, 'reg_alph...  ...        1.629986
+2   {'subsample': 1.0, 'reg_lambda': 60, 'reg_alph...  ...        1.902177
+3   {'subsample': 0.6, 'reg_lambda': 10, 'reg_alph...  ...        1.703011
+4   {'subsample': 0.6, 'reg_lambda': 40, 'reg_alph...  ...        1.887709
+..                                                ...  ...             ...
+95  {'subsample': 0.8, 'reg_lambda': 60, 'reg_alph...  ...        1.807568
+96  {'subsample': 1.0, 'reg_lambda': 50, 'reg_alph...  ...        1.204992
+97  {'subsample': 0.8, 'reg_lambda': 70, 'reg_alph...  ...        1.881131
+98  {'subsample': 0.9, 'reg_lambda': 0.5, 'reg_alp...  ...        1.819201
+99  {'subsample': 0.6, 'reg_lambda': 70, 'reg_alph...  ...        1.763455
+
+[100 rows x 3 columns]
+
+Using random_state=36 for training
+
+Best parameter combination:
+{'subsample': 0.8, 'reg_lambda': 80, 'reg_alpha': 0, 'n_estimators': 1150, 'min_child_weight': 6, 'max_depth': 21, 'learning_rate': 0.01, 'colsample_bytree': 0.6}
+Train R²: 0.8251, Test R²: 0.7136
+
+Results for each parameter combination:
+                                               params  ...  std_test_score
+0   {'subsample': 0.7, 'reg_lambda': 20, 'reg_alph...  ...        0.850252
+1   {'subsample': 0.8, 'reg_lambda': 0.5, 'reg_alp...  ...        0.761822
+2   {'subsample': 0.7, 'reg_lambda': 50, 'reg_alph...  ...        1.104318
+3   {'subsample': 0.9, 'reg_lambda': 20, 'reg_alph...  ...        0.720163
+4   {'subsample': 0.8, 'reg_lambda': 20, 'reg_alph...  ...        1.027604
+..                                                ...  ...             ...
+95  {'subsample': 0.7, 'reg_lambda': 30, 'reg_alph...  ...        0.525016
+96  {'subsample': 0.8, 'reg_lambda': 90, 'reg_alph...  ...        0.667659
+97  {'subsample': 0.9, 'reg_lambda': 60, 'reg_alph...  ...        0.804011
+98  {'subsample': 0.9, 'reg_lambda': 60, 'reg_alph...  ...        0.999979
+99  {'subsample': 1.0, 'reg_lambda': 0.1, 'reg_alp...  ...        0.502731
+
+[100 rows x 3 columns]
+
+Using random_state=37 for training
+
+Best parameter combination:
+{'subsample': 0.7, 'reg_lambda': 0.5, 'reg_alpha': 0, 'n_estimators': 1750, 'min_child_weight': 14, 'max_depth': 15, 'learning_rate': 0.01, 'colsample_bytree': 0.9}
+Train R²: 0.8648, Test R²: 0.7647
+
+Results for each parameter combination:
+                                               params  ...  std_test_score
+0   {'subsample': 0.7, 'reg_lambda': 60, 'reg_alph...  ...        2.342214
+1   {'subsample': 0.6, 'reg_lambda': 0.5, 'reg_alp...  ...        3.946550
+2   {'subsample': 0.6, 'reg_lambda': 60, 'reg_alph...  ...        3.934783
+3   {'subsample': 0.9, 'reg_lambda': 70, 'reg_alph...  ...        2.047695
+4   {'subsample': 1.0, 'reg_lambda': 1, 'reg_alpha...  ...        1.881630
+..                                                ...  ...             ...
+95  {'subsample': 1.0, 'reg_lambda': 90, 'reg_alph...  ...        2.385235
+96  {'subsample': 0.6, 'reg_lambda': 1, 'reg_alpha...  ...        3.998729
+97  {'subsample': 0.9, 'reg_lambda': 10, 'reg_alph...  ...        3.502470
+98  {'subsample': 0.8, 'reg_lambda': 50, 'reg_alph...  ...        2.948036
+99  {'subsample': 1.0, 'reg_lambda': 30, 'reg_alph...  ...        1.936587
+
+[100 rows x 3 columns]
+
+Using random_state=38 for training
+
+Best parameter combination:
+{'subsample': 1.0, 'reg_lambda': 30, 'reg_alpha': 1, 'n_estimators': 1050, 'min_child_weight': 8, 'max_depth': 7, 'learning_rate': 0.1, 'colsample_bytree': 0.6}
+Train R²: 0.8508, Test R²: 0.8790
+
+Results for each parameter combination:
+                                               params  ...  std_test_score
+0   {'subsample': 0.7, 'reg_lambda': 20, 'reg_alph...  ...        1.809266
+1   {'subsample': 0.7, 'reg_lambda': 10, 'reg_alph...  ...        1.531413
+2   {'subsample': 0.8, 'reg_lambda': 40, 'reg_alph...  ...        4.077687
+3   {'subsample': 0.7, 'reg_lambda': 100, 'reg_alp...  ...        1.887752
+4   {'subsample': 0.7, 'reg_lambda': 100, 'reg_alp...  ...        4.075770
+..                                                ...  ...             ...
+95  {'subsample': 1.0, 'reg_lambda': 40, 'reg_alph...  ...        1.850392
+96  {'subsample': 1.0, 'reg_lambda': 30, 'reg_alph...  ...        1.307647
+97  {'subsample': 0.7, 'reg_lambda': 10, 'reg_alph...  ...        1.500555
+98  {'subsample': 0.7, 'reg_lambda': 20, 'reg_alph...  ...        4.202112
+99  {'subsample': 0.6, 'reg_lambda': 90, 'reg_alph...  ...        2.358491
+
+[100 rows x 3 columns]
+
+Using random_state=39 for training
+
+Best parameter combination:
+{'subsample': 0.9, 'reg_lambda': 0.1, 'reg_alpha': 0.1, 'n_estimators': 150, 'min_child_weight': 7, 'max_depth': 21, 'learning_rate': 0.01, 'colsample_bytree': 0.7}
+Train R²: 0.8135, Test R²: 0.8258
+
+Results for each parameter combination:
+                                               params  ...  std_test_score
+0   {'subsample': 0.9, 'reg_lambda': 50, 'reg_alph...  ...        0.671844
+1   {'subsample': 0.8, 'reg_lambda': 0.1, 'reg_alp...  ...        1.300945
+2   {'subsample': 0.6, 'reg_lambda': 40, 'reg_alph...  ...        1.332699
+3   {'subsample': 1.0, 'reg_lambda': 0.1, 'reg_alp...  ...        0.987069
+4   {'subsample': 0.7, 'reg_lambda': 70, 'reg_alph...  ...        1.034804
+..                                                ...  ...             ...
+95  {'subsample': 0.8, 'reg_lambda': 40, 'reg_alph...  ...        0.688872
+96  {'subsample': 0.9, 'reg_lambda': 0.1, 'reg_alp...  ...        0.957581
+97  {'subsample': 0.7, 'reg_lambda': 40, 'reg_alph...  ...        0.937125
+98  {'subsample': 0.9, 'reg_lambda': 0.1, 'reg_alp...  ...        0.550909
+99  {'subsample': 1.0, 'reg_lambda': 80, 'reg_alph...  ...        0.804893
+
+[100 rows x 3 columns]
+
+Using random_state=40 for training
+
+Best parameter combination:
+{'subsample': 1.0, 'reg_lambda': 10, 'reg_alpha': 1, 'n_estimators': 550, 'min_child_weight': 3, 'max_depth': 26, 'learning_rate': 0.01, 'colsample_bytree': 0.8}
+Train R²: 0.8405, Test R²: 0.8350
+
+Results for each parameter combination:
+                                               params  ...  std_test_score
+0   {'subsample': 1.0, 'reg_lambda': 30, 'reg_alph...  ...        1.697746
+1   {'subsample': 0.9, 'reg_lambda': 40, 'reg_alph...  ...        2.193150
+2   {'subsample': 0.9, 'reg_lambda': 1, 'reg_alpha...  ...        1.755025
+3   {'subsample': 0.8, 'reg_lambda': 60, 'reg_alph...  ...        2.027435
+4   {'subsample': 0.9, 'reg_lambda': 80, 'reg_alph...  ...        1.885269
+..                                                ...  ...             ...
+95  {'subsample': 0.9, 'reg_lambda': 80, 'reg_alph...  ...        1.993652
+96  {'subsample': 0.6, 'reg_lambda': 70, 'reg_alph...  ...        1.904142
+97  {'subsample': 0.6, 'reg_lambda': 30, 'reg_alph...  ...        1.992323
+98  {'subsample': 0.9, 'reg_lambda': 10, 'reg_alph...  ...        2.196762
+99  {'subsample': 0.7, 'reg_lambda': 0.1, 'reg_alp...  ...        2.258057
+
+[100 rows x 3 columns]
+
+Using random_state=41 for training
+
+Best parameter combination:
+{'subsample': 1.0, 'reg_lambda': 50, 'reg_alpha': 0.5, 'n_estimators': 1450, 'min_child_weight': 2, 'max_depth': 17, 'learning_rate': 0.1, 'colsample_bytree': 0.7}
+Train R²: 0.9262, Test R²: 0.7386
+
+Results for each parameter combination:
+                                               params  ...  std_test_score
+0   {'subsample': 0.8, 'reg_lambda': 30, 'reg_alph...  ...        0.938163
+1   {'subsample': 0.7, 'reg_lambda': 70, 'reg_alph...  ...        1.473120
+2   {'subsample': 0.6, 'reg_lambda': 10, 'reg_alph...  ...        0.917205
+3   {'subsample': 1.0, 'reg_lambda': 70, 'reg_alph...  ...        1.069167
+4   {'subsample': 0.7, 'reg_lambda': 90, 'reg_alph...  ...        1.277439
+..                                                ...  ...             ...
+95  {'subsample': 0.7, 'reg_lambda': 50, 'reg_alph...  ...        1.157725
+96  {'subsample': 0.6, 'reg_lambda': 80, 'reg_alph...  ...        1.171137
+97  {'subsample': 1.0, 'reg_lambda': 80, 'reg_alph...  ...        0.982280
+98  {'subsample': 0.7, 'reg_lambda': 30, 'reg_alph...  ...        1.333954
+99  {'subsample': 0.8, 'reg_lambda': 70, 'reg_alph...  ...        1.466673
+
+[100 rows x 3 columns]
+
+Using random_state=42 for training
+
+Best parameter combination:
+{'subsample': 0.8, 'reg_lambda': 30, 'reg_alpha': 0.1, 'n_estimators': 50, 'min_child_weight': 1, 'max_depth': 4, 'learning_rate': 0.05, 'colsample_bytree': 0.6}
+Train R²: 0.6797, Test R²: 0.5464
+
+Results for each parameter combination:
+                                               params  ...  std_test_score
+0   {'subsample': 0.8, 'reg_lambda': 60, 'reg_alph...  ...        2.286977
+1   {'subsample': 0.7, 'reg_lambda': 30, 'reg_alph...  ...        2.288260
+2   {'subsample': 0.8, 'reg_lambda': 0.1, 'reg_alp...  ...        2.138146
+3   {'subsample': 0.9, 'reg_lambda': 1, 'reg_alpha...  ...        1.297062
+4   {'subsample': 0.8, 'reg_lambda': 50, 'reg_alph...  ...        3.012801
+..                                                ...  ...             ...
+95  {'subsample': 0.8, 'reg_lambda': 90, 'reg_alph...  ...        2.368087
+96  {'subsample': 0.9, 'reg_lambda': 50, 'reg_alph...  ...        2.141026
+97  {'subsample': 0.8, 'reg_lambda': 30, 'reg_alph...  ...        2.171987
+98  {'subsample': 0.7, 'reg_lambda': 80, 'reg_alph...  ...        2.054845
+99  {'subsample': 0.7, 'reg_lambda': 90, 'reg_alph...  ...        1.911964
+
+[100 rows x 3 columns]
+
+Using random_state=43 for training
+
+Best parameter combination:
+{'subsample': 0.6, 'reg_lambda': 70, 'reg_alpha': 0.01, 'n_estimators': 650, 'min_child_weight': 3, 'max_depth': 4, 'learning_rate': 0.01, 'colsample_bytree': 0.6}
+Train R²: 0.7170, Test R²: 0.5376
+
+Results for each parameter combination:
+                                               params  ...  std_test_score
+0   {'subsample': 0.9, 'reg_lambda': 40, 'reg_alph...  ...        4.716270
+1   {'subsample': 0.9, 'reg_lambda': 60, 'reg_alph...  ...        4.438209
+2   {'subsample': 0.9, 'reg_lambda': 0.5, 'reg_alp...  ...        7.465457
+3   {'subsample': 0.7, 'reg_lambda': 100, 'reg_alp...  ...        1.422234
+4   {'subsample': 0.8, 'reg_lambda': 10, 'reg_alph...  ...        8.748615
+..                                                ...  ...             ...
+95  {'subsample': 0.9, 'reg_lambda': 50, 'reg_alph...  ...        6.558224
+96  {'subsample': 0.6, 'reg_lambda': 0.5, 'reg_alp...  ...        0.576174
+97  {'subsample': 0.6, 'reg_lambda': 1, 'reg_alpha...  ...        6.953598
+98  {'subsample': 0.7, 'reg_lambda': 80, 'reg_alph...  ...        0.985068
+99  {'subsample': 0.9, 'reg_lambda': 90, 'reg_alph...  ...        4.770131
+
+[100 rows x 3 columns]
+
+Using random_state=44 for training
+
+Best parameter combination:
+{'subsample': 0.8, 'reg_lambda': 60, 'reg_alpha': 0.1, 'n_estimators': 150, 'min_child_weight': 5, 'max_depth': 5, 'learning_rate': 0.1, 'colsample_bytree': 0.8}
+Train R²: 0.8627, Test R²: 0.7666
+
+Results for each parameter combination:
+                                               params  ...  std_test_score
+0   {'subsample': 0.9, 'reg_lambda': 10, 'reg_alph...  ...        0.779860
+1   {'subsample': 0.8, 'reg_lambda': 90, 'reg_alph...  ...        0.774843
+2   {'subsample': 1.0, 'reg_lambda': 0.1, 'reg_alp...  ...        0.776522
+3   {'subsample': 0.9, 'reg_lambda': 1, 'reg_alpha...  ...        0.824126
+4   {'subsample': 0.9, 'reg_lambda': 20, 'reg_alph...  ...        0.785559
+..                                                ...  ...             ...
+95  {'subsample': 1.0, 'reg_lambda': 90, 'reg_alph...  ...        0.819833
+96  {'subsample': 0.6, 'reg_lambda': 100, 'reg_alp...  ...        0.784924
+97  {'subsample': 0.8, 'reg_lambda': 80, 'reg_alph...  ...        0.787682
+98  {'subsample': 0.7, 'reg_lambda': 80, 'reg_alph...  ...        0.835902
+99  {'subsample': 0.6, 'reg_lambda': 90, 'reg_alph...  ...        0.830633
+
+[100 rows x 3 columns]
+
+Using random_state=45 for training
+
+Best parameter combination:
+{'subsample': 1.0, 'reg_lambda': 50, 'reg_alpha': 1, 'n_estimators': 750, 'min_child_weight': 1, 'max_depth': 19, 'learning_rate': 0.01, 'colsample_bytree': 0.9}
+Train R²: 0.8050, Test R²: 0.7167
+
+Results for each parameter combination:
+                                               params  ...  std_test_score
+0   {'subsample': 1.0, 'reg_lambda': 10, 'reg_alph...  ...        0.750396
+1   {'subsample': 0.6, 'reg_lambda': 80, 'reg_alph...  ...        1.066459
+2   {'subsample': 0.6, 'reg_lambda': 1, 'reg_alpha...  ...        1.313423
+3   {'subsample': 0.8, 'reg_lambda': 80, 'reg_alph...  ...        0.738495
+4   {'subsample': 0.6, 'reg_lambda': 30, 'reg_alph...  ...        1.192786
+..                                                ...  ...             ...
+95  {'subsample': 0.9, 'reg_lambda': 50, 'reg_alph...  ...        0.983642
+96  {'subsample': 0.7, 'reg_lambda': 40, 'reg_alph...  ...        1.173758
+97  {'subsample': 0.8, 'reg_lambda': 30, 'reg_alph...  ...        1.334553
+98  {'subsample': 0.6, 'reg_lambda': 10, 'reg_alph...  ...        1.228404
+99  {'subsample': 1.0, 'reg_lambda': 60, 'reg_alph...  ...        1.123545
+
+[100 rows x 3 columns]
+
+Using random_state=46 for training
+
+Best parameter combination:
+{'subsample': 0.6, 'reg_lambda': 20, 'reg_alpha': 0, 'n_estimators': 50, 'min_child_weight': 4, 'max_depth': 23, 'learning_rate': 0.05, 'colsample_bytree': 0.8}
+Train R²: 0.6952, Test R²: 0.5597
+
+Results for each parameter combination:
+                                               params  ...  std_test_score
+0   {'subsample': 0.9, 'reg_lambda': 80, 'reg_alph...  ...       12.216474
+1   {'subsample': 0.8, 'reg_lambda': 1, 'reg_alpha...  ...        9.890369
+2   {'subsample': 0.8, 'reg_lambda': 90, 'reg_alph...  ...        1.103282
+3   {'subsample': 1.0, 'reg_lambda': 50, 'reg_alph...  ...       16.957436
+4   {'subsample': 0.7, 'reg_lambda': 30, 'reg_alph...  ...       10.908480
+..                                                ...  ...             ...
+95  {'subsample': 0.6, 'reg_lambda': 60, 'reg_alph...  ...        5.956116
+96  {'subsample': 0.6, 'reg_lambda': 60, 'reg_alph...  ...       11.659819
+97  {'subsample': 1.0, 'reg_lambda': 60, 'reg_alph...  ...        4.591582
+98  {'subsample': 0.7, 'reg_lambda': 60, 'reg_alph...  ...        2.325597
+99  {'subsample': 0.8, 'reg_lambda': 50, 'reg_alph...  ...       14.785474
+
+[100 rows x 3 columns]
+
+Using random_state=47 for training
+
+Best parameter combination:
+{'subsample': 0.6, 'reg_lambda': 0.5, 'reg_alpha': 0.5, 'n_estimators': 350, 'min_child_weight': 6, 'max_depth': 16, 'learning_rate': 0.01, 'colsample_bytree': 0.8}
+Train R²: 0.8678, Test R²: 0.7513
+
+Results for each parameter combination:
+                                               params  ...  std_test_score
+0   {'subsample': 0.7, 'reg_lambda': 10, 'reg_alph...  ...        3.884648
+1   {'subsample': 0.8, 'reg_lambda': 80, 'reg_alph...  ...        1.980546
+2   {'subsample': 0.7, 'reg_lambda': 0.1, 'reg_alp...  ...        1.931815
+3   {'subsample': 0.8, 'reg_lambda': 40, 'reg_alph...  ...        1.651676
+4   {'subsample': 0.7, 'reg_lambda': 50, 'reg_alph...  ...        2.332032
+..                                                ...  ...             ...
+95  {'subsample': 1.0, 'reg_lambda': 60, 'reg_alph...  ...       16.436898
+96  {'subsample': 0.7, 'reg_lambda': 30, 'reg_alph...  ...       22.708418
+97  {'subsample': 0.7, 'reg_lambda': 70, 'reg_alph...  ...        1.754980
+98  {'subsample': 1.0, 'reg_lambda': 40, 'reg_alph...  ...        2.183783
+99  {'subsample': 0.8, 'reg_lambda': 0.1, 'reg_alp...  ...        3.961847
+
+[100 rows x 3 columns]
+
+Using random_state=48 for training
+
+Best parameter combination:
+{'subsample': 0.6, 'reg_lambda': 1, 'reg_alpha': 0.1, 'n_estimators': 350, 'min_child_weight': 12, 'max_depth': 19, 'learning_rate': 0.5, 'colsample_bytree': 0.8}
+Train R²: 0.8998, Test R²: 0.8197
+
+Results for each parameter combination:
+                                               params  ...  std_test_score
+0   {'subsample': 0.9, 'reg_lambda': 10, 'reg_alph...  ...       34.682351
+1   {'subsample': 0.8, 'reg_lambda': 50, 'reg_alph...  ...       43.060596
+2   {'subsample': 1.0, 'reg_lambda': 10, 'reg_alph...  ...       37.554307
+3   {'subsample': 0.8, 'reg_lambda': 30, 'reg_alph...  ...       31.979940
+4   {'subsample': 0.7, 'reg_lambda': 0.5, 'reg_alp...  ...       40.307056
+..                                                ...  ...             ...
+95  {'subsample': 1.0, 'reg_lambda': 30, 'reg_alph...  ...       34.076940
+96  {'subsample': 0.8, 'reg_lambda': 10, 'reg_alph...  ...       37.010615
+97  {'subsample': 0.6, 'reg_lambda': 10, 'reg_alph...  ...       26.692066
+98  {'subsample': 0.8, 'reg_lambda': 20, 'reg_alph...  ...       30.171692
+99  {'subsample': 0.7, 'reg_lambda': 50, 'reg_alph...  ...       35.113411
+
+[100 rows x 3 columns]
+
+Using random_state=49 for training
+
+Best parameter combination:
+{'subsample': 0.9, 'reg_lambda': 0.5, 'reg_alpha': 1, 'n_estimators': 1050, 'min_child_weight': 14, 'max_depth': 24, 'learning_rate': 0.5, 'colsample_bytree': 0.9}
+Train R²: 0.8783, Test R²: 0.6847
+
+Results for each parameter combination:
+                                               params  ...  std_test_score
+0   {'subsample': 0.9, 'reg_lambda': 50, 'reg_alph...  ...        1.238585
+1   {'subsample': 0.9, 'reg_lambda': 70, 'reg_alph...  ...        1.115518
+2   {'subsample': 0.6, 'reg_lambda': 30, 'reg_alph...  ...        1.122184
+3   {'subsample': 1.0, 'reg_lambda': 0.1, 'reg_alp...  ...        1.052723
+4   {'subsample': 1.0, 'reg_lambda': 1, 'reg_alpha...  ...        1.061019
+..                                                ...  ...             ...
+95  {'subsample': 0.9, 'reg_lambda': 0.1, 'reg_alp...  ...        1.122215
+96  {'subsample': 0.7, 'reg_lambda': 50, 'reg_alph...  ...        1.186617
+97  {'subsample': 0.9, 'reg_lambda': 10, 'reg_alph...  ...        1.220539
+98  {'subsample': 0.9, 'reg_lambda': 30, 'reg_alph...  ...        1.194639
+99  {'subsample': 1.0, 'reg_lambda': 60, 'reg_alph...  ...        0.983413
+
+[100 rows x 3 columns]
+
+Using random_state=50 for training
+
+Best parameter combination:
+{'subsample': 0.6, 'reg_lambda': 90, 'reg_alpha': 1, 'n_estimators': 1950, 'min_child_weight': 13, 'max_depth': 7, 'learning_rate': 0.2, 'colsample_bytree': 0.8}
+Train R²: 0.8643, Test R²: 0.6271
+
+Results for each parameter combination:
+                                               params  ...  std_test_score
+0   {'subsample': 0.7, 'reg_lambda': 40, 'reg_alph...  ...        2.120092
+1   {'subsample': 0.8, 'reg_lambda': 10, 'reg_alph...  ...        2.803263
+2   {'subsample': 0.6, 'reg_lambda': 80, 'reg_alph...  ...        7.498173
+3   {'subsample': 0.6, 'reg_lambda': 0.1, 'reg_alp...  ...       10.673685
+4   {'subsample': 0.9, 'reg_lambda': 0.5, 'reg_alp...  ...        0.785834
+..                                                ...  ...             ...
+95  {'subsample': 0.9, 'reg_lambda': 20, 'reg_alph...  ...        1.214643
+96  {'subsample': 1.0, 'reg_lambda': 80, 'reg_alph...  ...        1.324254
+97  {'subsample': 1.0, 'reg_lambda': 80, 'reg_alph...  ...        1.314622
+98  {'subsample': 0.8, 'reg_lambda': 90, 'reg_alph...  ...        1.762944
+99  {'subsample': 0.9, 'reg_lambda': 40, 'reg_alph...  ...        2.022477
+
+[100 rows x 3 columns]
+
+Using random_state=51 for training
+
+Best parameter combination:
+{'subsample': 1.0, 'reg_lambda': 70, 'reg_alpha': 0.1, 'n_estimators': 650, 'min_child_weight': 3, 'max_depth': 6, 'learning_rate': 0.01, 'colsample_bytree': 0.8}
+Train R²: 0.8184, Test R²: 0.4776
+
+Results for each parameter combination:
+                                               params  ...  std_test_score
+0   {'subsample': 0.8, 'reg_lambda': 40, 'reg_alph...  ...        4.006808
+1   {'subsample': 0.6, 'reg_lambda': 0.5, 'reg_alp...  ...        5.199986
+2   {'subsample': 0.7, 'reg_lambda': 60, 'reg_alph...  ...        4.820011
+3   {'subsample': 0.9, 'reg_lambda': 40, 'reg_alph...  ...        4.071006
+4   {'subsample': 1.0, 'reg_lambda': 90, 'reg_alph...  ...        3.261796
+..                                                ...  ...             ...
+95  {'subsample': 1.0, 'reg_lambda': 0.1, 'reg_alp...  ...        5.712629
+96  {'subsample': 1.0, 'reg_lambda': 100, 'reg_alp...  ...        3.279691
+97  {'subsample': 0.9, 'reg_lambda': 60, 'reg_alph...  ...        4.836019
+98  {'subsample': 0.8, 'reg_lambda': 30, 'reg_alph...  ...        3.068060
+99  {'subsample': 0.6, 'reg_lambda': 80, 'reg_alph...  ...        4.008576
+
+[100 rows x 3 columns]
+
+Using random_state=52 for training
+
+Best parameter combination:
+{'subsample': 0.6, 'reg_lambda': 0.1, 'reg_alpha': 0.5, 'n_estimators': 250, 'min_child_weight': 3, 'max_depth': 15, 'learning_rate': 0.01, 'colsample_bytree': 0.7}
+Train R²: 0.8653, Test R²: 0.7450
+
+Results for each parameter combination:
+                                               params  ...  std_test_score
+0   {'subsample': 0.7, 'reg_lambda': 10, 'reg_alph...  ...       14.970729
+1   {'subsample': 1.0, 'reg_lambda': 30, 'reg_alph...  ...        6.153943
+2   {'subsample': 1.0, 'reg_lambda': 60, 'reg_alph...  ...        5.430442
+3   {'subsample': 0.9, 'reg_lambda': 10, 'reg_alph...  ...        3.720952
+4   {'subsample': 0.6, 'reg_lambda': 100, 'reg_alp...  ...        3.577585
+..                                                ...  ...             ...
+95  {'subsample': 0.6, 'reg_lambda': 30, 'reg_alph...  ...        3.660102
+96  {'subsample': 0.6, 'reg_lambda': 1, 'reg_alpha...  ...        3.316969
+97  {'subsample': 0.6, 'reg_lambda': 20, 'reg_alph...  ...        4.476642
+98  {'subsample': 0.8, 'reg_lambda': 20, 'reg_alph...  ...        3.668260
+99  {'subsample': 0.7, 'reg_lambda': 0.5, 'reg_alp...  ...       12.128648
+
+[100 rows x 3 columns]
+
+Using random_state=53 for training
+
+Best parameter combination:
+{'subsample': 0.9, 'reg_lambda': 10, 'reg_alpha': 1, 'n_estimators': 650, 'min_child_weight': 7, 'max_depth': 5, 'learning_rate': 0.01, 'colsample_bytree': 0.7}
+Train R²: 0.8675, Test R²: 0.8089
+
+Results for each parameter combination:
+                                               params  ...  std_test_score
+0   {'subsample': 0.8, 'reg_lambda': 40, 'reg_alph...  ...        2.266488
+1   {'subsample': 0.7, 'reg_lambda': 50, 'reg_alph...  ...        1.559187
+2   {'subsample': 0.7, 'reg_lambda': 80, 'reg_alph...  ...        1.720595
+3   {'subsample': 1.0, 'reg_lambda': 10, 'reg_alph...  ...        1.772609
+4   {'subsample': 0.7, 'reg_lambda': 0.5, 'reg_alp...  ...        2.187532
+..                                                ...  ...             ...
+95  {'subsample': 0.9, 'reg_lambda': 1, 'reg_alpha...  ...        2.753086
+96  {'subsample': 0.9, 'reg_lambda': 0.1, 'reg_alp...  ...        2.054230
+97  {'subsample': 0.8, 'reg_lambda': 40, 'reg_alph...  ...        2.379717
+98  {'subsample': 1.0, 'reg_lambda': 40, 'reg_alph...  ...        2.355285
+99  {'subsample': 0.9, 'reg_lambda': 20, 'reg_alph...  ...        2.253565
+
+[100 rows x 3 columns]
+
+Using random_state=54 for training
+
+Best parameter combination:
+{'subsample': 1.0, 'reg_lambda': 90, 'reg_alpha': 1, 'n_estimators': 550, 'min_child_weight': 10, 'max_depth': 15, 'learning_rate': 0.5, 'colsample_bytree': 0.7}
+Train R²: 0.8610, Test R²: 0.8019
+
+Results for each parameter combination:
+                                               params  ...  std_test_score
+0   {'subsample': 0.8, 'reg_lambda': 70, 'reg_alph...  ...        0.242001
+1   {'subsample': 0.8, 'reg_lambda': 0.1, 'reg_alp...  ...        0.322015
+2   {'subsample': 1.0, 'reg_lambda': 1, 'reg_alpha...  ...        0.221734
+3   {'subsample': 0.9, 'reg_lambda': 90, 'reg_alph...  ...        0.280083
+4   {'subsample': 0.8, 'reg_lambda': 0.5, 'reg_alp...  ...        0.673099
+..                                                ...  ...             ...
+95  {'subsample': 0.7, 'reg_lambda': 20, 'reg_alph...  ...        0.267484
+96  {'subsample': 0.8, 'reg_lambda': 70, 'reg_alph...  ...        0.256052
+97  {'subsample': 1.0, 'reg_lambda': 90, 'reg_alph...  ...        0.222964
+98  {'subsample': 0.7, 'reg_lambda': 20, 'reg_alph...  ...        0.359146
+99  {'subsample': 0.6, 'reg_lambda': 50, 'reg_alph...  ...        0.939358
+
+[100 rows x 3 columns]
+
+Using random_state=55 for training
+
+Best parameter combination:
+{'subsample': 0.7, 'reg_lambda': 70, 'reg_alpha': 0.5, 'n_estimators': 250, 'min_child_weight': 13, 'max_depth': 26, 'learning_rate': 0.05, 'colsample_bytree': 0.6}
+Train R²: 0.7516, Test R²: 0.7508
+
+Results for each parameter combination:
+                                               params  ...  std_test_score
+0   {'subsample': 0.9, 'reg_lambda': 20, 'reg_alph...  ...        7.856246
+1   {'subsample': 0.8, 'reg_lambda': 30, 'reg_alph...  ...       14.750830
+2   {'subsample': 1.0, 'reg_lambda': 60, 'reg_alph...  ...       18.622116
+3   {'subsample': 0.9, 'reg_lambda': 70, 'reg_alph...  ...       12.407494
+4   {'subsample': 1.0, 'reg_lambda': 90, 'reg_alph...  ...        7.410048
+..                                                ...  ...             ...
+95  {'subsample': 0.9, 'reg_lambda': 20, 'reg_alph...  ...        8.352871
+96  {'subsample': 0.8, 'reg_lambda': 50, 'reg_alph...  ...       18.501537
+97  {'subsample': 0.6, 'reg_lambda': 40, 'reg_alph...  ...        8.762543
+98  {'subsample': 1.0, 'reg_lambda': 80, 'reg_alph...  ...       15.061057
+99  {'subsample': 1.0, 'reg_lambda': 10, 'reg_alph...  ...       16.716480
+
+[100 rows x 3 columns]
+
+Using random_state=56 for training
+
+Best parameter combination:
+{'subsample': 1.0, 'reg_lambda': 30, 'reg_alpha': 1, 'n_estimators': 750, 'min_child_weight': 12, 'max_depth': 17, 'learning_rate': 0.6, 'colsample_bytree': 0.6}
+Train R²: 0.8427, Test R²: 0.7629
+
+Results for each parameter combination:
+                                               params  ...  std_test_score
+0   {'subsample': 0.7, 'reg_lambda': 40, 'reg_alph...  ...        5.113655
+1   {'subsample': 0.9, 'reg_lambda': 10, 'reg_alph...  ...        1.898429
+2   {'subsample': 0.6, 'reg_lambda': 90, 'reg_alph...  ...        3.818486
+3   {'subsample': 0.7, 'reg_lambda': 70, 'reg_alph...  ...        2.529273
+4   {'subsample': 0.8, 'reg_lambda': 10, 'reg_alph...  ...        1.333653
+..                                                ...  ...             ...
+95  {'subsample': 0.7, 'reg_lambda': 30, 'reg_alph...  ...        4.706185
+96  {'subsample': 0.9, 'reg_lambda': 70, 'reg_alph...  ...        2.840822
+97  {'subsample': 1.0, 'reg_lambda': 1, 'reg_alpha...  ...        3.590184
+98  {'subsample': 1.0, 'reg_lambda': 70, 'reg_alph...  ...        1.936341
+99  {'subsample': 0.6, 'reg_lambda': 80, 'reg_alph...  ...        3.726695
+
+[100 rows x 3 columns]
+
+Using random_state=57 for training
+
+Best parameter combination:
+{'subsample': 1.0, 'reg_lambda': 90, 'reg_alpha': 1, 'n_estimators': 1250, 'min_child_weight': 12, 'max_depth': 27, 'learning_rate': 0.5, 'colsample_bytree': 0.7}
+Train R²: 0.8325, Test R²: 0.8429
+
+Results for each parameter combination:
+                                               params  ...  std_test_score
+0   {'subsample': 0.8, 'reg_lambda': 90, 'reg_alph...  ...        0.753975
+1   {'subsample': 0.9, 'reg_lambda': 40, 'reg_alph...  ...        0.860234
+2   {'subsample': 0.8, 'reg_lambda': 10, 'reg_alph...  ...        0.250680
+3   {'subsample': 0.6, 'reg_lambda': 0.5, 'reg_alp...  ...        1.681140
+4   {'subsample': 0.8, 'reg_lambda': 90, 'reg_alph...  ...        1.416483
+..                                                ...  ...             ...
+95  {'subsample': 0.7, 'reg_lambda': 60, 'reg_alph...  ...        0.980945
+96  {'subsample': 1.0, 'reg_lambda': 1, 'reg_alpha...  ...        0.559969
+97  {'subsample': 1.0, 'reg_lambda': 1, 'reg_alpha...  ...        0.504089
+98  {'subsample': 1.0, 'reg_lambda': 20, 'reg_alph...  ...        1.654076
+99  {'subsample': 0.8, 'reg_lambda': 70, 'reg_alph...  ...        0.916214
+
+[100 rows x 3 columns]
+
+Using random_state=58 for training
+
+Best parameter combination:
+{'subsample': 1.0, 'reg_lambda': 90, 'reg_alpha': 1, 'n_estimators': 450, 'min_child_weight': 1, 'max_depth': 25, 'learning_rate': 0.1, 'colsample_bytree': 0.7}
+Train R²: 0.8646, Test R²: 0.8747
+
+Results for each parameter combination:
+                                               params  ...  std_test_score
+0   {'subsample': 0.6, 'reg_lambda': 80, 'reg_alph...  ...        0.556548
+1   {'subsample': 1.0, 'reg_lambda': 50, 'reg_alph...  ...        0.499220
+2   {'subsample': 1.0, 'reg_lambda': 70, 'reg_alph...  ...        0.407404
+3   {'subsample': 0.7, 'reg_lambda': 20, 'reg_alph...  ...        0.699760
+4   {'subsample': 1.0, 'reg_lambda': 1, 'reg_alpha...  ...        0.383026
+..                                                ...  ...             ...
+95  {'subsample': 0.8, 'reg_lambda': 20, 'reg_alph...  ...        0.656542
+96  {'subsample': 0.9, 'reg_lambda': 70, 'reg_alph...  ...        0.418450
+97  {'subsample': 0.7, 'reg_lambda': 100, 'reg_alp...  ...        0.659414
+98  {'subsample': 0.6, 'reg_lambda': 0.5, 'reg_alp...  ...        0.686000
+99  {'subsample': 0.6, 'reg_lambda': 30, 'reg_alph...  ...        0.596847
+
+[100 rows x 3 columns]
+
+Using random_state=59 for training
+
+Best parameter combination:
+{'subsample': 0.6, 'reg_lambda': 80, 'reg_alpha': 0.5, 'n_estimators': 750, 'min_child_weight': 3, 'max_depth': 23, 'learning_rate': 0.2, 'colsample_bytree': 0.7}
+Train R²: 0.9297, Test R²: 0.7684
+
+Results for each parameter combination:
+                                               params  ...  std_test_score
+0   {'subsample': 0.7, 'reg_lambda': 60, 'reg_alph...  ...        3.688487
+1   {'subsample': 0.9, 'reg_lambda': 0.1, 'reg_alp...  ...        2.821626
+2   {'subsample': 0.8, 'reg_lambda': 50, 'reg_alph...  ...        2.529805
+3   {'subsample': 0.8, 'reg_lambda': 60, 'reg_alph...  ...       20.325331
+4   {'subsample': 0.9, 'reg_lambda': 0.1, 'reg_alp...  ...        2.571841
+..                                                ...  ...             ...
+95  {'subsample': 0.7, 'reg_lambda': 80, 'reg_alph...  ...        5.129576
+96  {'subsample': 1.0, 'reg_lambda': 30, 'reg_alph...  ...       29.325388
+97  {'subsample': 0.9, 'reg_lambda': 0.1, 'reg_alp...  ...        2.970832
+98  {'subsample': 0.8, 'reg_lambda': 80, 'reg_alph...  ...        6.723864
+99  {'subsample': 0.7, 'reg_lambda': 1, 'reg_alpha...  ...        2.692103
+
+[100 rows x 3 columns]
+
+Using random_state=60 for training
+
+Best parameter combination:
+{'subsample': 0.6, 'reg_lambda': 100, 'reg_alpha': 0.5, 'n_estimators': 850, 'min_child_weight': 3, 'max_depth': 11, 'learning_rate': 0.3, 'colsample_bytree': 0.6}
+Train R²: 0.9287, Test R²: 0.7988
+
+Results for each parameter combination:
+                                               params  ...  std_test_score
+0   {'subsample': 1.0, 'reg_lambda': 1, 'reg_alpha...  ...        4.291614
+1   {'subsample': 1.0, 'reg_lambda': 10, 'reg_alph...  ...       33.767380
+2   {'subsample': 0.9, 'reg_lambda': 100, 'reg_alp...  ...       21.599969
+3   {'subsample': 0.7, 'reg_lambda': 0.1, 'reg_alp...  ...        8.005293
+4   {'subsample': 0.9, 'reg_lambda': 20, 'reg_alph...  ...        3.433911
+..                                                ...  ...             ...
+95  {'subsample': 1.0, 'reg_lambda': 1, 'reg_alpha...  ...        3.893035
+96  {'subsample': 1.0, 'reg_lambda': 80, 'reg_alph...  ...        4.621617
+97  {'subsample': 0.7, 'reg_lambda': 60, 'reg_alph...  ...        1.379647
+98  {'subsample': 0.8, 'reg_lambda': 20, 'reg_alph...  ...       32.195363
+99  {'subsample': 0.7, 'reg_lambda': 0.1, 'reg_alp...  ...        3.345240
+
+[100 rows x 3 columns]
+
+Using random_state=61 for training
+
+Best parameter combination:
+{'subsample': 1.0, 'reg_lambda': 100, 'reg_alpha': 1, 'n_estimators': 450, 'min_child_weight': 8, 'max_depth': 9, 'learning_rate': 0.2, 'colsample_bytree': 0.8}
+Train R²: 0.8675, Test R²: 0.7886
+
+Results for each parameter combination:
+                                               params  ...  std_test_score
+0   {'subsample': 0.9, 'reg_lambda': 70, 'reg_alph...  ...        0.337426
+1   {'subsample': 0.6, 'reg_lambda': 80, 'reg_alph...  ...        0.404813
+2   {'subsample': 0.6, 'reg_lambda': 50, 'reg_alph...  ...        0.383618
+3   {'subsample': 0.7, 'reg_lambda': 40, 'reg_alph...  ...        0.317587
+4   {'subsample': 1.0, 'reg_lambda': 0.5, 'reg_alp...  ...        0.588409
+..                                                ...  ...             ...
+95  {'subsample': 0.9, 'reg_lambda': 1, 'reg_alpha...  ...        0.321148
+96  {'subsample': 0.8, 'reg_lambda': 0.1, 'reg_alp...  ...        0.534148
+97  {'subsample': 0.6, 'reg_lambda': 90, 'reg_alph...  ...        0.429695
+98  {'subsample': 0.9, 'reg_lambda': 20, 'reg_alph...  ...        0.312154
+99  {'subsample': 0.8, 'reg_lambda': 10, 'reg_alph...  ...        0.401283
+
+[100 rows x 3 columns]
+
+Using random_state=62 for training
+
+Best parameter combination:
+{'subsample': 0.8, 'reg_lambda': 40, 'reg_alpha': 0.1, 'n_estimators': 550, 'min_child_weight': 11, 'max_depth': 29, 'learning_rate': 0.01, 'colsample_bytree': 0.7}
+Train R²: 0.7445, Test R²: 0.6101
+
+Results for each parameter combination:
+                                               params  ...  std_test_score
+0   {'subsample': 0.6, 'reg_lambda': 20, 'reg_alph...  ...        2.134204
+1   {'subsample': 0.9, 'reg_lambda': 90, 'reg_alph...  ...        2.064575
+2   {'subsample': 0.9, 'reg_lambda': 10, 'reg_alph...  ...        1.975823
+3   {'subsample': 0.7, 'reg_lambda': 100, 'reg_alp...  ...        2.147082
+4   {'subsample': 0.8, 'reg_lambda': 30, 'reg_alph...  ...        2.563495
+..                                                ...  ...             ...
+95  {'subsample': 0.8, 'reg_lambda': 70, 'reg_alph...  ...        2.477726
+96  {'subsample': 0.6, 'reg_lambda': 30, 'reg_alph...  ...        1.821831
+97  {'subsample': 0.6, 'reg_lambda': 1, 'reg_alpha...  ...        3.645307
+98  {'subsample': 0.6, 'reg_lambda': 1, 'reg_alpha...  ...        2.659878
+99  {'subsample': 0.6, 'reg_lambda': 40, 'reg_alph...  ...        2.141880
+
+[100 rows x 3 columns]
+
+Using random_state=63 for training
+
+Best parameter combination:
+{'subsample': 0.6, 'reg_lambda': 100, 'reg_alpha': 1, 'n_estimators': 150, 'min_child_weight': 9, 'max_depth': 14, 'learning_rate': 0.2, 'colsample_bytree': 0.8}
+Train R²: 0.8495, Test R²: 0.5517
+
+Results for each parameter combination:
+                                               params  ...  std_test_score
+0   {'subsample': 0.8, 'reg_lambda': 70, 'reg_alph...  ...        1.595472
+1   {'subsample': 1.0, 'reg_lambda': 0.5, 'reg_alp...  ...        1.282275
+2   {'subsample': 0.8, 'reg_lambda': 100, 'reg_alp...  ...        1.420332
+3   {'subsample': 1.0, 'reg_lambda': 20, 'reg_alph...  ...        1.239698
+4   {'subsample': 1.0, 'reg_lambda': 50, 'reg_alph...  ...        1.434638
+..                                                ...  ...             ...
+95  {'subsample': 0.8, 'reg_lambda': 50, 'reg_alph...  ...        1.433797
+96  {'subsample': 0.7, 'reg_lambda': 0.5, 'reg_alp...  ...        1.426982
+97  {'subsample': 0.6, 'reg_lambda': 70, 'reg_alph...  ...        1.432917
+98  {'subsample': 1.0, 'reg_lambda': 100, 'reg_alp...  ...        1.278578
+99  {'subsample': 0.8, 'reg_lambda': 40, 'reg_alph...  ...        2.425271
+
+[100 rows x 3 columns]
+
+Using random_state=64 for training
+
+Best parameter combination:
+{'subsample': 0.6, 'reg_lambda': 40, 'reg_alpha': 0, 'n_estimators': 950, 'min_child_weight': 13, 'max_depth': 7, 'learning_rate': 0.01, 'colsample_bytree': 0.7}
+Train R²: 0.7676, Test R²: 0.8109
+
+Results for each parameter combination:
+                                               params  ...  std_test_score
+0   {'subsample': 0.8, 'reg_lambda': 50, 'reg_alph...  ...        1.075139
+1   {'subsample': 0.9, 'reg_lambda': 40, 'reg_alph...  ...        2.678614
+2   {'subsample': 0.9, 'reg_lambda': 40, 'reg_alph...  ...        2.172026
+3   {'subsample': 0.7, 'reg_lambda': 50, 'reg_alph...  ...        2.170704
+4   {'subsample': 0.8, 'reg_lambda': 30, 'reg_alph...  ...        2.369754
+..                                                ...  ...             ...
+95  {'subsample': 0.6, 'reg_lambda': 40, 'reg_alph...  ...        0.804590
+96  {'subsample': 0.8, 'reg_lambda': 0.5, 'reg_alp...  ...        2.202209
+97  {'subsample': 0.6, 'reg_lambda': 0.5, 'reg_alp...  ...        2.269039
+98  {'subsample': 0.8, 'reg_lambda': 30, 'reg_alph...  ...        1.041094
+99  {'subsample': 0.9, 'reg_lambda': 90, 'reg_alph...  ...        1.205090
+
+[100 rows x 3 columns]
+
+Using random_state=65 for training
+
+Best parameter combination:
+{'subsample': 0.7, 'reg_lambda': 30, 'reg_alpha': 1, 'n_estimators': 50, 'min_child_weight': 1, 'max_depth': 15, 'learning_rate': 0.6, 'colsample_bytree': 0.6}
+Train R²: 0.8671, Test R²: 0.7679
+
+Results for each parameter combination:
+                                               params  ...  std_test_score
+0   {'subsample': 0.6, 'reg_lambda': 20, 'reg_alph...  ...        0.878304
+1   {'subsample': 0.8, 'reg_lambda': 1, 'reg_alpha...  ...        0.914706
+2   {'subsample': 0.9, 'reg_lambda': 30, 'reg_alph...  ...        0.701639
+3   {'subsample': 0.8, 'reg_lambda': 90, 'reg_alph...  ...        0.565256
+4   {'subsample': 0.6, 'reg_lambda': 20, 'reg_alph...  ...        0.822609
+..                                                ...  ...             ...
+95  {'subsample': 0.7, 'reg_lambda': 70, 'reg_alph...  ...        0.719929
+96  {'subsample': 0.6, 'reg_lambda': 1, 'reg_alpha...  ...        0.708027
+97  {'subsample': 0.6, 'reg_lambda': 30, 'reg_alph...  ...        0.807060
+98  {'subsample': 0.8, 'reg_lambda': 100, 'reg_alp...  ...        0.527006
+99  {'subsample': 0.7, 'reg_lambda': 30, 'reg_alph...  ...        0.462400
+
+[100 rows x 3 columns]
+
+Using random_state=66 for training
+
+Best parameter combination:
+{'subsample': 0.6, 'reg_lambda': 100, 'reg_alpha': 1, 'n_estimators': 350, 'min_child_weight': 6, 'max_depth': 16, 'learning_rate': 0.2, 'colsample_bytree': 0.9}
+Train R²: 0.8678, Test R²: 0.8073
+
+Results for each parameter combination:
+                                               params  ...  std_test_score
+0   {'subsample': 1.0, 'reg_lambda': 1, 'reg_alpha...  ...       10.818820
+1   {'subsample': 0.9, 'reg_lambda': 0.1, 'reg_alp...  ...       17.434398
+2   {'subsample': 0.7, 'reg_lambda': 0.5, 'reg_alp...  ...       12.825707
+3   {'subsample': 0.7, 'reg_lambda': 0.1, 'reg_alp...  ...        8.599363
+4   {'subsample': 0.7, 'reg_lambda': 80, 'reg_alph...  ...        7.692109
+..                                                ...  ...             ...
+95  {'subsample': 1.0, 'reg_lambda': 100, 'reg_alp...  ...       25.032510
+96  {'subsample': 1.0, 'reg_lambda': 100, 'reg_alp...  ...        9.117931
+97  {'subsample': 1.0, 'reg_lambda': 20, 'reg_alph...  ...        5.965291
+98  {'subsample': 0.7, 'reg_lambda': 60, 'reg_alph...  ...        9.389157
+99  {'subsample': 0.6, 'reg_lambda': 0.5, 'reg_alp...  ...       17.359203
+
+[100 rows x 3 columns]
+
+Using random_state=67 for training
+
+Best parameter combination:
+{'subsample': 0.8, 'reg_lambda': 40, 'reg_alpha': 1, 'n_estimators': 450, 'min_child_weight': 2, 'max_depth': 29, 'learning_rate': 0.2, 'colsample_bytree': 0.8}
+Train R²: 0.9145, Test R²: 0.7276
+
+Results for each parameter combination:
+                                               params  ...  std_test_score
+0   {'subsample': 0.9, 'reg_lambda': 90, 'reg_alph...  ...        0.992494
+1   {'subsample': 1.0, 'reg_lambda': 50, 'reg_alph...  ...        1.042097
+2   {'subsample': 0.9, 'reg_lambda': 30, 'reg_alph...  ...        1.968607
+3   {'subsample': 0.6, 'reg_lambda': 70, 'reg_alph...  ...        1.450717
+4   {'subsample': 1.0, 'reg_lambda': 90, 'reg_alph...  ...        1.756216
+..                                                ...  ...             ...
+95  {'subsample': 0.8, 'reg_lambda': 80, 'reg_alph...  ...        0.918628
+96  {'subsample': 0.7, 'reg_lambda': 80, 'reg_alph...  ...        1.621171
+97  {'subsample': 0.8, 'reg_lambda': 10, 'reg_alph...  ...        1.507968
+98  {'subsample': 0.9, 'reg_lambda': 70, 'reg_alph...  ...        1.588630
+99  {'subsample': 0.9, 'reg_lambda': 20, 'reg_alph...  ...        1.253876
+
+[100 rows x 3 columns]
+
+Using random_state=68 for training
+
+Best parameter combination:
+{'subsample': 0.6, 'reg_lambda': 0.1, 'reg_alpha': 0.5, 'n_estimators': 50, 'min_child_weight': 10, 'max_depth': 29, 'learning_rate': 0.05, 'colsample_bytree': 0.8}
+Train R²: 0.8301, Test R²: 0.7229
+
+Results for each parameter combination:
+                                               params  ...  std_test_score
+0   {'subsample': 0.6, 'reg_lambda': 40, 'reg_alph...  ...        2.655147
+1   {'subsample': 0.7, 'reg_lambda': 60, 'reg_alph...  ...        2.609215
+2   {'subsample': 1.0, 'reg_lambda': 80, 'reg_alph...  ...        3.174507
+3   {'subsample': 0.7, 'reg_lambda': 1, 'reg_alpha...  ...        2.865232
+4   {'subsample': 0.7, 'reg_lambda': 90, 'reg_alph...  ...        2.208458
+..                                                ...  ...             ...
+95  {'subsample': 1.0, 'reg_lambda': 100, 'reg_alp...  ...        3.211078
+96  {'subsample': 0.8, 'reg_lambda': 20, 'reg_alph...  ...        3.164471
+97  {'subsample': 0.8, 'reg_lambda': 90, 'reg_alph...  ...        2.617930
+98  {'subsample': 1.0, 'reg_lambda': 30, 'reg_alph...  ...        2.741844
+99  {'subsample': 0.9, 'reg_lambda': 0.5, 'reg_alp...  ...        2.996020
+
+[100 rows x 3 columns]
+
+Using random_state=69 for training
+
+Best parameter combination:
+{'subsample': 0.6, 'reg_lambda': 10, 'reg_alpha': 0.1, 'n_estimators': 350, 'min_child_weight': 5, 'max_depth': 20, 'learning_rate': 0.01, 'colsample_bytree': 0.7}
+Train R²: 0.8135, Test R²: 0.7137
+
+Results for each parameter combination:
+                                               params  ...  std_test_score
+0   {'subsample': 0.9, 'reg_lambda': 0.1, 'reg_alp...  ...        0.901971
+1   {'subsample': 0.7, 'reg_lambda': 40, 'reg_alph...  ...        2.014404
+2   {'subsample': 1.0, 'reg_lambda': 90, 'reg_alph...  ...        1.609744
+3   {'subsample': 0.6, 'reg_lambda': 40, 'reg_alph...  ...        1.909033
+4   {'subsample': 0.8, 'reg_lambda': 20, 'reg_alph...  ...        2.367610
+..                                                ...  ...             ...
+95  {'subsample': 0.8, 'reg_lambda': 60, 'reg_alph...  ...        1.954076
+96  {'subsample': 0.9, 'reg_lambda': 0.1, 'reg_alp...  ...        2.447679
+97  {'subsample': 0.8, 'reg_lambda': 100, 'reg_alp...  ...        1.646375
+98  {'subsample': 1.0, 'reg_lambda': 20, 'reg_alph...  ...        1.863862
+99  {'subsample': 0.8, 'reg_lambda': 40, 'reg_alph...  ...        1.940460
+
+[100 rows x 3 columns]
+
+Using random_state=70 for training
+
+Best parameter combination:
+{'subsample': 1.0, 'reg_lambda': 80, 'reg_alpha': 0, 'n_estimators': 650, 'min_child_weight': 13, 'max_depth': 13, 'learning_rate': 0.01, 'colsample_bytree': 0.7}
+Train R²: 0.7659, Test R²: 0.6233
+
+Results for each parameter combination:
+                                               params  ...  std_test_score
+0   {'subsample': 0.6, 'reg_lambda': 100, 'reg_alp...  ...        0.614881
+1   {'subsample': 0.7, 'reg_lambda': 1, 'reg_alpha...  ...        1.714267
+2   {'subsample': 0.8, 'reg_lambda': 0.5, 'reg_alp...  ...        0.608333
+3   {'subsample': 0.6, 'reg_lambda': 80, 'reg_alph...  ...        1.999309
+4   {'subsample': 0.6, 'reg_lambda': 70, 'reg_alph...  ...        2.036614
+..                                                ...  ...             ...
+95  {'subsample': 0.7, 'reg_lambda': 1, 'reg_alpha...  ...        0.258065
+96  {'subsample': 0.7, 'reg_lambda': 30, 'reg_alph...  ...        0.772029
+97  {'subsample': 0.9, 'reg_lambda': 0.5, 'reg_alp...  ...        0.940004
+98  {'subsample': 0.9, 'reg_lambda': 10, 'reg_alph...  ...        0.717032
+99  {'subsample': 0.6, 'reg_lambda': 20, 'reg_alph...  ...        1.519662
+
+[100 rows x 3 columns]
+
+Using random_state=71 for training
+
+Best parameter combination:
+{'subsample': 1.0, 'reg_lambda': 1, 'reg_alpha': 1, 'n_estimators': 750, 'min_child_weight': 3, 'max_depth': 18, 'learning_rate': 0.01, 'colsample_bytree': 0.6}
+Train R²: 0.8624, Test R²: 0.8696
+
+Results for each parameter combination:
+                                               params  ...  std_test_score
+0   {'subsample': 0.6, 'reg_lambda': 90, 'reg_alph...  ...        1.718443
+1   {'subsample': 0.6, 'reg_lambda': 50, 'reg_alph...  ...        0.608778
+2   {'subsample': 0.7, 'reg_lambda': 50, 'reg_alph...  ...        0.757018
+3   {'subsample': 1.0, 'reg_lambda': 0.5, 'reg_alp...  ...        2.038762
+4   {'subsample': 0.6, 'reg_lambda': 50, 'reg_alph...  ...        1.354489
+..                                                ...  ...             ...
+95  {'subsample': 0.8, 'reg_lambda': 1, 'reg_alpha...  ...        2.178416
+96  {'subsample': 0.6, 'reg_lambda': 60, 'reg_alph...  ...        1.004075
+97  {'subsample': 1.0, 'reg_lambda': 30, 'reg_alph...  ...        0.700048
+98  {'subsample': 0.8, 'reg_lambda': 1, 'reg_alpha...  ...        1.349141
+99  {'subsample': 0.8, 'reg_lambda': 30, 'reg_alph...  ...        1.489503
+
+[100 rows x 3 columns]
+
+Using random_state=72 for training
+
+Best parameter combination:
+{'subsample': 0.7, 'reg_lambda': 100, 'reg_alpha': 0.01, 'n_estimators': 1550, 'min_child_weight': 4, 'max_depth': 10, 'learning_rate': 0.01, 'colsample_bytree': 0.8}
+Train R²: 0.8213, Test R²: 0.6951
+
+Results for each parameter combination:
+                                               params  ...  std_test_score
+0   {'subsample': 0.7, 'reg_lambda': 80, 'reg_alph...  ...        3.627606
+1   {'subsample': 0.8, 'reg_lambda': 30, 'reg_alph...  ...        2.910054
+2   {'subsample': 0.9, 'reg_lambda': 40, 'reg_alph...  ...        4.793551
+3   {'subsample': 0.7, 'reg_lambda': 20, 'reg_alph...  ...        3.452037
+4   {'subsample': 0.8, 'reg_lambda': 10, 'reg_alph...  ...        3.887256
+..                                                ...  ...             ...
+95  {'subsample': 0.8, 'reg_lambda': 80, 'reg_alph...  ...        2.779431
+96  {'subsample': 0.6, 'reg_lambda': 0.1, 'reg_alp...  ...        3.878703
+97  {'subsample': 0.9, 'reg_lambda': 10, 'reg_alph...  ...        2.875132
+98  {'subsample': 1.0, 'reg_lambda': 0.1, 'reg_alp...  ...        4.194576
+99  {'subsample': 0.7, 'reg_lambda': 0.1, 'reg_alp...  ...        6.758166
+
+[100 rows x 3 columns]
+
+Using random_state=73 for training
+
+Best parameter combination:
+{'subsample': 1.0, 'reg_lambda': 0.5, 'reg_alpha': 1, 'n_estimators': 1150, 'min_child_weight': 6, 'max_depth': 26, 'learning_rate': 0.3, 'colsample_bytree': 0.7}
+Train R²: 0.8821, Test R²: 0.6777
+
+Results for each parameter combination:
+                                               params  ...  std_test_score
+0   {'subsample': 0.8, 'reg_lambda': 40, 'reg_alph...  ...        1.066493
+1   {'subsample': 0.8, 'reg_lambda': 60, 'reg_alph...  ...        0.998193
+2   {'subsample': 0.9, 'reg_lambda': 10, 'reg_alph...  ...        1.327879
+3   {'subsample': 0.7, 'reg_lambda': 10, 'reg_alph...  ...        1.089741
+4   {'subsample': 1.0, 'reg_lambda': 0.5, 'reg_alp...  ...        0.924026
+..                                                ...  ...             ...
+95  {'subsample': 1.0, 'reg_lambda': 70, 'reg_alph...  ...        0.799350
+96  {'subsample': 0.9, 'reg_lambda': 90, 'reg_alph...  ...        1.266495
+97  {'subsample': 1.0, 'reg_lambda': 0.5, 'reg_alp...  ...        0.516447
+98  {'subsample': 1.0, 'reg_lambda': 80, 'reg_alph...  ...        0.549905
+99  {'subsample': 0.7, 'reg_lambda': 80, 'reg_alph...  ...        0.517837
+
+[100 rows x 3 columns]
+
+Using random_state=74 for training
+
+Best parameter combination:
+{'subsample': 1.0, 'reg_lambda': 20, 'reg_alpha': 1, 'n_estimators': 350, 'min_child_weight': 3, 'max_depth': 4, 'learning_rate': 0.5, 'colsample_bytree': 0.7}
+Train R²: 0.8902, Test R²: 0.7382
+
+Results for each parameter combination:
+                                               params  ...  std_test_score
+0   {'subsample': 0.7, 'reg_lambda': 1, 'reg_alpha...  ...        2.625518
+1   {'subsample': 0.8, 'reg_lambda': 60, 'reg_alph...  ...        1.900776
+2   {'subsample': 0.7, 'reg_lambda': 50, 'reg_alph...  ...        2.828537
+3   {'subsample': 0.6, 'reg_lambda': 0.5, 'reg_alp...  ...        2.091806
+4   {'subsample': 1.0, 'reg_lambda': 100, 'reg_alp...  ...        1.341629
+..                                                ...  ...             ...
+95  {'subsample': 0.7, 'reg_lambda': 90, 'reg_alph...  ...        2.008487
+96  {'subsample': 1.0, 'reg_lambda': 100, 'reg_alp...  ...        1.394962
+97  {'subsample': 0.9, 'reg_lambda': 60, 'reg_alph...  ...        2.632557
+98  {'subsample': 0.6, 'reg_lambda': 0.1, 'reg_alp...  ...        3.195812
+99  {'subsample': 1.0, 'reg_lambda': 50, 'reg_alph...  ...        1.723916
+
+[100 rows x 3 columns]
+
+Using random_state=75 for training
+
+Best parameter combination:
+{'subsample': 1.0, 'reg_lambda': 100, 'reg_alpha': 1, 'n_estimators': 1050, 'min_child_weight': 8, 'max_depth': 10, 'learning_rate': 0.1, 'colsample_bytree': 0.8}
+Train R²: 0.8758, Test R²: 0.7118
+
+Results for each parameter combination:
+                                               params  ...  std_test_score
+0   {'subsample': 0.7, 'reg_lambda': 70, 'reg_alph...  ...        0.287032
+1   {'subsample': 1.0, 'reg_lambda': 60, 'reg_alph...  ...        0.367867
+2   {'subsample': 0.7, 'reg_lambda': 0.1, 'reg_alp...  ...        0.473176
+3   {'subsample': 0.7, 'reg_lambda': 0.5, 'reg_alp...  ...        0.490091
+4   {'subsample': 0.6, 'reg_lambda': 0.1, 'reg_alp...  ...        0.452857
+..                                                ...  ...             ...
+95  {'subsample': 0.6, 'reg_lambda': 40, 'reg_alph...  ...        0.620330
+96  {'subsample': 1.0, 'reg_lambda': 0.5, 'reg_alp...  ...        0.619578
+97  {'subsample': 0.6, 'reg_lambda': 80, 'reg_alph...  ...        0.295105
+98  {'subsample': 1.0, 'reg_lambda': 40, 'reg_alph...  ...        0.556899
+99  {'subsample': 1.0, 'reg_lambda': 50, 'reg_alph...  ...        0.552360
+
+[100 rows x 3 columns]
+
+Using random_state=76 for training
+
+Best parameter combination:
+{'subsample': 0.6, 'reg_lambda': 10, 'reg_alpha': 10, 'n_estimators': 950, 'min_child_weight': 5, 'max_depth': 29, 'learning_rate': 0.01, 'colsample_bytree': 0.6}
+Train R²: 0.2029, Test R²: -0.2002
+
+Results for each parameter combination:
+                                               params  ...  std_test_score
+0   {'subsample': 0.9, 'reg_lambda': 0.5, 'reg_alp...  ...       57.247302
+1   {'subsample': 0.8, 'reg_lambda': 30, 'reg_alph...  ...       61.018249
+2   {'subsample': 1.0, 'reg_lambda': 90, 'reg_alph...  ...       55.100332
+3   {'subsample': 0.6, 'reg_lambda': 100, 'reg_alp...  ...       48.859049
+4   {'subsample': 1.0, 'reg_lambda': 80, 'reg_alph...  ...       77.133439
+..                                                ...  ...             ...
+95  {'subsample': 1.0, 'reg_lambda': 20, 'reg_alph...  ...       82.430642
+96  {'subsample': 0.7, 'reg_lambda': 10, 'reg_alph...  ...       95.022668
+97  {'subsample': 1.0, 'reg_lambda': 80, 'reg_alph...  ...       58.201665
+98  {'subsample': 0.6, 'reg_lambda': 20, 'reg_alph...  ...      115.552884
+99  {'subsample': 0.7, 'reg_lambda': 60, 'reg_alph...  ...       94.648523
+
+[100 rows x 3 columns]
+
+Using random_state=77 for training
+
+Best parameter combination:
+{'subsample': 0.7, 'reg_lambda': 0.5, 'reg_alpha': 1, 'n_estimators': 250, 'min_child_weight': 7, 'max_depth': 8, 'learning_rate': 0.5, 'colsample_bytree': 0.8}
+Train R²: 0.9164, Test R²: 0.7750
+
+Results for each parameter combination:
+                                               params  ...  std_test_score
+0   {'subsample': 0.9, 'reg_lambda': 0.5, 'reg_alp...  ...        4.612313
+1   {'subsample': 0.8, 'reg_lambda': 20, 'reg_alph...  ...        5.383191
+2   {'subsample': 0.9, 'reg_lambda': 80, 'reg_alph...  ...        4.326946
+3   {'subsample': 0.9, 'reg_lambda': 0.5, 'reg_alp...  ...        5.881342
+4   {'subsample': 0.6, 'reg_lambda': 0.1, 'reg_alp...  ...       11.579686
+..                                                ...  ...             ...
+95  {'subsample': 0.6, 'reg_lambda': 1, 'reg_alpha...  ...        4.339511
+96  {'subsample': 1.0, 'reg_lambda': 0.1, 'reg_alp...  ...        4.882169
+97  {'subsample': 0.8, 'reg_lambda': 10, 'reg_alph...  ...       12.416426
+98  {'subsample': 0.6, 'reg_lambda': 50, 'reg_alph...  ...        4.606138
+99  {'subsample': 0.6, 'reg_lambda': 80, 'reg_alph...  ...        5.890549
+
+[100 rows x 3 columns]
+
+Using random_state=78 for training
+
+Best parameter combination:
+{'subsample': 1.0, 'reg_lambda': 50, 'reg_alpha': 1, 'n_estimators': 50, 'min_child_weight': 6, 'max_depth': 6, 'learning_rate': 0.6, 'colsample_bytree': 0.7}
+Train R²: 0.8720, Test R²: 0.8211
+
+Results for each parameter combination:
+                                               params  ...  std_test_score
+0   {'subsample': 0.6, 'reg_lambda': 50, 'reg_alph...  ...        0.572952
+1   {'subsample': 0.8, 'reg_lambda': 1, 'reg_alpha...  ...        0.766454
+2   {'subsample': 0.6, 'reg_lambda': 80, 'reg_alph...  ...        0.414841
+3   {'subsample': 0.7, 'reg_lambda': 50, 'reg_alph...  ...        0.584774
+4   {'subsample': 0.8, 'reg_lambda': 100, 'reg_alp...  ...        0.760987
+..                                                ...  ...             ...
+95  {'subsample': 0.6, 'reg_lambda': 40, 'reg_alph...  ...        0.531005
+96  {'subsample': 0.8, 'reg_lambda': 80, 'reg_alph...  ...        0.644596
+97  {'subsample': 0.7, 'reg_lambda': 30, 'reg_alph...  ...        0.641647
+98  {'subsample': 0.8, 'reg_lambda': 0.5, 'reg_alp...  ...        1.000988
+99  {'subsample': 0.6, 'reg_lambda': 1, 'reg_alpha...  ...        0.664873
+
+[100 rows x 3 columns]
+
+Using random_state=79 for training
+
+Best parameter combination:
+{'subsample': 0.6, 'reg_lambda': 40, 'reg_alpha': 0.5, 'n_estimators': 1550, 'min_child_weight': 1, 'max_depth': 7, 'learning_rate': 0.01, 'colsample_bytree': 0.8}
+Train R²: 0.8381, Test R²: 0.8025
+
+Results for each parameter combination:
+                                               params  ...  std_test_score
+0   {'subsample': 0.7, 'reg_lambda': 50, 'reg_alph...  ...        4.834154
+1   {'subsample': 0.7, 'reg_lambda': 30, 'reg_alph...  ...        1.120814
+2   {'subsample': 0.8, 'reg_lambda': 100, 'reg_alp...  ...        3.686443
+3   {'subsample': 0.9, 'reg_lambda': 70, 'reg_alph...  ...        1.028031
+4   {'subsample': 0.8, 'reg_lambda': 60, 'reg_alph...  ...        1.223523
+..                                                ...  ...             ...
+95  {'subsample': 0.6, 'reg_lambda': 20, 'reg_alph...  ...        1.429352
+96  {'subsample': 0.9, 'reg_lambda': 0.5, 'reg_alp...  ...        3.110085
+97  {'subsample': 0.9, 'reg_lambda': 1, 'reg_alpha...  ...        0.945236
+98  {'subsample': 0.8, 'reg_lambda': 0.1, 'reg_alp...  ...        2.296795
+99  {'subsample': 1.0, 'reg_lambda': 20, 'reg_alph...  ...        1.207402
+
+[100 rows x 3 columns]
+
+Using random_state=80 for training
+
+Best parameter combination:
+{'subsample': 1.0, 'reg_lambda': 100, 'reg_alpha': 1, 'n_estimators': 450, 'min_child_weight': 12, 'max_depth': 7, 'learning_rate': 0.2, 'colsample_bytree': 0.7}
+Train R²: 0.8470, Test R²: 0.8033
+
+Results for each parameter combination:
+                                               params  ...  std_test_score
+0   {'subsample': 0.6, 'reg_lambda': 80, 'reg_alph...  ...        0.703135
+1   {'subsample': 0.7, 'reg_lambda': 100, 'reg_alp...  ...        0.506378
+2   {'subsample': 0.7, 'reg_lambda': 50, 'reg_alph...  ...        0.870203
+3   {'subsample': 0.9, 'reg_lambda': 60, 'reg_alph...  ...        0.726295
+4   {'subsample': 1.0, 'reg_lambda': 60, 'reg_alph...  ...        1.293455
+..                                                ...  ...             ...
+95  {'subsample': 0.8, 'reg_lambda': 30, 'reg_alph...  ...        1.011451
+96  {'subsample': 0.7, 'reg_lambda': 40, 'reg_alph...  ...        0.741393
+97  {'subsample': 0.7, 'reg_lambda': 1, 'reg_alpha...  ...        0.691253
+98  {'subsample': 0.9, 'reg_lambda': 0.5, 'reg_alp...  ...        1.167770
+99  {'subsample': 0.7, 'reg_lambda': 40, 'reg_alph...  ...        0.551009
+
+[100 rows x 3 columns]
+
+Using random_state=81 for training
+
+Best parameter combination:
+{'subsample': 1.0, 'reg_lambda': 0.1, 'reg_alpha': 1, 'n_estimators': 650, 'min_child_weight': 8, 'max_depth': 16, 'learning_rate': 0.05, 'colsample_bytree': 0.8}
+Train R²: 0.8630, Test R²: 0.8868
+
+Results for each parameter combination:
+                                               params  ...  std_test_score
+0   {'subsample': 0.8, 'reg_lambda': 20, 'reg_alph...  ...        1.717847
+1   {'subsample': 0.9, 'reg_lambda': 20, 'reg_alph...  ...        1.065412
+2   {'subsample': 0.6, 'reg_lambda': 0.1, 'reg_alp...  ...        1.110607
+3   {'subsample': 0.8, 'reg_lambda': 40, 'reg_alph...  ...        1.630271
+4   {'subsample': 1.0, 'reg_lambda': 10, 'reg_alph...  ...        1.037416
+..                                                ...  ...             ...
+95  {'subsample': 0.6, 'reg_lambda': 20, 'reg_alph...  ...        0.944530
+96  {'subsample': 1.0, 'reg_lambda': 40, 'reg_alph...  ...        0.847351
+97  {'subsample': 0.6, 'reg_lambda': 50, 'reg_alph...  ...        1.377495
+98  {'subsample': 0.8, 'reg_lambda': 40, 'reg_alph...  ...        0.836346
+99  {'subsample': 0.9, 'reg_lambda': 40, 'reg_alph...  ...        0.990287
+
+[100 rows x 3 columns]
+
+Using random_state=82 for training
+
+Best parameter combination:
+{'subsample': 0.7, 'reg_lambda': 70, 'reg_alpha': 0.01, 'n_estimators': 950, 'min_child_weight': 3, 'max_depth': 13, 'learning_rate': 0.01, 'colsample_bytree': 0.6}
+Train R²: 0.7697, Test R²: 0.8013
+
+Results for each parameter combination:
+                                               params  ...  std_test_score
+0   {'subsample': 0.9, 'reg_lambda': 50, 'reg_alph...  ...        3.013176
+1   {'subsample': 1.0, 'reg_lambda': 1, 'reg_alpha...  ...        2.106117
+2   {'subsample': 1.0, 'reg_lambda': 20, 'reg_alph...  ...        2.920220
+3   {'subsample': 0.7, 'reg_lambda': 90, 'reg_alph...  ...        3.893141
+4   {'subsample': 0.8, 'reg_lambda': 30, 'reg_alph...  ...        1.629580
+..                                                ...  ...             ...
+95  {'subsample': 0.6, 'reg_lambda': 0.1, 'reg_alp...  ...        2.720736
+96  {'subsample': 0.7, 'reg_lambda': 100, 'reg_alp...  ...        1.681315
+97  {'subsample': 0.9, 'reg_lambda': 1, 'reg_alpha...  ...        2.446498
+98  {'subsample': 0.9, 'reg_lambda': 20, 'reg_alph...  ...        2.382546
+99  {'subsample': 0.8, 'reg_lambda': 20, 'reg_alph...  ...        2.302364
+
+[100 rows x 3 columns]
+
+Using random_state=83 for training
+
+Best parameter combination:
+{'subsample': 0.6, 'reg_lambda': 80, 'reg_alpha': 0.5, 'n_estimators': 350, 'min_child_weight': 9, 'max_depth': 13, 'learning_rate': 0.05, 'colsample_bytree': 0.9}
+Train R²: 0.8489, Test R²: 0.2285
+
+Results for each parameter combination:
+                                               params  ...  std_test_score
+0   {'subsample': 1.0, 'reg_lambda': 20, 'reg_alph...  ...        5.239729
+1   {'subsample': 0.8, 'reg_lambda': 30, 'reg_alph...  ...        5.784190
+2   {'subsample': 0.9, 'reg_lambda': 30, 'reg_alph...  ...       10.737815
+3   {'subsample': 0.6, 'reg_lambda': 100, 'reg_alp...  ...        5.028019
+4   {'subsample': 0.9, 'reg_lambda': 100, 'reg_alp...  ...       10.283126
+..                                                ...  ...             ...
+95  {'subsample': 0.6, 'reg_lambda': 30, 'reg_alph...  ...       10.239833
+96  {'subsample': 0.7, 'reg_lambda': 40, 'reg_alph...  ...        6.775363
+97  {'subsample': 0.6, 'reg_lambda': 10, 'reg_alph...  ...        5.059553
+98  {'subsample': 0.7, 'reg_lambda': 60, 'reg_alph...  ...        5.961012
+99  {'subsample': 0.9, 'reg_lambda': 70, 'reg_alph...  ...        7.310083
+
+[100 rows x 3 columns]
+
+Using random_state=84 for training
+
+Best parameter combination:
+{'subsample': 0.9, 'reg_lambda': 100, 'reg_alpha': 0, 'n_estimators': 350, 'min_child_weight': 4, 'max_depth': 6, 'learning_rate': 0.2, 'colsample_bytree': 0.6}
+Train R²: 0.9364, Test R²: 0.8331
+
+Results for each parameter combination:
+                                               params  ...  std_test_score
+0   {'subsample': 0.7, 'reg_lambda': 80, 'reg_alph...  ...        3.817257
+1   {'subsample': 0.6, 'reg_lambda': 10, 'reg_alph...  ...        1.519535
+2   {'subsample': 1.0, 'reg_lambda': 100, 'reg_alp...  ...        4.466976
+3   {'subsample': 0.6, 'reg_lambda': 20, 'reg_alph...  ...        3.506473
+4   {'subsample': 0.8, 'reg_lambda': 50, 'reg_alph...  ...        3.215247
+..                                                ...  ...             ...
+95  {'subsample': 0.7, 'reg_lambda': 90, 'reg_alph...  ...        3.122943
+96  {'subsample': 1.0, 'reg_lambda': 1, 'reg_alpha...  ...        3.035253
+97  {'subsample': 1.0, 'reg_lambda': 1, 'reg_alpha...  ...        3.423379
+98  {'subsample': 0.9, 'reg_lambda': 90, 'reg_alph...  ...        3.370215
+99  {'subsample': 0.9, 'reg_lambda': 10, 'reg_alph...  ...        1.834048
+
+[100 rows x 3 columns]
+
+Using random_state=85 for training
+
+Best parameter combination:
+{'subsample': 0.8, 'reg_lambda': 0.5, 'reg_alpha': 1, 'n_estimators': 250, 'min_child_weight': 2, 'max_depth': 20, 'learning_rate': 0.01, 'colsample_bytree': 0.9}
+Train R²: 0.8325, Test R²: 0.8369
+
+Results for each parameter combination:
+                                               params  ...  std_test_score
+0   {'subsample': 0.9, 'reg_lambda': 60, 'reg_alph...  ...        0.664716
+1   {'subsample': 0.9, 'reg_lambda': 1, 'reg_alpha...  ...        0.638239
+2   {'subsample': 0.8, 'reg_lambda': 50, 'reg_alph...  ...        0.602284
+3   {'subsample': 1.0, 'reg_lambda': 100, 'reg_alp...  ...        0.581729
+4   {'subsample': 0.9, 'reg_lambda': 80, 'reg_alph...  ...        0.660421
+..                                                ...  ...             ...
+95  {'subsample': 0.8, 'reg_lambda': 60, 'reg_alph...  ...        0.518228
+96  {'subsample': 0.9, 'reg_lambda': 30, 'reg_alph...  ...        0.569763
+97  {'subsample': 0.8, 'reg_lambda': 1, 'reg_alpha...  ...        1.238915
+98  {'subsample': 0.9, 'reg_lambda': 20, 'reg_alph...  ...        0.787618
+99  {'subsample': 0.6, 'reg_lambda': 10, 'reg_alph...  ...        0.797291
+
+[100 rows x 3 columns]
+
+Using random_state=86 for training
+
+Best parameter combination:
+{'subsample': 0.6, 'reg_lambda': 1, 'reg_alpha': 0.01, 'n_estimators': 150, 'min_child_weight': 8, 'max_depth': 15, 'learning_rate': 0.01, 'colsample_bytree': 0.9}
+Train R²: 0.7912, Test R²: 0.7917
+
+Results for each parameter combination:
+                                               params  ...  std_test_score
+0   {'subsample': 0.6, 'reg_lambda': 10, 'reg_alph...  ...        3.065948
+1   {'subsample': 1.0, 'reg_lambda': 90, 'reg_alph...  ...        5.528472
+2   {'subsample': 0.6, 'reg_lambda': 70, 'reg_alph...  ...        3.319112
+3   {'subsample': 0.9, 'reg_lambda': 0.5, 'reg_alp...  ...        7.034968
+4   {'subsample': 0.7, 'reg_lambda': 20, 'reg_alph...  ...        7.498887
+..                                                ...  ...             ...
+95  {'subsample': 0.8, 'reg_lambda': 80, 'reg_alph...  ...        8.076546
+96  {'subsample': 0.9, 'reg_lambda': 100, 'reg_alp...  ...        7.620715
+97  {'subsample': 1.0, 'reg_lambda': 100, 'reg_alp...  ...        3.766274
+98  {'subsample': 0.9, 'reg_lambda': 70, 'reg_alph...  ...        6.965681
+99  {'subsample': 0.6, 'reg_lambda': 0.5, 'reg_alp...  ...        2.921936
+
+[100 rows x 3 columns]
+
+Using random_state=87 for training
+
+Best parameter combination:
+{'subsample': 0.9, 'reg_lambda': 10, 'reg_alpha': 0.1, 'n_estimators': 150, 'min_child_weight': 13, 'max_depth': 17, 'learning_rate': 0.01, 'colsample_bytree': 0.6}
+Train R²: 0.6834, Test R²: 0.7457
+
+Results for each parameter combination:
+                                               params  ...  std_test_score
+0   {'subsample': 0.8, 'reg_lambda': 100, 'reg_alp...  ...        4.821546
+1   {'subsample': 0.7, 'reg_lambda': 30, 'reg_alph...  ...        6.426580
+2   {'subsample': 0.9, 'reg_lambda': 100, 'reg_alp...  ...        4.730644
+3   {'subsample': 1.0, 'reg_lambda': 90, 'reg_alph...  ...        6.132379
+4   {'subsample': 0.7, 'reg_lambda': 40, 'reg_alph...  ...        3.297400
+..                                                ...  ...             ...
+95  {'subsample': 0.9, 'reg_lambda': 90, 'reg_alph...  ...        2.761660
+96  {'subsample': 0.7, 'reg_lambda': 1, 'reg_alpha...  ...        6.755800
+97  {'subsample': 0.8, 'reg_lambda': 20, 'reg_alph...  ...        4.728764
+98  {'subsample': 0.7, 'reg_lambda': 30, 'reg_alph...  ...        3.220078
+99  {'subsample': 0.8, 'reg_lambda': 30, 'reg_alph...  ...        3.765481
+
+[100 rows x 3 columns]
+
+Using random_state=88 for training
+
+Best parameter combination:
+{'subsample': 0.6, 'reg_lambda': 40, 'reg_alpha': 0.1, 'n_estimators': 1950, 'min_child_weight': 10, 'max_depth': 12, 'learning_rate': 0.6, 'colsample_bytree': 0.9}
+Train R²: 0.9387, Test R²: 0.2521
+
+Results for each parameter combination:
+                                               params  ...  std_test_score
+0   {'subsample': 0.6, 'reg_lambda': 70, 'reg_alph...  ...        1.009050
+1   {'subsample': 0.9, 'reg_lambda': 50, 'reg_alph...  ...        2.144785
+2   {'subsample': 0.8, 'reg_lambda': 10, 'reg_alph...  ...        1.924299
+3   {'subsample': 0.6, 'reg_lambda': 60, 'reg_alph...  ...        1.203779
+4   {'subsample': 1.0, 'reg_lambda': 0.1, 'reg_alp...  ...        0.805846
+..                                                ...  ...             ...
+95  {'subsample': 0.7, 'reg_lambda': 70, 'reg_alph...  ...        5.252456
+96  {'subsample': 0.9, 'reg_lambda': 100, 'reg_alp...  ...        1.191348
+97  {'subsample': 0.6, 'reg_lambda': 100, 'reg_alp...  ...        4.182615
+98  {'subsample': 0.7, 'reg_lambda': 70, 'reg_alph...  ...        1.174200
+99  {'subsample': 0.9, 'reg_lambda': 30, 'reg_alph...  ...        3.581142
+
+[100 rows x 3 columns]
+
+Using random_state=89 for training
+
+Best parameter combination:
+{'subsample': 0.9, 'reg_lambda': 1, 'reg_alpha': 1, 'n_estimators': 50, 'min_child_weight': 8, 'max_depth': 17, 'learning_rate': 0.5, 'colsample_bytree': 0.9}
+Train R²: 0.8930, Test R²: 0.6659
+
+Results for each parameter combination:
+                                               params  ...  std_test_score
+0   {'subsample': 0.6, 'reg_lambda': 30, 'reg_alph...  ...        1.982144
+1   {'subsample': 0.6, 'reg_lambda': 20, 'reg_alph...  ...        1.489234
+2   {'subsample': 0.9, 'reg_lambda': 90, 'reg_alph...  ...        1.854584
+3   {'subsample': 0.9, 'reg_lambda': 40, 'reg_alph...  ...        3.302513
+4   {'subsample': 0.9, 'reg_lambda': 100, 'reg_alp...  ...        1.959365
+..                                                ...  ...             ...
+95  {'subsample': 0.9, 'reg_lambda': 90, 'reg_alph...  ...        1.880264
+96  {'subsample': 0.9, 'reg_lambda': 0.5, 'reg_alp...  ...        2.437576
+97  {'subsample': 0.9, 'reg_lambda': 90, 'reg_alph...  ...        1.337309
+98  {'subsample': 0.8, 'reg_lambda': 10, 'reg_alph...  ...        1.648227
+99  {'subsample': 0.7, 'reg_lambda': 0.1, 'reg_alp...  ...        1.516223
+
+[100 rows x 3 columns]
+
+Using random_state=90 for training
+
+Best parameter combination:
+{'subsample': 1.0, 'reg_lambda': 60, 'reg_alpha': 1, 'n_estimators': 1750, 'min_child_weight': 5, 'max_depth': 23, 'learning_rate': 0.3, 'colsample_bytree': 0.7}
+Train R²: 0.8938, Test R²: 0.6775
+
+Results for each parameter combination:
+                                               params  ...  std_test_score
+0   {'subsample': 0.8, 'reg_lambda': 70, 'reg_alph...  ...        0.332987
+1   {'subsample': 0.6, 'reg_lambda': 50, 'reg_alph...  ...        0.321103
+2   {'subsample': 0.7, 'reg_lambda': 100, 'reg_alp...  ...        0.330142
+3   {'subsample': 0.7, 'reg_lambda': 80, 'reg_alph...  ...        0.315139
+4   {'subsample': 1.0, 'reg_lambda': 1, 'reg_alpha...  ...        0.381644
+..                                                ...  ...             ...
+95  {'subsample': 0.8, 'reg_lambda': 0.5, 'reg_alp...  ...        0.316608
+96  {'subsample': 0.8, 'reg_lambda': 50, 'reg_alph...  ...        0.344976
+97  {'subsample': 1.0, 'reg_lambda': 50, 'reg_alph...  ...        0.332781
+98  {'subsample': 0.8, 'reg_lambda': 70, 'reg_alph...  ...        0.399190
+99  {'subsample': 0.8, 'reg_lambda': 60, 'reg_alph...  ...        0.319461
+
+[100 rows x 3 columns]
+
+Using random_state=91 for training
+
+Best parameter combination:
+{'subsample': 0.7, 'reg_lambda': 0.1, 'reg_alpha': 0.01, 'n_estimators': 250, 'min_child_weight': 9, 'max_depth': 9, 'learning_rate': 0.01, 'colsample_bytree': 0.9}
+Train R²: 0.8663, Test R²: 0.6568
+
+Results for each parameter combination:
+                                               params  ...  std_test_score
+0   {'subsample': 0.6, 'reg_lambda': 0.5, 'reg_alp...  ...        2.901916
+1   {'subsample': 0.9, 'reg_lambda': 1, 'reg_alpha...  ...        2.663476
+2   {'subsample': 1.0, 'reg_lambda': 70, 'reg_alph...  ...        2.211401
+3   {'subsample': 0.6, 'reg_lambda': 0.1, 'reg_alp...  ...        1.445839
+4   {'subsample': 0.7, 'reg_lambda': 100, 'reg_alp...  ...        2.421199
+..                                                ...  ...             ...
+95  {'subsample': 1.0, 'reg_lambda': 30, 'reg_alph...  ...        3.002600
+96  {'subsample': 0.9, 'reg_lambda': 70, 'reg_alph...  ...        2.462007
+97  {'subsample': 0.8, 'reg_lambda': 10, 'reg_alph...  ...        2.180192
+98  {'subsample': 1.0, 'reg_lambda': 0.1, 'reg_alp...  ...        2.603241
+99  {'subsample': 0.9, 'reg_lambda': 80, 'reg_alph...  ...        2.173118
+
+[100 rows x 3 columns]
+
+Using random_state=92 for training
+
+Best parameter combination:
+{'subsample': 0.8, 'reg_lambda': 0.5, 'reg_alpha': 10, 'n_estimators': 1350, 'min_child_weight': 6, 'max_depth': 19, 'learning_rate': 0.5, 'colsample_bytree': 0.7}
+Train R²: 0.5391, Test R²: 0.5513
+
+Results for each parameter combination:
+                                               params  ...  std_test_score
+0   {'subsample': 0.7, 'reg_lambda': 30, 'reg_alph...  ...        2.929662
+1   {'subsample': 0.9, 'reg_lambda': 0.1, 'reg_alp...  ...        2.338065
+2   {'subsample': 0.6, 'reg_lambda': 60, 'reg_alph...  ...        2.132807
+3   {'subsample': 1.0, 'reg_lambda': 60, 'reg_alph...  ...        2.184181
+4   {'subsample': 0.6, 'reg_lambda': 50, 'reg_alph...  ...        2.243490
+..                                                ...  ...             ...
+95  {'subsample': 1.0, 'reg_lambda': 1, 'reg_alpha...  ...        2.114729
+96  {'subsample': 0.7, 'reg_lambda': 30, 'reg_alph...  ...        2.011667
+97  {'subsample': 0.9, 'reg_lambda': 0.5, 'reg_alp...  ...        1.558180
+98  {'subsample': 0.9, 'reg_lambda': 50, 'reg_alph...  ...        2.569471
+99  {'subsample': 0.8, 'reg_lambda': 20, 'reg_alph...  ...        2.560608
+
+[100 rows x 3 columns]
+
+Using random_state=93 for training
+
+Best parameter combination:
+{'subsample': 1.0, 'reg_lambda': 30, 'reg_alpha': 0.01, 'n_estimators': 550, 'min_child_weight': 8, 'max_depth': 26, 'learning_rate': 0.01, 'colsample_bytree': 0.8}
+Train R²: 0.8412, Test R²: 0.7582
+
+Results for each parameter combination:
+                                               params  ...  std_test_score
+0   {'subsample': 0.6, 'reg_lambda': 20, 'reg_alph...  ...        4.250459
+1   {'subsample': 0.6, 'reg_lambda': 1, 'reg_alpha...  ...        4.388842
+2   {'subsample': 0.8, 'reg_lambda': 50, 'reg_alph...  ...        3.545638
+3   {'subsample': 1.0, 'reg_lambda': 30, 'reg_alph...  ...        4.006823
+4   {'subsample': 0.9, 'reg_lambda': 0.1, 'reg_alp...  ...        3.611317
+..                                                ...  ...             ...
+95  {'subsample': 1.0, 'reg_lambda': 20, 'reg_alph...  ...        2.877616
+96  {'subsample': 1.0, 'reg_lambda': 70, 'reg_alph...  ...        3.315484
+97  {'subsample': 0.6, 'reg_lambda': 60, 'reg_alph...  ...        5.221070
+98  {'subsample': 1.0, 'reg_lambda': 30, 'reg_alph...  ...        2.366819
+99  {'subsample': 0.9, 'reg_lambda': 10, 'reg_alph...  ...        4.178747
+
+[100 rows x 3 columns]
+
+Using random_state=94 for training
+
+Best parameter combination:
+{'subsample': 0.9, 'reg_lambda': 40, 'reg_alpha': 0.5, 'n_estimators': 850, 'min_child_weight': 14, 'max_depth': 13, 'learning_rate': 0.01, 'colsample_bytree': 0.7}
+Train R²: 0.8205, Test R²: 0.6468
+
+Results for each parameter combination:
+                                               params  ...  std_test_score
+0   {'subsample': 0.9, 'reg_lambda': 40, 'reg_alph...  ...        1.528631
+1   {'subsample': 0.9, 'reg_lambda': 70, 'reg_alph...  ...        1.770233
+2   {'subsample': 0.6, 'reg_lambda': 80, 'reg_alph...  ...        1.110803
+3   {'subsample': 0.9, 'reg_lambda': 80, 'reg_alph...  ...        0.736992
+4   {'subsample': 0.9, 'reg_lambda': 50, 'reg_alph...  ...        0.693778
+..                                                ...  ...             ...
+95  {'subsample': 0.8, 'reg_lambda': 80, 'reg_alph...  ...        1.582279
+96  {'subsample': 0.7, 'reg_lambda': 30, 'reg_alph...  ...        1.013211
+97  {'subsample': 0.7, 'reg_lambda': 60, 'reg_alph...  ...        1.040656
+98  {'subsample': 0.8, 'reg_lambda': 60, 'reg_alph...  ...        0.933150
+99  {'subsample': 0.9, 'reg_lambda': 0.1, 'reg_alp...  ...        1.202833
+
+[100 rows x 3 columns]
+
+Using random_state=95 for training
+
+Best parameter combination:
+{'subsample': 0.9, 'reg_lambda': 70, 'reg_alpha': 1, 'n_estimators': 1050, 'min_child_weight': 9, 'max_depth': 3, 'learning_rate': 0.01, 'colsample_bytree': 0.7}
+Train R²: 0.7971, Test R²: 0.6653
+
+Results for each parameter combination:
+                                               params  ...  std_test_score
+0   {'subsample': 1.0, 'reg_lambda': 60, 'reg_alph...  ...        6.191169
+1   {'subsample': 0.9, 'reg_lambda': 70, 'reg_alph...  ...        4.623574
+2   {'subsample': 0.6, 'reg_lambda': 90, 'reg_alph...  ...        3.815061
+3   {'subsample': 0.9, 'reg_lambda': 70, 'reg_alph...  ...        3.182213
+4   {'subsample': 0.7, 'reg_lambda': 10, 'reg_alph...  ...        6.143544
+..                                                ...  ...             ...
+95  {'subsample': 0.6, 'reg_lambda': 70, 'reg_alph...  ...        3.539818
+96  {'subsample': 0.8, 'reg_lambda': 70, 'reg_alph...  ...        3.645937
+97  {'subsample': 0.8, 'reg_lambda': 70, 'reg_alph...  ...        4.061990
+98  {'subsample': 1.0, 'reg_lambda': 60, 'reg_alph...  ...        3.285520
+99  {'subsample': 1.0, 'reg_lambda': 10, 'reg_alph...  ...        3.699307
+
+[100 rows x 3 columns]
+
+Using random_state=96 for training
+
+Best parameter combination:
+{'subsample': 0.7, 'reg_lambda': 80, 'reg_alpha': 1, 'n_estimators': 950, 'min_child_weight': 13, 'max_depth': 10, 'learning_rate': 0.01, 'colsample_bytree': 0.7}
+Train R²: 0.7189, Test R²: 0.5706
+
+Results for each parameter combination:
+                                               params  ...  std_test_score
+0   {'subsample': 0.8, 'reg_lambda': 60, 'reg_alph...  ...        1.322553
+1   {'subsample': 0.7, 'reg_lambda': 70, 'reg_alph...  ...        1.413719
+2   {'subsample': 0.8, 'reg_lambda': 80, 'reg_alph...  ...        1.340441
+3   {'subsample': 0.8, 'reg_lambda': 80, 'reg_alph...  ...        1.366157
+4   {'subsample': 0.6, 'reg_lambda': 60, 'reg_alph...  ...        1.009813
+..                                                ...  ...             ...
+95  {'subsample': 0.8, 'reg_lambda': 40, 'reg_alph...  ...        0.940413
+96  {'subsample': 0.9, 'reg_lambda': 1, 'reg_alpha...  ...        0.732840
+97  {'subsample': 1.0, 'reg_lambda': 60, 'reg_alph...  ...        0.758924
+98  {'subsample': 0.8, 'reg_lambda': 1, 'reg_alpha...  ...        0.907822
+99  {'subsample': 1.0, 'reg_lambda': 0.1, 'reg_alp...  ...        0.832881
+
+[100 rows x 3 columns]
+
+Using random_state=97 for training
+
+Best parameter combination:
+{'subsample': 0.9, 'reg_lambda': 0.5, 'reg_alpha': 10, 'n_estimators': 1150, 'min_child_weight': 7, 'max_depth': 3, 'learning_rate': 0.2, 'colsample_bytree': 0.9}
+Train R²: 0.5257, Test R²: 0.4702
+
+Results for each parameter combination:
+                                               params  ...  std_test_score
+0   {'subsample': 1.0, 'reg_lambda': 90, 'reg_alph...  ...       85.701206
+1   {'subsample': 0.9, 'reg_lambda': 50, 'reg_alph...  ...       26.738149
+2   {'subsample': 0.8, 'reg_lambda': 0.5, 'reg_alp...  ...      102.814820
+3   {'subsample': 1.0, 'reg_lambda': 80, 'reg_alph...  ...       53.032539
+4   {'subsample': 0.9, 'reg_lambda': 20, 'reg_alph...  ...       41.212033
+..                                                ...  ...             ...
+95  {'subsample': 0.7, 'reg_lambda': 40, 'reg_alph...  ...       19.944315
+96  {'subsample': 0.7, 'reg_lambda': 10, 'reg_alph...  ...       21.968237
+97  {'subsample': 0.9, 'reg_lambda': 0.5, 'reg_alp...  ...       80.460756
+98  {'subsample': 0.7, 'reg_lambda': 0.1, 'reg_alp...  ...       48.185376
+99  {'subsample': 0.6, 'reg_lambda': 0.5, 'reg_alp...  ...       63.768725
+
+[100 rows x 3 columns]
+
+Using random_state=98 for training
+
+Best parameter combination:
+{'subsample': 1.0, 'reg_lambda': 60, 'reg_alpha': 0.1, 'n_estimators': 150, 'min_child_weight': 3, 'max_depth': 2, 'learning_rate': 0.05, 'colsample_bytree': 0.9}
+Train R²: 0.8011, Test R²: 0.8406
+
+Results for each parameter combination:
+                                               params  ...  std_test_score
+0   {'subsample': 1.0, 'reg_lambda': 50, 'reg_alph...  ...        0.748351
+1   {'subsample': 0.7, 'reg_lambda': 100, 'reg_alp...  ...        0.881185
+2   {'subsample': 0.9, 'reg_lambda': 60, 'reg_alph...  ...        0.733096
+3   {'subsample': 0.7, 'reg_lambda': 1, 'reg_alpha...  ...        0.690191
+4   {'subsample': 0.8, 'reg_lambda': 40, 'reg_alph...  ...        1.579148
+..                                                ...  ...             ...
+95  {'subsample': 1.0, 'reg_lambda': 80, 'reg_alph...  ...        0.657818
+96  {'subsample': 1.0, 'reg_lambda': 60, 'reg_alph...  ...        0.541701
+97  {'subsample': 0.8, 'reg_lambda': 0.5, 'reg_alp...  ...        0.702893
+98  {'subsample': 0.9, 'reg_lambda': 90, 'reg_alph...  ...        0.969304
+99  {'subsample': 0.7, 'reg_lambda': 40, 'reg_alph...  ...        0.987991
+
+[100 rows x 3 columns]
+
+Using random_state=99 for training
+
+Best parameter combination:
+{'subsample': 0.6, 'reg_lambda': 10, 'reg_alpha': 1, 'n_estimators': 350, 'min_child_weight': 1, 'max_depth': 4, 'learning_rate': 0.05, 'colsample_bytree': 0.6}
+Train R²: 0.8731, Test R²: 0.7879
+
+Results for each parameter combination:
+                                               params  ...  std_test_score
+0   {'subsample': 0.9, 'reg_lambda': 30, 'reg_alph...  ...        0.484675
+1   {'subsample': 0.6, 'reg_lambda': 100, 'reg_alp...  ...        0.435525
+2   {'subsample': 0.7, 'reg_lambda': 30, 'reg_alph...  ...        0.500124
+3   {'subsample': 0.8, 'reg_lambda': 50, 'reg_alph...  ...        0.656376
+4   {'subsample': 0.9, 'reg_lambda': 20, 'reg_alph...  ...        0.491211
+..                                                ...  ...             ...
+95  {'subsample': 0.7, 'reg_lambda': 60, 'reg_alph...  ...        0.503649
+96  {'subsample': 0.9, 'reg_lambda': 20, 'reg_alph...  ...        0.530385
+97  {'subsample': 0.9, 'reg_lambda': 20, 'reg_alph...  ...        0.418855
+98  {'subsample': 0.9, 'reg_lambda': 20, 'reg_alph...  ...        2.459515
+99  {'subsample': 0.7, 'reg_lambda': 0.1, 'reg_alp...  ...        0.625472
+
+[100 rows x 3 columns]
+
+散点图已保存为：/home/ggx/wls/DAC-code/co/UL/ST/ST-XGBR/XGBR-regression_results.png
+
+SHAP图已保存为：/home/ggx/wls/DAC-code/co/UL/ST/ST-XGBR/shap_plots/shap_summary.png
+
+最佳模型已保存为：/home/ggx/wls/DAC-code/co/UL/ST/ST-XGBR/best_XGBR_model.pkl
+
+最佳数据标准化器已保存为：/home/ggx/wls/DAC-code/co/UL/ST/ST-XGBR/best_XGBR_scaler.pkl
